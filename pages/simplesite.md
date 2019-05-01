@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Simple blog site using GitHub Pages
+tagline: documentation
 description: Simple blog site GitHub Pages
 ---
 
