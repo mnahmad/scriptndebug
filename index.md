@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Script&Debug
 tagline: documentation
 description: Script&debug is personal documentation.
