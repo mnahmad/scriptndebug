@@ -4,8 +4,10 @@ title: Script&Debug
 tagline: documentation.
 description: Script&debug is personal documentation.
 ---
-ScriptNDebug all about my daily experience and interaction with different languages, libraries, frameworks and software. I work with python, php, Javascript, gdal, OpenLayers, Extjs, GeoExt, jQuery, Mapfish, Django, PostgreSQL, mySQL, QGIS, GeoServer, R etc.
+Script&debug is all about my daily experience and interaction with different languages, libraries, frameworks and software. I work with python, php, Javascript, gdal, OpenLayers, Extjs, GeoExt, jQuery, Mapfish, Django, PostgreSQL, mySQL, QGIS, GeoServer, R etc.
 
+
+- [Common CLI Commands](pages/commands.html)
 - [Simple site using github](pages/simplesite.html)
 - [About](pages/about.html)
 
