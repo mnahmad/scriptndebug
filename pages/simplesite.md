@@ -3,7 +3,9 @@ layout: page
 title: Simple blog site using GitHub Pages
 tagline: documentation
 description: Simple blog site GitHub Pages
+date: 1-5-2019
 ---
+*Last update: 1/5/2019*
 
 I was looking for simple way to document my work, so I can refer back to it and if possible help others as well.
 
