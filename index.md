@@ -7,6 +7,8 @@ Script&debug is all about my daily experience and interaction with different lan
 
 - [Gdal commands](pages/gdal_commands.html)
 - [Common CLI Commands](pages/commands.html)
+- [Band combination for Landsat and Sentinel 2](pages/band_combination.html)
+- [Download Landsat Images Python script](pages/satellite/Landsat/download_landsat57.html)
 - [OziExplorerCE](pages/androzic/androzic.html)
 - [Bitnami and muSQL](pages/containers/mysql_bitnami.html)
 - [Simple site using github](pages/simplesite.html)

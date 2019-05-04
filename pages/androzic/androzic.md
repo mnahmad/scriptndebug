@@ -79,8 +79,7 @@ After making route, export file as txt file by using the option
 OziExplorerCE -> Menu -> File -> Track log -> Track log -> File-Export Track Tail to File.
 
 
-configuration:
-http://www.oziexplorer3.com/ozice/help/ozice_d_working_tracks.html
+Also read the [configuration(http://www.oziexplorer3.com/ozice/help/ozice_d_working_tracks.html) file. 
 
 
 ## How to download data from OZiExplorer
