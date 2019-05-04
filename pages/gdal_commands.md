@@ -14,7 +14,7 @@ One can create image stack any software like QGIS (it also uses the gdal), R etc
 
 In the example below, I am using gdal to make a stack of landsat 5 bands.
 
-```bash
+```Shell
 gdal_merge.py -separate -of GTiff -o  merge_ls5.TIF LT51680602011234MLK00_B1.TIF  LT51680602011234MLK00_B3.TIF  LT51680602011234MLK00_B4.TIF  LT51680602011234MLK00_B5.TIF  LT51680602011234MLK00_B6.TIF  LT51680602011234MLK00_B7.TIF
 ```
 
