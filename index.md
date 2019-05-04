@@ -7,7 +7,7 @@ Script&debug is all about my daily experience and interaction with different lan
 
 - [Gdal commands](pages/gdal_commands.html)
 - [Common CLI Commands](pages/commands.html)
-- [OziExplorerCE](pages/androzic/androzi.html)
+- [OziExplorerCE](pages/androzic/androzic.html)
 - [Bitnami and muSQL](pages/containers/mysql_bitnami.html)
 - [Simple site using github](pages/simplesite.html)
 - [About](pages/about.html)
@@ -16,7 +16,7 @@ If anything here is confusing (or _wrong_!), or if I've missed
 important details, please
 [submit an issue](https://github.com/mnahmad/scriptndebug/issues).
 
----
+
 
 
 Note: This blog website is based on a repository [on github](https://github.com/kbroman/simple_site).
