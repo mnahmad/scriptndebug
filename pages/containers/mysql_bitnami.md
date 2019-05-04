@@ -4,9 +4,10 @@ title: Bitnami and mySQL
 description: Bitnami and mySQL.
 ---
 *Updates: 4/5/2019*
+
 Now I usually use KVM and docker.
 
-**The post below is old and included here only for my documentation **
+### The post below is old and included here only for my documentation
 
 *Last updated: 9/7/2016*
 

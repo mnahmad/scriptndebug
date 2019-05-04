@@ -7,7 +7,8 @@ Script&debug is all about my daily experience and interaction with different lan
 
 - [Gdal commands](pages/gdal_commands.html)
 - [Common CLI Commands](pages/commands.html)
-- [Bitnami and muSQL](pages/containers/mysql_bitnami.html) 
+- [OziExplorerCE](pages/androzic/androzi.html)
+- [Bitnami and muSQL](pages/containers/mysql_bitnami.html)
 - [Simple site using github](pages/simplesite.html)
 - [About](pages/about.html)
 
