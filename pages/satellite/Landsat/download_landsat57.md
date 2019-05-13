@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Landsat Images download
-tagline: Landsat 5 7 8
-description: Landsat 5 7 8 downloads
+tagline: Python script for downloading Landsat 5 7
+description: Landsat 5 7 downloads
 ---
 *Last Updated: July 2017*
 
