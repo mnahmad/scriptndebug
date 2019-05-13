@@ -3,7 +3,7 @@ layout: page
 title: About
 description: About Pages
 ---
-Script&debug is all about my daily experience and interaction with different languages, libraries, frameworks and software. I work with python, php, Javascript, gdal, OpenLayers, Extjs, GeoExt, jQuery, Mapfish, Django, PostgreSQL, mySQL, QGIS, GeoServer, R etc.
+Script&debug is all about my daily experience and interaction with different languages, libraries, frameworks and software. I work with python, php, Javascript, gdal, OpenLayers, Extjs, GeoExt, jQuery, Mapfish, Django, PostgreSQL, mySQL, QGIS, GeoServer, R etc. 
 
 
 ## Note

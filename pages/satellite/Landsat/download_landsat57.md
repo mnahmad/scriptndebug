@@ -6,7 +6,7 @@ description: Landsat 5 7 8 downloads
 ---
 *Last Updated: July 2017*
 
-Around a year ago, I came across [landsat_util](https://pythonhosted.org/landsat-util/) that can be used to download Landsat 8 images. It can searches, process and download images form servers.
+Around a year ago, I came across [landsat_util](https://pythonhosted.org/landsat-util/) that can be used to download Landsat 8 images. It can searches, process and download images from servers.
 
 But what if one has to download Landsat 5/7 images. I googled for such a utility and found an answer on [StackExchange](http://gis.stackexchange.com/questions/124561/is-there-a-ftp-to-get-landsat-images). The utility is called "LANDSAT-Download" and its written in python. Although one does not need to know python to run this program but its good to know as you might have to look at this script (as in my case, I will explain it later).
 
@@ -105,6 +105,7 @@ I found out that the script has to have ground station IDs to download the image
 It worked for me, however, I faced some of the issues like
 
 1) Connection reset by server.
+
 2) Some images can be seen on EarthExplorer but download_lantsat cannot find these images.
 
 
