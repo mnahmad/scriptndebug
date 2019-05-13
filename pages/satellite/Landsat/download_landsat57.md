@@ -99,7 +99,10 @@ IFS=$OLDIFS
 
 ```
 
-I found out that the script has to have ground station IDs to download the image, actually the script uses station IDs to generate a URL request. Thus, I needed to know [Landsat 5 era](http://landsat.usgs.gov/about_landsat5.php) to see which stations were active during that era. I got [current ground stations](http://landsat.usgs.gov/about_ground_stations.php) but I need historic LS 5 era ground stations, thus, I needed info. which i found from [this](http://landsat.usgs.gov/Historical_IGS.php) document. I used the ground station IDs of Landsat 5 to modify the script (at 2 places) so that script can search for specific stations. It worked for me, however, I faced some of the issues like
+I found out that the script has to have ground station IDs to download the image, actually the script uses station IDs to generate a URL request. Thus, I needed to know [Landsat 5 era](http://landsat.usgs.gov/about_landsat5.php) to see which stations were active during that era. I got [current ground stations](http://landsat.usgs.gov/about_ground_stations.php) but I need historic LS 5 era ground stations, thus, I needed info. which i found from [this](http://landsat.usgs.gov/Historical_IGS.php) document. I used the ground station IDs of Landsat 5 to modify the script (at 2 places) so that script can search for specific stations. You can see my small modification to the script at [line430 ](https://github.com/mnahmad/LANDSAT-Download/blob/b7d4ddaad2bf2bd0a2c247025dab8780a6600523/download_landsat_scene.py#L430) and [line582](https://github.com/mnahmad/LANDSAT-Download/blob/b7d4ddaad2bf2bd0a2c247025dab8780a6600523/download_landsat_scene.py#L582).
+
+
+It worked for me, however, I faced some of the issues like
 
 1) Connection reset by server.
 2) Some images can be seen on EarthExplorer but download_lantsat cannot find these images.
