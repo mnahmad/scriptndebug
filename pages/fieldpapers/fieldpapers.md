@@ -7,7 +7,9 @@ description: Field Papers
 
 *Last Updated: 15/10/2016*
 
-Field papers is an excellent tool for spatial field surveys. All you have to do is
+Field papers is an excellent tool for spatial field surveys and participatory GIS.
+
+All you have to do is
 
 1. Sign Up on http://fieldpapers.org/
 2. Make an Atlas
