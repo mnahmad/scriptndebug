@@ -4,8 +4,8 @@ title: Script&Debug
 description: Script&debug is personal documentation.
 ---
 Script&debug is all about my daily experience and interaction with different languages, libraries, frameworks and software. I work with python, php, Javascript, gdal, OpenLayers, Extjs, GeoExt, jQuery, Mapfish, Django, PostgreSQL, mySQL, QGIS, GeoServer, R etc.
-
-- [How to generate random points in QGIS and export as GPX file](⁨/pages/⁩qgis/⁨random_points_gpx/generate_random_points.html)
+                                                              
+- [How to generate random points in QGIS and export as GPX file](⁨/pages/qgis/random_points_gpx/generate_random_points.html)
 - [Data Science, where to start (Part 1)](/pages/datascience/where-2-star.html)
 - [Gdal commands](pages/gdal_commands.html)
 - [Common CLI Commands](pages/commands.html)
