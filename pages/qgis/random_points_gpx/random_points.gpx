@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 2.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="-0.181603098164024" minlon="-0.441306758206061" maxlat="0.191475424280833" maxlon="0.068743437917400"/></metadata>                    
+<wpt lat="0.111089804348653" lon="0.0687434379174">
+  <name>Point-0</name>
+</wpt>
+<wpt lat="0.111507108443127" lon="-0.432319852797806">
+  <name>Point-1</name>
+</wpt>
+<wpt lat="0.131865101003692" lon="-0.083232635880844">
+  <name>Point-2</name>
+</wpt>
+<wpt lat="-0.181603098164024" lon="-0.028581148542886">
+  <name>Point-3</name>
+</wpt>
+<wpt lat="-0.069470133540433" lon="0.033320115022433">
+  <name>Point-4</name>
+</wpt>
+<wpt lat="0.035084691070118" lon="0.014403115678477">
+  <name>Point-5</name>
+</wpt>
+<wpt lat="-0.050607919166134" lon="-0.441306758206061">
+  <name>Point-6</name>
+</wpt>
+<wpt lat="0.018860777747381" lon="-0.403355224855407">
+  <name>Point-7</name>
+</wpt>
+<wpt lat="-0.040570776927704" lon="-0.396878436715396">
+  <name>Point-8</name>
+</wpt>
+<wpt lat="0.191475424280833" lon="-0.33805086683938">
+  <name>Point-9</name>
+</wpt>
+</gpx>
