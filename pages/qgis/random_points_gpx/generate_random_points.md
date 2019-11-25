@@ -4,7 +4,7 @@ title: How to generate random points in QGIS and export as GPX file
 description: QGIS Random points GPX
 ---
 
-<a href="https://twitter.com/intent/tweet?text=How%20to%20generate%20random%20points%20in%20QGIS%20and%20export%20as%20GPX%20file%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/T.png" height="25" width="25"></a>
+<a href="https://twitter.com/intent/tweet?text=How%20to%20generate%20random%20points%20in%20QGIS%20and%20export%20as%20GPX%20file%20https://mnahmad.github.io/scriptndebug/pages/qgis/random_points_gpx/generate_random_points.html%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/T.png" height="25" width="25"></a>
 
 *Last update: 02/11/2019*
 
