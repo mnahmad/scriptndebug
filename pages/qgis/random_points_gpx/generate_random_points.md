@@ -7,7 +7,7 @@ description: QGIS Random points GPX
 
 
 
-<a href="https://twitter.com/intent/tweet?text=How%20tow%20generatew%20randomw%20pointsw%20inw%20QGISw%20andw%20exportw%20asw%20GPXw%20file"><img src="https://mnahmad.github.io/scriptndebug/T.png"></a>
+<a href="https://twitter.com/intent/tweet?text=How%20tow%20generatew%20randomw%20pointsw%20inw%20QGISw%20andw%20exportw%20asw%20GPXw%20file"><img src="https://mnahmad.github.io/scriptndebug/T.png" height="25" width="25"></a>
 
 *Last update: 02/11/2019*
 
