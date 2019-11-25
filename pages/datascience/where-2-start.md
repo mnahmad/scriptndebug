@@ -6,20 +6,22 @@ description: Data science, where to start
 ---
 *Last Updated: 19/05/2019*
 
-I started programming back in 1997 while in school, my first language was foxpro, moved to C (in second semester) and ended up programming in Visual Basic (started from version 5). Over the years learned php, Javascript, python and R. Python turned out to be my favorite language due to its simplicity and it is part of my work (Django, data processing etc.). During data processing, I followed some tutorials and videos, thus, thought it would be good share my learning path with others.
+I started programming back in 1997 while in school, my first language was foxpro, moved to C (in second semester) and ended up programming in Visual Basic (started from version 5). Over the years I learned php, Javascript, python and R. Python turned out to be my favourite language due to huge number of libraries and it is part of my work (Django, data processing etc.). During data processing, I followed some tutorials and videos, thus, thought it would be good share my learning path with others.
 
-__Note__ This is a list of URL I following and not at all comprehensive list. All credit goes to the all the authors of these tutorials, posts and videos.
+__Note__ This is a list of URL I following and not at all comprehensive list. All credit goes to the authors of these tutorials, posts and videos.
 
 ### Which python to use
 You can use Official [Python](https://www.python.org/
-), however for data science [anaconda python](https://www.anaconda.com/distribution/) is recommend, it has all the data science packages thus you don't have to install pakcages like numpy, Scipy, pandas, metaplotlib etc.   
+), however for data science [anaconda python](https://www.anaconda.com/distribution/) is recommend, it has all the data science packages thus you don't have to install packages (at least not all of them) like numpy, Scipy, pandas, metaplotlib etc.   
 
 ### Integrated Development Environment (IDE)
 This is a well discussed question, there are many suggestions like [PyCharm](https://www.jetbrains.com/pycharm/), [Spider](https://www.spyder-ide.org/), [Atom](https://atom.io/) etc. However, for data science, [Jupyter](https://jupyter.org/) and Anaconda Python is highly recommend, you can read more about jupyter at [this link](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook?utm_source=adwords_ppc&utm_campaignid=1455363063&utm_adgroupid=65083631748&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=1t1&utm_creative=332602034364&utm_targetid=aud-299261629574:dsa-473406581035&utm_loc_interest_ms=&utm_loc_physical_ms=9076848&gclid=EAIaIQobChMI_LzB-MeQ4gIVCIXVCh1x1A-OEAAYASAAEgLETPD_BwE).
 
-For beginners, I also suggest [Google CoLab](https://colab.research.google.com/) (if internet accessibility is not an issue) as, in my opinion, it is the fastest way to start coding and CoLab provides Jupyter Notebook as IDE.
+For beginners, I also suggest [Google CoLab](https://colab.research.google.com/) (if internet accessibility is not an issue) as, in my opinion, it is the fastest way to start coding as Google CoLab provides Jupyter Notebook as IDE.
 
 You can read more abote IDEs at this [link](https://www.datacamp.com/community/tutorials/data-science-python-ide?utm_source=adwords_ppc&utm_campaignid=1455363063&utm_adgroupid=65083631748&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=1t1&utm_creative=278443377092&utm_targetid=aud-299261629574:dsa-473406587035&utm_loc_interest_ms=&utm_loc_physical_ms=9076848&gclid=EAIaIQobChMIkN-Oo-2l4gIVkUPTCh3h6gN7EAAYASAAEgJ99PD_BwE).
+
+Recently, I have moved to dockers and started using [continuumio anaconda docker image](https://hub.docker.com/r/continuumio/anaconda3/). If you are not familiar with docker I suggest you read more about it first. The continuumio anaconda docker image uses Debian Linux and anaconda python, thus, is perfect for data scientist. I will write an other blog in future about how I am using this image for my work.    
 
 ### Where to start
 The best tutorial website I found is [tutorials point](https://www.tutorialspoint.com/python/). I suggest any one learning python should start form this website.   
