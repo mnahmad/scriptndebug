@@ -3,6 +3,14 @@ layout: page
 title: Script&Debug
 description: Script&debug is personal documentation.
 ---
+
+![Platform](https://img.shields.io/badge/Language-bash-green.svg?longCache=true)
+![Platform](https://img.shields.io/badge/Language-Python-yellow.svg?longCache=true)
+![Platform](https://img.shields.io/badge/Django-orange.svg?longCache=true)
+![Platform](https://img.shields.io/badge/Database-MySQL-orange.svg?longCache=true)
+![Platform](https://img.shields.io/badge/Database-PostgreSQL-orange.svg?longCache=true)
+![Platform](https://img.shields.io/badge/Language-R-blue.svg?longCache=true)
+
 Script&debug is all about my daily experience and interaction with different languages, libraries, frameworks and software. I work with python, php, Javascript, gdal, OpenLayers, Extjs, GeoExt, jQuery, Mapfish, Django, PostgreSQL, mySQL, QGIS, GeoServer, R etc.
 
 - [Generate random points in QGIS and export as GPX](pages/qgis/random_points_gpx/generate_random_points.html)
