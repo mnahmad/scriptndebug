@@ -8,6 +8,7 @@ description: QGIS Random points GPX
 
 *Last update: 02/11/2019*
 
+Some time field survey require random field locations to remove bias from the data collection. QGIS can generate random points for a field survey  
 
 ### Area of Interest for generating random points.
 
