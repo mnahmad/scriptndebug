@@ -1,8 +1,17 @@
+![Platform](https://img.shields.io/badge/Software-QGIS3.8-green.svg?longCache=true)
+
+
 # How to install and use Earth Engine plugin in QGIS 3.
 
-
 ### Installation
-This part was not very obvious to me in the beginning
+Few days back I read about [Google Earth Engine (GEE) plugin for QGIS](https://gee-community.github.io/qgis-earthengine-plugin/). The installation was straight forward (by using the QGIS plugins menu option Manage and Install plugins). Now, I could see the GEE Plugins in QGIS Plugins menu (as shown below).  
+
+![Image](gee-plugin-qgis.png)
+
+Once installed, the plugin tried to authenticate my GEE account but when I provided the authorization key, I got an error that I am missing a library (I might have missed some thing).
+
+
+Later I found out that I do not have __earthengine-api__ install on my computer. This part was not obvious to me in the beginning and was not mentioned in the documentation. So I installed the earthengine-api library using the following commands.
 
 ```
 sudo pip3 install earthengine-api
@@ -14,14 +23,14 @@ for python 2
 sudo pip install earthengine-api
 ```
 
-
-Now an other step I found in the GEE python [documentation](https://developers.google.com/earth-engine/python_install-conda.html) was to get oauth2 key for your GEE account by using the following command in . Open terminal and run the following command.  
+Now an other step I found in the GEE python [documentation](https://developers.google.com/earth-engine/python_install-conda.html) was to get oauth2 key for your GEE account by using the following command (open a terminal and execute the command below).  
 
 ```
 earthengine authenticate
 ```
 
-the above command will show
+Note: The above command will open a web page in your default web browser and will ask you to authorize the newly installed GEE plugin to use your GEE credentials. Once you put your password, you will see the following output in the terminal (where you are executed the command __earthengine authenticate__)
+
 
 ```
 
@@ -38,40 +47,26 @@ Successfully saved authorization token.
 
 ```
 
-Now you can use the QGIS plugin
+Thats it, installation is complete and now you can use the GEE plugin in QGIS python console.
 
+### Usage
 
-The python code to load and search for images
+Now you can use the QGIS plugin.The python code to load and search for images.
+
 ```
 import ee
 from ee_plugin import Map
 
-Map.setCenter(83.34135,18.54646,20)
+Map.setCenter(36.8219,1.2921,20)   
 
 image = ee.ImageCollection("COPERNICUS/S2").filterBounds(Map.getCenter()).first()
 Map.addLayer(image,{'bands': 'B4,B3,B2', 'min':0, 'max':5000, 'gamma': 1.4},'RGBTrueColor');
 
 ```
 
-Image annual mosaic code
+Output
 
-```
-import ee
-from ee_plugin import Map
-
-Map.setCenter(83.34135,18.54646,20)
-
-s2 = ee.ImageCollection('COPERNICUS/S2').filterDate('2019-01-01', '2019-12-31')
+![Image](gee-python-code.png)
 
 
-blue    = s2.select('B2').reduce(ee.Reducer.median())
-green   = s2.select('B3').reduce(ee.Reducer.median())
-red     = s2.select('B4').reduce(ee.Reducer.median())
-
-rgb_stack = ee.Image(blue).addBands(green)
-rgb_stack = rgb_stack.addBands(red)
-
-Map.addLayer(rgb_stack,{'bands': 'B4_median,B3_median,B2_median', 'min':0, 'max':5000, 'gamma': 1.4},'RGBTrueColor_median')
-
-
-```
+Note, the above code is taken from [GEE plugin page](https://gee-community.github.io/qgis-earthengine-plugin/), except the coordinates for Nairobi.

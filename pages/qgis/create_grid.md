@@ -1,9 +1,8 @@
 
-
 # how to create grid
 
 
-Too used
+Too use
 
 Processing - tool box - Create Grid (which is in Vector creation )
 
