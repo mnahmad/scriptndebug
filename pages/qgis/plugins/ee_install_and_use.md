@@ -29,7 +29,7 @@ Now an other step I found in the GEE python [documentation](https://developers.g
 earthengine authenticate
 ```
 
-Note: The above command will open a web page in your default web browser and will ask you to authorize the newly installed GEE plugin to use your GEE credentials. Once you put your password, you will see the following output in the terminal (where you are executed the command __earthengine authenticate__)
+Note: The above command will open a web page in your default web browser and will ask you to authorize the newly installed GEE plugin to use your GEE credentials. Once you put your password, you will see the following output in the terminal (where you have executed the command __earthengine authenticate__)
 
 
 ```
