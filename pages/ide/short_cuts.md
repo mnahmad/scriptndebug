@@ -5,6 +5,8 @@ description: IDE shortcuts
 ---
 *Last update: 05/04/2020*
 
+I always struggle with remembering the IDE shortcut, thus, this blog/short documentation. 
+
 ### Atom
 
 - Tab:
