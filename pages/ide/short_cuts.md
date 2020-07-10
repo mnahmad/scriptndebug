@@ -5,7 +5,7 @@ description: IDE shortcuts
 ---
 *Last update: 05/04/2020*
 
-I always struggle with remembering the IDE shortcut, thus, this blog/short documentation.
+I always struggle with remembering the IDEs shortcuts, thus, this blog/short documentation.
 
 ### Atom
 
@@ -13,7 +13,7 @@ I always struggle with remembering the IDE shortcut, thus, this blog/short docum
 Add tab to code
 
 Left tab
-> Mc: cmd + ]
+> Mac: cmd + ]
 
 Right tab
 > Mac: cmd + [
@@ -30,7 +30,6 @@ Find space between 2 set of characters, first start search option (ctrl + f), th
 
 ```
 \b \b
-
 ```
 
 - Browser Plus:
@@ -44,6 +43,11 @@ Package __Project Manager__ is a nice tool to switch between projects quickly. O
 > Mac: cmd + p
 
 
+ - Markdown blockquote
+select text and press
+1. CMD + Shift + L
+2. Left arrow
+3. Shit + >  
 
 ### PyCharm
 
