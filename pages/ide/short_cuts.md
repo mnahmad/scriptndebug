@@ -31,6 +31,7 @@ Find space between 2 set of characters, first start search option (ctrl + f), th
 ```
 \b \b
 ```
+where \b is word boundary, read more about Atom regex in this nice [documentation](http://2017.compciv.org/guide/topics/end-user-software/atom/how-to-use-regex-atom.html) and also see this [blog](https://dev.to/programliftoff/learn-regular-expressions-using-atom-alk)
 
 - Browser Plus:
 Open webpage in __Browser Plus__ (you need to install package [Browser Plus](https://atom.io/packages/browser-plus)). Following is the shortcut to open an html page in Browser Plus.
