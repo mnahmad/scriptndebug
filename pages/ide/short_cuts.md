@@ -9,6 +9,11 @@ I always struggle with remembering the IDEs shortcuts, thus, this blog/short doc
 
 ### Atom
 
+- Command Pallet:
+For some packages, it is necessary to access command pallet, thus, use the following command
+
+> Shift + Cmd + P 
+
 - Tab:
 Add tab to code
 
