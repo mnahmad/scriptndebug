@@ -13,7 +13,7 @@ description: Script&debug is personal documentation.
 
 Script&debug is all about my daily experience and interaction with different languages, libraries, frameworks and software. I work with python, php, Javascript, gdal, OpenLayers, Extjs, GeoExt, jQuery, Mapfish, Django, PostgreSQL, mySQL, QGIS, GeoServer, R etc.
 
-
+- [Summery of Zonal, Focal, local and Global operations](pages/stats/spatial_statistics.html)
 - [Google Earth Engine plugin](pages/qgis/plugins/ee_install_and_use.html)
 - [Generate random points in QGIS and export as GPX](pages/qgis/random_points_gpx/generate_random_points.html)
 - [Gdal commands](pages/gdal_commands.html)
