@@ -3,6 +3,9 @@ layout: page
 title: Summery of Zonal, Focal, local and Global operations
 description: Zonal Focal local Global
 ---
+
+<a href="https://twitter.com/intent/tweet?text=Summery%20of%20Zonal,%20Focal,%20local%20and%20Global%20operations%20https://mnahmad.github.io/scriptndebug/pages/stats/spatial_statistics.html%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/T.png" height="25" width="25"></a>
+
 *Last update: 09/10/2020*
 
 Its always helpful to know some of the basic spatial statistical concepts while working with GIS datasets especially raster datasets. Following are some basic concepts
