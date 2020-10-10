@@ -4,7 +4,7 @@ title: Summery of Zonal, Focal, local and Global operations
 description: Zonal Focal local Global
 ---
 
-<a href="https://twitter.com/intent/tweet?text=Summery%20of%20Zonal,%20Focal,%20local%20and%20Global%20operations%20https://mnahmad.github.io/scriptndebug/pages/stats/spatial_statistics.html%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/T.png" height="25" width="25"></a>
+<a href="https://twitter.com/intent/tweet?text=Summery%20of%20Zonal,%20Focal,%20local%20and%20Global%20operations%20https://mnahmad.github.io/scriptndebug/pages/stats/spatial_statistics.html%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a>
 
 *Last update: 09/10/2020*
 
@@ -42,3 +42,7 @@ References:<br>
 [Map Algebra: Global, Zonal, Focal and Local Operations](https://gisgeography.com/map-algebra-global-zonal-focal-local/)
 
 *Note: Is post is a work in progress.*
+
+
+Icon references:<br>
+<a href="https://icon-library.net/icon/twiter-icon-15.html">Twiter Icon #268986</a>
