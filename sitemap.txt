@@ -1,3 +1,4 @@
+https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers-part2.html
 https://mnahmad.github.io/scriptndebug/pages/stats/spatial_statistics.html
 https://mnahmad.github.io/scriptndebug/pages/qgis/plugins/ee_install_and_use.html
 https://mnahmad.github.io/scriptndebug/pages/qgis/random_points_gpx/generate_random_points.html
