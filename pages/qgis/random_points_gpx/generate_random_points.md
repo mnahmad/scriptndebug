@@ -4,7 +4,7 @@ title: How to generate random points in QGIS and export as GPX file
 description: QGIS Random points GPX
 ---
 
-<a href="https://twitter.com/intent/tweet?text=How%20to%20generate%20random%20points%20in%20QGIS%20and%20export%20as%20GPX%20file%20https://mnahmad.github.io/scriptndebug/pages/qgis/random_points_gpx/generate_random_points.html%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/T.png" height="25" width="25"></a>
+<a href="https://twitter.com/intent/tweet?text=How%20to%20generate%20random%20points%20in%20QGIS%20and%20export%20as%20GPX%20file%20https://mnahmad.github.io/scriptndebug/pages/qgis/random_points_gpx/generate_random_points.html%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a>
 
 *Last update: 02/11/2019*
 
@@ -58,8 +58,13 @@ Finally, as your shape file is still in __Edit__ mode, delete the *id* field.
 
 Don't forget to switch off the __Edit__ mode of your shape file.
 
-Now finally, export this shape file (in my case temporary layer) as GPX file. Now, when I loaded my GPX file an android navigation app (LocusMap Free), not only I could see points but their names as well (as shown below).
+Now finally, export this shape file (in my case temporary layer) as GPX file. Now, when I loaded my GPX file in an android navigation app (LocusMap Free), not only I could see points but their names as well (as shown below).
 
 <img src="locusmap.png" width="300" height="500"/><br/>
 
 In an other blog, I will also show the process of loading GPX file to an android phone using a navigation app.  
+
+
+
+Icon references:<br>
+<a href="https://icon-library.net/icon/twiter-icon-15.html">Twiter Icon #268986</a>
