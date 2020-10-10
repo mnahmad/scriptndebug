@@ -1,0 +1,13 @@
+https://mnahmad.github.io/scriptndebug/pages/stats/spatial_statistics.html
+https://mnahmad.github.io/scriptndebug/pages/qgis/plugins/ee_install_and_use.html
+https://mnahmad.github.io/scriptndebug/pages/qgis/random_points_gpx/generate_random_points.html
+https://mnahmad.github.io/scriptndebug/pages/gdal_commands.html
+https://mnahmad.github.io/scriptndebug/pages/ide/short_cuts.html
+https://mnahmad.github.io/scriptndebug/pages/commands.html
+https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers.html
+https://mnahmad.github.io/scriptndebug/pages/satellite/band_combination.html
+https://mnahmad.github.io/scriptndebug/pages/satellite/Landsat/download_landsat57.html
+https://mnahmad.github.io/scriptndebug/pages/androzic/androzic.html
+https://mnahmad.github.io/scriptndebug/pages/containers/mysql_bitnami.html
+https://mnahmad.github.io/scriptndebug/pages/simplesite.html
+https://mnahmad.github.io/scriptndebug/pages/about.html
