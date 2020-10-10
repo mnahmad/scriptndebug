@@ -42,7 +42,9 @@ description: Field Papers
 
 +  Click iD and field paper website will take you to OSM web page. Login and you will see your scanned image as one of the layer on map. Now you can digitize your work directly in OSM.
 
-+ Click on download button and get a GeoTiff. Now use can any GIS(for example QGIS) software to (a) start a shape file (b) start digitizing, . [reference](http://gis.stackexchange.com/questions/192798/how-to-use-data-from-field-papers-to-qgis).   
++ Click on download button and get a GeoTiff. Now use can any GIS(for example QGIS) software to (a) start a shape file (b) start digitizing. 
+
+[reference](http://gis.stackexchange.com/questions/192798/how-to-use-data-from-field-papers-to-qgis).   
 
 
 Its pretty awesome :).

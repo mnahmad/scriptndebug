@@ -43,5 +43,9 @@ convert -density 150 atlas-2apfrt1t.pdf -quality 90 atlas-2apfrt1t.png
 7. Download geo tiff, open it in QGISs and start digitizing	  
 
 
+Note, you can also convert geo tif file to mbtiles for mobile use as well but that a topic for an other post. 
+
+Note, it is also good to read this LearnOSM [post](https://learnosm.org/en/mobile-mapping/field-papers/).
+
 Icon references:<br>
 <a href="https://icon-library.net/icon/twiter-icon-15.html">Twiter Icon #268986</a>
