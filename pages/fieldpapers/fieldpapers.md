@@ -5,7 +5,7 @@ tagline: Field papers
 description: Field Papers
 ---
 
-<a href="https://twitter.com/intent/tweet?text=<Field%20Papers>https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers.md%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a>
+<a href="https://twitter.com/intent/tweet?text=Field%20Papershttps://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers.md%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a>
 
 *Last Updated: 10/10/2020*
 
@@ -42,7 +42,7 @@ description: Field Papers
 
 +  Click iD and field paper website will take you to OSM web page. Login and you will see your scanned image as one of the layer on map. Now you can digitize your work directly in OSM.
 
-+ Click on download button and get a GeoTiff. Now use can any GIS(for example QGIS) software to (a) start a shape file (b) start digitizing. 
++ Click on download button and get a GeoTiff. Now use can any GIS(for example QGIS) software to (a) start a shape file (b) start digitizing.
 
 [reference](http://gis.stackexchange.com/questions/192798/how-to-use-data-from-field-papers-to-qgis).   
 
