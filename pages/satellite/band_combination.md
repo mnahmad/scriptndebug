@@ -30,6 +30,8 @@ Vegetation Analysis 6 5 4
 
 The above information is summarized from [ESA's discussion forum](http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7)
 
+Landsat scenes are categorised into 3 tiers [source](https://www.usgs.gov/media/videos/landsat-collections-what-are-tiers) i.e. raw real time data, tier 1 (where RMSE is less than 12 meters) and tier 2 (where RMSE is more than 2 meters). Also read more [here](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1_RT)
+
 
 ### Sentinel 2
 
