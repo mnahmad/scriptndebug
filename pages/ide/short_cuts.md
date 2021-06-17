@@ -7,12 +7,21 @@ description: IDE shortcuts
 
 I always struggle with remembering the IDEs shortcuts, thus, this blog/short documentation.
 
+
+### VS Code
+
+- Comment block of code
+
+> Mac: cmd + /
+
+and same to remove the comments form block
+
 ### Atom
 
 - Command Pallet:
 For some packages, it is necessary to access command pallet, thus, use the following command
 
-> Shift + Cmd + P 
+> Shift + Cmd + P
 
 - Tab:
 Add tab to code
