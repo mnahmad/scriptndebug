@@ -3,7 +3,7 @@ layout: page
 title: IDE shortcuts and Tips
 description: IDE shortcuts
 ---
-*Last update: 05/04/2020*
+*Last update: 17/06/2021*
 
 I always struggle with remembering the IDEs shortcuts, thus, this blog/short documentation.
 
