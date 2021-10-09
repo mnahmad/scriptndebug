@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Template for new blogs
+tagline: Template
 description: Template for new blogs
 ---
 
