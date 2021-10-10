@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Solve Pip error "No module named helpers" on mac
+title: Solve Pip error -No module named helpers- on mac
 tagline: pip error helpers
 description: Solve Pip error "No module named helpers" on mac
 ---
 
-<a href="https://twitter.com/intent/tweet?text=<Solve%20Pip%20 error%20"No%20module%20named%20helpers"%20on%20mac>https://mnahmad.github.io/scriptndebug/pages/python/pip-issue.md%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a>
+<a href="https://twitter.com/intent/tweet?text=solve%20Pip%20error%20-No%20module%20named%20helpers-%20on%20mac%20https://mnahmad.github.io/scriptndebug/pages/python/pip-issue.md%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a>
 
 *Last update: 10/10/2021*
 
@@ -50,7 +50,7 @@ pip install --upgrade pip
 
 ```
 
-When I tried to insatll packages again with pip, it worked. 
+When I tried to insatll packages again with pip, it worked.
 
 Icon references:<br>
 <a href="https://icon-library.net/icon/twiter-icon-15.html">Twiter Icon #268986</a>
