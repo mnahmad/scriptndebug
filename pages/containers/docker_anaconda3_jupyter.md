@@ -5,28 +5,35 @@ tagline: docker python anaconda3
 description: Using Continuumio Docker image for python anaconda3
 ---
 
-<a href="https://twitter.com/intent/tweet?text=<title with %20 for each space>%20https://mnahmad.github.io/scriptndebug/pages/<url-post>%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a>
+<a href="https://twitter.com/intent/tweet?text=Using%20Continuumio%20Docker%20image%20for%20python%20anaconda3%20https://mnahmad.github.io/scriptndebug/pages/containers/docker_anaconda3_jupyter.md%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a>
 
-*Last update: --/--/----*
+*Last update: 01/06/2019*
 
-#
+Few months back I decided to try python anaconda for some of my data science tasks but wanted to isntall in a VM (so my other python pasths are not disturbed). On of the best solution was to use anaconda docker image that not only have anaconda but jupyter notebookas well so
+- Every thing comes preinstalled
+- I can access IDE as a web service (this is where jupyter comes in)
 
+I started looking for images and came accross [ContinuumIO](https://github.com/ContinuumIO/docker-images/tree/master/anaconda3) image. It has every thing I needs this I downlaoded it and following is the usage story.
 
-[https://github.com/ContinuumIO/docker-images/tree/master/anaconda3](https://github.com/ContinuumIO/docker-images/tree/master/anaconda3)
+Note, at the time I was using this image, I was new to docker thus you will see lots of basic stuff and explanation.  
 
+Lets start the container
 
 ```
 docker run -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
 ```
 
 
-How to know which image is running
+Now that container is running, lets see which other containers are running
 
 ```
 docker ps
 ```
 
-If you want CLI access to docker
+One can also use `docker ps -a` to see which images were executed in the past.
+
+
+If you want CLI access to docker container (specific one), use the following commands.
 
 ```
 docker exec -it docker_id /bin/bash
@@ -41,42 +48,31 @@ docker exec -it docker_id /bin/bash
 
 the docker_ID will come form the ps command
 
-Now your note book is installed at /opt/notebooks and all your notebooks are inside that folder. But when you will shut docker container, the notebook will be deleted. To save your code, you can download your code as notebook by going to File- Download as - Notebook. This way your code will be downloaded onto your computer and when you start the container next time just load the downloaded notebook.
+With the above `docer run command` jupyter notebook is installed (every time you this command the jupyter notebook will be installed) and a folder is created at /opt/notebooks, thus, all your notebooks will be stored inside this folder.
 
-the other way is to load a host folder as volume
+I felt it was a good idea to safe all my notebooks outside the container thus, I used a `-v` for volumne option. So now when I will starte the container, all my notebooks (and changes) will be saved in a folder outside the container.
 
 ```
 docker run -v /host/directory:/container/directory -other -options image_name command_to_run
 ```
-this way if you save your code, while in docker container, it will be save on local drive.
 
 like
 
 ```
-docker run -v /Users/AMuhammad/Downloads/mynotebooks:/opt/notebooks/mynotebooks -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
-
-
-OR
-
-docker run -v /Users/AMuhammad/mynotebooks:/opt/notebooks/mynotebooks -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
-
+docker run -v /Users/<my-user>/mynotebooks:/opt/notebooks/mynotebooks -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
 
 ```
 
 It is much better option to load your code, work on it and then save it (and it will be saved on host).
 
+
+Once done, docker cotainer can be stoped by using the following command.
 ```
 docker stop docker_container_id
 ```
 
-
-work with iris data https://towardsdatascience.com/knn-using-scikit-learn-c6bed765be75
-
-
-
-
 ## Installations inside container
-From time to time, I test different libraries inside this container. This second covers the installation steps, issues and their solution and basic working of libraries.
+From time to time, I test different libraries inside this container. This section covers the installation steps, issues and their solution and basic working of libraries.
 
 ### pandas profiling
 
@@ -89,6 +85,9 @@ Installation and activation:
 
 
 
-Note,
+Note:
 1. special thanks to [Nicole Janeway Bills](https://medium.com/@nicolejaneway) for her [blog](https://towardsdatascience.com/10-underrated-python-skills-dfdff5741fdf).
 2. Read more details at this [link](https://pandas-profiling.github.io/pandas-profiling/docs/master/rtd/pages/introduction.html)
+
+
+In futuer, I will try to use the container to play around with iris data available at [this](https://towardsdatascience.com/knn-using-scikit-learn-c6bed765be75) link.
