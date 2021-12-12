@@ -13,9 +13,10 @@ description: Script&debug is personal documentation.
 
 Script&debug is all about my daily experience and interaction with different languages, libraries, frameworks and software. I work with python, php, Javascript, gdal, OpenLayers, Extjs, GeoExt, jQuery, Mapfish, Django, PostgreSQL, mySQL, QGIS, GeoServer, R etc.
 
-- [Using Continuumio Docker image for python anaconda3](pages/containers/docker_anaconda3_jupyter.md)
-- [Solve Pip error "No module named helpers" on mac](pages/python/pip-issue.md)
-- [Django app using M2M relationship models](pages/Django/m2m.md)
+- [Using Continuumio Docker image for python anaconda3](pages/containers/docker_anaconda3_jupyter.html)
+
+- [Solve Pip error "No module named helpers" on mac](pages/python/pip-issue.html)
+- [Django app using M2M relationship models](pages/Django/m2m.html)
 - [Field Papers part 2](pages/fieldpapers/fieldpapers-part2.html)
 - [Summery of Zonal, Focal, local and Global operations](pages/stats/spatial_statistics.html)
 - [Google Earth Engine plugin](pages/qgis/plugins/ee_install_and_use.html)
