@@ -23,6 +23,40 @@ Lets start the container
 docker run -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
 ```
 
+some details about the above command
+
+
+--entrypoint entry point tells docker which executable to run when the container starts, when used with -c it means the container will run the next command(s) like `/bin/bash -c "/opt/conda/bin/conda install jupyter && "` where && is pipe to add more commands
+
+Note, good to add quotation but not needed like `docker run -it --entrypoint  /bin/bash  scioquiver/notebooks -c ls -l`. One can move the image name to before `/bin/bash` as well `docker run -it scioquiver/notebooks  /bin/bash -c ls -l`
+
+
+-e set environment variable like `-e "abc=xyz"` or
+
+```
+export today=Wednesday
+docker run -e "deep=purple" -e today --rm alpine env
+```
+
+
+__Now__, to explain docker run command, I took an example from one of the docker images I work on. The continuumio/anaconda3 is a data science notebook I use for some of my data processing etc., following is command to start it
+
+```
+docker run -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
+
+```  
+
+Following is break down of the above command
+
+| command/option/ | explanation   |
+| :------------- | :------------- |
+| docker run    | command to run the image|
+|  -i           | the session will be interactive |
+| -t            | tty          |
+| -p 8888:8888  | map host port to container port |
+| continuumio/anaconda3 | image name |
+| /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"   |  -c tells the container to (a) use the bash as cli tool, (B) use conda command as first command from /opt/conda/bin/conda and install jypyter notebook software, (c) create a folder in /opt/notebaook and finally (d) run command jupyter notebook from /opt/conda/bin/. While starting notebook , set the default folder for all notebooks to be /opt/notebooks , listen on all IPs, port for jupyter is 8888 , do not opne web browser and allow root user to access it.  
+
 
 Now that container is running, lets see which other containers are running
 
