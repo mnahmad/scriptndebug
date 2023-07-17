@@ -15,14 +15,14 @@ description: Field Papers
 <meta property="og:url" content="https://mnahmad.github.io/" />
 <meta property="og:title" content="Field Papers" />
 <meta property="og:description" content="Field papers is an excellent tool for spatial field surveys and participatory GIS." />
-<meta property="og:image" content="https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fp.png" />
+<meta property="og:image" content="https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fp.png?raw=true" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://mnahmad.github.io/" />
 <meta property="twitter:title" content="Field Papers" />
 <meta property="twitter:description" content="Field papers is an excellent tool for spatial field surveys and participatory GIS." />
-<meta property="twitter:image" content="https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fp.png" />
+<meta property="twitter:image" content="https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fp.png?raw=true" />
 
 <!-- Meta Tags Generated with https://metatags.io -->
 
