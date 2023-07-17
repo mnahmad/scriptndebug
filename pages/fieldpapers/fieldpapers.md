@@ -4,6 +4,16 @@ title: Field Papers
 tagline: Field papers
 description: Field Papers
 
+
+og_type: website
+og_url: https://mnahmad.github.io/
+og_title: Field Papers
+og_description: Field papers is an excellent tool for spatial field surveys and participatory GIS.
+og_image: https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fp.png?raw=true
+
+---
+
+
 <!-- Primary Meta Tags -->
 <title>Field Papers</title>
 <meta name="title" content="Field Papers" />
@@ -24,10 +34,6 @@ description: Field Papers
 <meta property="twitter:image" content="https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fp.png?raw=true" />
 
 <!-- Meta Tags Generated with https://metatags.io -->
----
-
-
-
 
 
 <a href="https://twitter.com/intent/tweet?text=Field%20Papers%20https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers.md%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a>
