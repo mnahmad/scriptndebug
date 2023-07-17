@@ -2,6 +2,12 @@
 layout: page
 title: Script&Debug
 description: Script&debug is personal documentation.
+
+og_type: website
+og_url: https://mnahmad.github.io/scriptndebug/
+og_title: Field Papers
+og_description: Field papers is an excellent tool for spatial field surveys and participatory GIS.
+og_image: https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fp.png?raw=true
 ---
 
 ![Platform](https://img.shields.io/badge/Language-bash-green.svg?longCache=true)
