@@ -6,7 +6,7 @@ description: Field Papers
 
 
 og_type: website
-og_url: https://mnahmad.github.io/scriptndebug/
+og_url: https://mnahmad.github.io/scriptndebug/pages/fieldpapers/
 og_title: Field Papers
 og_description: Field papers is an excellent tool for spatial field surveys and participatory GIS.
 og_image: https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fp.png?raw=true
