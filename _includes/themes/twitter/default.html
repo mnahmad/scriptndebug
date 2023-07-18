@@ -16,6 +16,14 @@
     {% if page.og_description %}<meta property="og:description"  content="{{ page.og_description }}">{% endif %}
     {% if page.og_image" %}<meta property="og:image"  content="{{ page.og_image }}">{% endif %}
 
+    <!-- Twitter --> <!-- You can have different summary for Twitter! -->
+    {% if page.twitter_card %}<meta property="twitter:card" content="{{ page.twitter_card }}">{% endif %}
+    {% if page.twitter_url %}<meta property="twitter:url" content="{{ page.twitter_url }}">{% endif %}
+    {% if page.twitter_title %}<meta property="twitter:title" content="{{ page.twitter_title }}">{% endif %}
+    {% if page.twitter_description %}<meta property="twitter:description" content="{{ page.twitter_description }}">{% endif %}
+    {% if page.twitter_image %}<meta property="twitter:image" content="{{ twitter_image }}">{% endif %}
+
+
     <!-- Meta Tags Generated with https://metatags.io -->
 
     <!-- Enable responsive viewport -->
