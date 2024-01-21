@@ -16,6 +16,8 @@ I always struggle with remembering the IDEs shortcuts, thus, this blog/short doc
 
 and same to remove the comments form block
 
+- Select multiple instances of same word 
+	shift + cmd + L
 ### Atom
 
 - Command Pallet:
