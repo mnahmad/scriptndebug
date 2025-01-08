@@ -167,7 +167,7 @@ Now I could see the signup page
 
 http://localhost:81/core/
 
-![image_1](image_1.png)
+![image\_1](image_1.png)
 
 But now wanted to see the admin page to make sure if I add user they go into a database. When I visited admin/ module got error that table is not in db.
 

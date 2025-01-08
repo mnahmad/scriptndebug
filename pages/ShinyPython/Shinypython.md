@@ -26,7 +26,7 @@ All set, next I created a new python file using VSCode option file -> new file -
 
 I copied the code from tutorial and ran by pressing the arrow button, it worked , see below 
 
-![shiny_test1|900](Pasted%20image%2020240920120953.png)
+![shiny\_test1|900](Pasted%20image%2020240920120953.png)
 
 
 Since I wanted to use plotly, thus, had to install shinywidgets, I copied following command from [this](https://shiny.posit.co/py/docs/jupyter-widgets.html) page to 
