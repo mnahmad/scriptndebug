@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Continuumio_docker_image/index.html",
       "/posts/bitnami/index.html",
-      "/posts/welcome/index.html",
-      "/posts/Continuumio_docker_image/index.html"
+      "/posts/welcome/index.html"
     ]
   }
 ]
