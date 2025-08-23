@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Muhammad N. Ahmad">
+<meta name="author" content="Muhammad N Ahmad">
+<meta name="dcterms.date" content="2016-07-09">
 
-<title>Welcome To My Blog – ScriptNdebug</title>
+<title>Using Continuumio Docker image for python anaconda3 – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,9 +120,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog</h1>
+      <h1 class="title">Using Continuumio Docker image for python anaconda3</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">post</div>
+                <div class="quarto-category">containers</div>
               </div>
                   </div>
   </div>
@@ -132,23 +134,17 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Muhammad N. Ahmad </p>
+               <p>Muhammad N Ahmad </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">Invalid Date</p>
+        <p class="date">July 9, 2016</p>
       </div>
     </div>
     
-      <div>
-      <div class="quarto-title-meta-heading">Modified</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date-modified">August 20, 2025</p>
-      </div>
-    </div>
       
     </div>
     
@@ -164,13 +160,99 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
-<p>Off and on, I blog about some personal projects and other tasks I do. I was looking for simple way to document my work, so I can refer back to it and if possible help others as well.</p>
-<p>I started a blog site back in 2014 using <a href="https://scriptndebug.wordpress.com/">wordpress</a>. Since I was not hosting the wordpress website, thus, had couple of difficulties like maintenance was always an issue. I wanted a simple solution where I don’t have to compile like Jekyll etc.</p>
-<p>I moved to a simple <a href="https://kbroman.org/simple_site/pages/independent_site.html">solution</a> by <a href="https://kbroman.org">karl Broman</a>, it was amazing but over a period of time, I realized it is was too simple. Don’t get it wrong, it works but the UI etc. might require some work to imrpove thus I started looking for an other solution.</p>
-<p>Few years back, I came across quarto and I think it will be enough for a blogging site (at least for now), it is simple and can easily be used with git pages. Yes, the site has to be build, but it is a small step I am willing to take toget a better looking blog.</p>
+<p>Few months back I decided to try python anaconda for some of my data science tasks but wanted to isntall in a VM (so my other python pasths are not disturbed). On of the best solution was to use anaconda docker image that not only have anaconda but jupyter notebookas well so - Every thing comes preinstalled - I can access IDE as a web service (this is where jupyter comes in)</p>
+<p>I started looking for images and came accross <a href="https://github.com/ContinuumIO/docker-images/tree/master/anaconda3">ContinuumIO</a> image. It has every thing I needs this I downlaoded it and following is the usage story.</p>
+<p>Note, at the time I was using this image, I was new to docker thus you will see lots of basic stuff and explanation.</p>
+<p>Lets start the container</p>
+<pre><code>docker run -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet &amp;&amp; mkdir /opt/notebooks &amp;&amp; /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"</code></pre>
+<p>some details about the above command</p>
+<p>–entrypoint entry point tells docker which executable to run when the container starts, when used with -c it means the container will run the next command(s) like <code>/bin/bash -c "/opt/conda/bin/conda install jupyter &amp;&amp; "</code> where &amp;&amp; is pipe to add more commands</p>
+<p>Note, good to add quotation but not needed like <code>docker run -it --entrypoint  /bin/bash  scioquiver/notebooks -c ls -l</code>. One can move the image name to before <code>/bin/bash</code> as well <code>docker run -it scioquiver/notebooks  /bin/bash -c ls -l</code></p>
+<p>-e set environment variable like <code>-e "abc=xyz"</code> or</p>
+<pre><code>export today=Wednesday
+docker run -e "deep=purple" -e today --rm alpine env</code></pre>
+<p><strong>Now</strong>, to explain docker run command, I took an example from one of the docker images I work on. The continuumio/anaconda3 is a data science notebook I use for some of my data processing etc., following is command to start it</p>
+<pre><code>docker run -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet &amp;&amp; mkdir /opt/notebooks &amp;&amp; /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
+</code></pre>
+<p>Following is break down of the above command</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">command/option/</th>
+<th style="text-align: left;">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">docker run</td>
+<td style="text-align: left;">command to run the image</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">-i</td>
+<td style="text-align: left;">the session will be interactive</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">-t</td>
+<td style="text-align: left;">tty</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">-p 8888:8888</td>
+<td style="text-align: left;">map host port to container port</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">continuumio/anaconda3</td>
+<td style="text-align: left;">image name</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/bin/bash -c “/opt/conda/bin/conda install jupyter -y –quiet &amp;&amp; mkdir /opt/notebooks &amp;&amp; /opt/conda/bin/jupyter notebook –notebook-dir=/opt/notebooks –ip=’*’ –port=8888 –no-browser –allow-root”</td>
+<td style="text-align: left;">-c tells the container to (a) use the bash as cli tool, (B) use conda command as first command from /opt/conda/bin/conda and install jypyter notebook software, (c) create a folder in /opt/notebaook and finally (d) run command jupyter notebook from /opt/conda/bin/. While starting notebook , set the default folder for all notebooks to be /opt/notebooks , listen on all IPs, port for jupyter is 8888 , do not opne web browser and allow root user to access it.</td>
+</tr>
+</tbody>
+</table>
+<p>Now that container is running, lets see which other containers are running</p>
+<pre><code>docker ps</code></pre>
+<p>One can also use <code>docker ps -a</code> to see which images were executed in the past.</p>
+<p>If you want CLI access to docker container (specific one), use the following commands.</p>
+<pre><code>docker exec -it docker_id /bin/bash
 
 
+-i --interactive: Take user to container CLI
+-t -- tty
+
+-d detach: run in detach mode
+</code></pre>
+<p>the docker_ID will come form the ps command</p>
+<p>With the above <code>docer run command</code> jupyter notebook is installed (every time you this command the jupyter notebook will be installed) and a folder is created at /opt/notebooks, thus, all your notebooks will be stored inside this folder.</p>
+<p>I felt it was a good idea to safe all my notebooks outside the container thus, I used a <code>-v</code> for volumne option. So now when I will starte the container, all my notebooks (and changes) will be saved in a folder outside the container.</p>
+<pre><code>docker run -v /host/directory:/container/directory -other -options image_name command_to_run</code></pre>
+<p>like</p>
+<pre><code>docker run -v /Users/&lt;my-user&gt;/mynotebooks:/opt/notebooks/mynotebooks -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet &amp;&amp; /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
+</code></pre>
+<p>It is much better option to load your code, work on it and then save it (and it will be saved on host).</p>
+<p>Once done, docker cotainer can be stoped by using the following command.</p>
+<pre><code>docker stop docker_container_id</code></pre>
+<section id="installations-inside-container" class="level2">
+<h2 class="anchored" data-anchor-id="installations-inside-container">Installations inside container</h2>
+<p>From time to time, I test different libraries inside this container. This section covers the installation steps, issues and their solution and basic working of libraries.</p>
+<section id="pandas-profiling" class="level3">
+<h3 class="anchored" data-anchor-id="pandas-profiling">pandas profiling</h3>
+<p>Installation and activation:</p>
+<ol type="1">
+<li><code>docker ps</code> to get container id</li>
+<li><code>docker exec -it docker_id /bin/bash</code> to start shell session</li>
+<li><code>pip install -U pandas-profiling[notebook]</code> code taken from <a href="https://pandas-profiling.github.io/pandas-profiling/docs/master/rtd/pages/introduction.html">official blog</a></li>
+<li><code>jupyter nbextension enable --py widgetsnbextension</code> code taken from <a href="https://pandas-profiling.github.io/pandas-profiling/docs/master/rtd/pages/introduction.html">official blog</a></li>
+</ol>
+<p>Note: 1. special thanks to <a href="https://medium.com/@nicolejaneway">Nicole Janeway Bills</a> for her <a href="https://towardsdatascience.com/10-underrated-python-skills-dfdff5741fdf">blog</a>. 2. Read more details at this <a href="https://pandas-profiling.github.io/pandas-profiling/docs/master/rtd/pages/introduction.html">link</a></p>
+<p>In future, I will try to use the container to play around with iris data available at <a href="https://towardsdatascience.com/knn-using-scikit-learn-c6bed765be75">this</a> link.</p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

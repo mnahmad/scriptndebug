@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
-<meta name="dcterms.date" content="2025-08-23">
+<meta name="author" content="Muhammad N Ahmad">
+<meta name="dcterms.date" content="2016-05-09">
 
-<title>Post With Code – ScriptNdebug</title>
+<title>Using Continuumio Docker image for python anaconda3 – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,11 +120,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post With Code</h1>
+      <h1 class="title">Using Continuumio Docker image for python anaconda3</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">post</div>
+                <div class="quarto-category">containers</div>
               </div>
                   </div>
   </div>
@@ -135,14 +134,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>Muhammad N Ahmad </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 23, 2025</p>
+        <p class="date">May 9, 2016</p>
       </div>
     </div>
     
@@ -161,9 +160,67 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is a post with executable code.</p>
+<p>There was a time, I used bitname stack, specically for mysql, it was nice and easy, however, now I usually use docker, thus, the post below is old and included here only for my documentation.</p>
+<section id="install" class="level4">
+<h4 class="anchored" data-anchor-id="install">Install</h4>
+<p>Usually the bitnami containers are installed under /opt/. For mysql, you will see the folder my sql in container for example the path below</p>
+<blockquote class="blockquote">
+<p>/opt/mysql/lampstack-5.4.13-1/mysql/</p>
+</blockquote>
+</section>
+<section id="start-and-stop-container" class="level4">
+<h4 class="anchored" data-anchor-id="start-and-stop-container">Start and stop container</h4>
+<p>Use the script at the root of container</p>
+<pre><code>./ctlscript.sh start</code></pre>
+<p>for status</p>
+<pre><code>./ctlscript.sh status</code></pre>
+</section>
+<section id="logs" class="level4">
+<h4 class="anchored" data-anchor-id="logs">Logs</h4>
+<p>Logs are available at</p>
+<blockquote class="blockquote">
+<p>/opt/mysql/lampstack-5.4.13-1/mysql/data$ vi mysqld.log</p>
+</blockquote>
+</section>
+<section id="issues-starting-mysql" class="level4">
+<h4 class="anchored" data-anchor-id="issues-starting-mysql">Issues starting mysql</h4>
+<p>If you see the following on the command line (happened to me twice),</p>
+<blockquote class="blockquote">
+<p>Warning: World-writable config file ‘/opt/mysql/lampstack-5.4.13-1/mysql/my.cnf’ is ignored Warning: World-writable config file ‘/opt/mysql/lampstack-5.4.13-1/mysql/my.cnf’ is ignored 161115 09:30:24 mysqld_safe Logging to &gt;‘/opt/mysql/lampstack-5.4.13-1/mysql/data/mysqld.log’. 161115 09:30:24 mysqld_safe Starting mysqld daemon with databases from &gt;/opt/mysql/lampstack-5.4.13-1/mysql/data 161115 09:30:26 mysqld_safe mysqld from pid file &gt;/opt/mysql/lampstack-5.4.13-1/mysql/data/mysqld.pid ende</p>
+</blockquote>
+<p>and the log file will look like this</p>
+<blockquote class="blockquote">
+<p>155 InnoDB: Restoring possible half-written data pages from the doublewrite 156 InnoDB: buffer… 157 161115 9:30:24 InnoDB: Waiting for the background threads to start 158 161115 9:30:25 InnoDB: 1.1.8 started; log sequence number 669048462 159 161115 9:30:25 [ERROR] /opt/mysql/lampstack-5.4.13-1/mysql/bin/mysqld.bin: unknown &gt;variable ‘defaults-file=/opt/mys ql/lampstack-5.4.13-1/mysql/my.cnf’ 160 161115 9:30:25 [ERROR] Aborting 161 162 161115 9:30:25 InnoDB: Starting shutdown… 163 161115 9:30:26 InnoDB: Shutdown completed; log sequence number 669048462 164 161115 9:30:26 [Note] /opt/mysql/lampstack-5.4.13-1/mysql/bin/mysqld.bin: Shutdown &gt;complete 165 166 161115 09:30:26 mysqld_safe mysqld from pid file &gt;/opt/mysql/lampstack-5.4.13-1/mysql/data/mysqld.pid ended</p>
+</blockquote>
+<p>It means that the file /opt/mysql/lampstack5.4/mysql/bin/mysqld has a line which is causing issues. See below</p>
+<pre><code>  1 #!/bin/sh
+  2 LD_LIBRARY_PATH=/opt/mysql/lampstack-5.4.13-1/mysql/lib:$LD_LIBRARY_PATH
+  3 export LD_LIBRARY_PATH
+  4 case "$@" in
+  5   *--no-defaults*)
+  6     exec $0.bin "$@"
+  7     exit
+  8 esac
+  9 exec $0.bin --defaults-file=/opt/mysql/lampstack-5.4.13-1/mysql/my.cnf "$@"
+
+</code></pre>
+<p>see the last line , just make it look like this</p>
+<pre><code>exec $0.bin "$@"
+ 13 #--defaults-file=/opt/redmine/redmine-2.6.1-0/mysql/my.cnf "$@"
+</code></pre>
+<p>Start stack again by using the following command</p>
+<pre><code>./ctl
+</code></pre>
+</section>
+<section id="phpmyadmin" class="level4">
+<h4 class="anchored" data-anchor-id="phpmyadmin">phpmyadmin</h4>
+<p>In bitnami stack, phpmyadmin is at</p>
+<p>/opt/mysql/lampstack-5.4.13-1/apps/phpmyadmin/</p>
+<p>and its ini is at</p>
+<p>/opt/mysql/lampstack-5.4.13-1/apps/phpmyadmin/htdocs/config.inc.php</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
