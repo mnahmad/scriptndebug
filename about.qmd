@@ -6,13 +6,14 @@ about:
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com
+      href: https://x.com/mnabiahmad
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/muhammad-nabi-ahmad-2459a85
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/mnahmad
+
 
 ---
 
