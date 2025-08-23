@@ -37,21 +37,21 @@
   {
     "objectID": "old_blog/pages/Django/migrations.html",
     "href": "old_blog/pages/Django/migrations.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "https://b0uh.github.io/django-model-change-field-name-with-no-db-impact.html\nmakemigrations  is only needed when migration folder specific to app and inside the app folder is empty, thus, a new migration document needs to be initaed.\nhttps://stackoverflow.com/questions/36153748/django-makemigrations-no-changes-detected\nmakemigrations -v 3 for verbosity"
   },
   {
     "objectID": "old_blog/pages/Django/migrations.html#special-case",
     "href": "old_blog/pages/Django/migrations.html#special-case",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "Special case",
     "text": "Special case\nModel name was old and has changed but migration added the RenameModel somewhere below the Update field, thus, error.\nthe error was\nKeyError: ('respi', 'microcatchment_establishment')\nold migration definition\nrespi_microcatchment;\n                                               Table \"public.respi_microcatchment\"\n           Column           |           Type           | Collation | Nullable |                     Default\n----------------------------+--------------------------+-----------+----------+--------------------------------------------------\n id                         | integer                  |           | not null | nextval('respi_microcatchment_id_seq'::regclass)\n recorded_dte               | timestamp with time zone |           | not null |\n microcatchment_type        | character varying(50)    |           | not null |\n total_microcatchments      | integer                  |           | not null |\n established_date           | date                     |           | not null |\n length                     | double precision         |           | not null |\n width                      | double precision         |           | not null |\n depth                      | double precision         |           | not null |\n vertical_spacing           | double precision         |           | not null |\n horizontal_spacing         | double precision         |           | not null |\n reseeded                   | boolean                  |           | not null |\n quantity_seeds_sown        | integer                  |           |          |\n sow_unit                   | character varying(10)    |           |          |\n seed_sources               | character varying(255)   |           | not null |\n local_seed_bank_name       | character varying(50)    |           |          |\n other_seed_sources         | character varying(100)   |           |          |\n who_manages_microcatchment | character varying(255)   |           | not null |\n other_managements_gender   | character varying(100)   |           |          |\n management_practices       | character varying(255)   |           | not null |\n other_managements          | character varying(100)   |           |          |\n usages                     | character varying(255)   |           | not null |\n other_usages               | character varying(100)   |           |          |\n rangleland_entry_id        | integer                  |           | not null |\nIndexes:\n    \"respi_microcatchment_pkey\" PRIMARY KEY, btree (id)\n    \"respi_microcatchment_rangleland_entry_id_2fd812d1\" btree (rangleland_entry_id)\nForeign-key constraints:\n    \"respi_microcatchment_rangleland_entry_id_2fd812d1_fk_respi_ran\" FOREIGN KEY (rangleland_entry_id) REFERENCES respi_rangeland_entry(id) DEFERRABLE INITIALLY DEFERRED\nReferenced by:\n    TABLE \"respi_individual_mirocatchment\" CONSTRAINT \"respi_individual_mir_microcatchment_id_0db1c6d6_fk_respi_mic\" FOREIGN KEY (microcatchment_id) REFERENCES respi_microcatchment(id) DEFERRABLE INITIALLY DEFERRED\nfield in migratoin which is refereing to new model name.\nmigrations.RenameField(\n            model_name='microcatchment_establishment',\n            old_name='other_managements_gender',\n            new_name='other_who_manages',\n        ),\nsolution , add a line in the same migration file but above the lines where migration is renaming fields.\noperations = [  \n    migrations.RenameModel('OldModelName', 'NewModelName'),  \n    ]\n\nor \n\n        migrations.RenameModel(\n            old_name='microcatchment',\n            new_name='microcatchment_establishment',\n        ),\nmigrations.RenameModel("
   },
   {
     "objectID": "old_blog/pages/ShinyPython/Shinypython.html",
     "href": "old_blog/pages/ShinyPython/Shinypython.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "Following this tutorial for Shiny python app development.\nWhen I ran pip install shiny, i got the following error\nInstalling collected packages: appdirs, uvicorn, uc-micro-py, python-multipart, prompt-toolkit, mdurl, htmltools, asgiref, watchfiles, starlette, questionary, markdown-it-py, linkify-it-py, mdit-py-plugins, shiny\n  Attempting uninstall: prompt-toolkit\n    Found existing installation: prompt-toolkit 3.0.42\n    Uninstalling prompt-toolkit-3.0.42:\n      Successfully uninstalled prompt-toolkit-3.0.42\nERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\nipython 8.24.0 requires prompt-toolkit&lt;3.1.0,&gt;=3.0.41, but you have prompt-toolkit 3.0.36 which is incompatible.\nSuccessfully installed appdirs-1.4.4 asgiref-3.8.1 htmltools-0.5.3 linkify-it-py-2.0.3 markdown-it-py-3.0.0 mdit-py-plugins-0.4.2 mdurl-0.1.2 prompt-toolkit-3.0.36 python-multipart-0.0.9 questionary-2.0.1 shiny-1.1.0 starlette-0.38.5 uc-micro-py-1.0.3 uvicorn-0.30.6 watchfiles-0.24.0\nProbably I will update prompt-toolkit from 3.0.36 to 3.0.41\nNext, i rand pip install --upgrade shiny htmltools\nThe tutorial suggests installing python VSCode extension that I already had and Shiny that I installed.\nAll set, next I created a new python file using VSCode option file -&gt; new file -&gt; python file.\nI copied the code from tutorial and ran by pressing the arrow button, it worked , see below\n\n\n\nshiny_test1|900\n\n\nSince I wanted to use plotly, thus, had to install shinywidgets, I copied following command from this page to\npip install shinywidgets"
   },
@@ -79,7 +79,7 @@
   {
     "objectID": "old_blog/pages/android/locusMap/download_offline_maps.html",
     "href": "old_blog/pages/android/locusMap/download_offline_maps.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "layout: page title: How to download Offline maps for LocusMap Free description: Offline maps, LocusMpa Free\n\n\n\nLast update: 13/10/2019\nLocusMap Free is an excellent android app for navigation. Not only it is free but also allows users to\n\nDownload offline maps for navigation\nAdd Point of Interest (POI)\nLoad already generated POIs.\n\nI will talk about point 1 in this blog and will cover 2 and 3 in future blogs. There are couple of ways you can download offline maps in LocusMap Free](https://play.google.com/store/apps/details?id=menion.android.locus&hl=en), so lets look at some of them.\n\nUsing cache to download maps\n(actually map tiles)\n\n\nOffline maps provided by LocusMap\nNote You need to register with LocusMap server to use this option.\n\n\nDownload offline OSM map\n\nClick on menu and goto “Maps”\nSelect “On-line” option\nSelect “OSM-Other” option , the list will expand with more options, we are interested in “OpenTopoMap”.\nClick the submenu (the tree vertical dots) for “OpenTopoMap” and select “Download”\nNow you need to select an area to download, you can download a country level map (will take alot of time), select area (best option), or this screen (also the best option)\nLet’s select “This screen”, this will bring one tiled map (based on your screen bounding box(Bbox)).\nNow select select “Select area” option to download maps of selected area."
   },
@@ -93,7 +93,7 @@
   {
     "objectID": "old_blog/pages/qgis/QGIS Raster Calculator.html",
     "href": "old_blog/pages/qgis/QGIS Raster Calculator.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "QGIS Raster Calc\nExtract one class from multi class raster \n(layer = value ) * layer \nExample \nIn a raster pixel value 1 is forest\n(raster = 1) *  raster \nWill give you raster with 1 as forest and zero has nonforest. \nRescale raster from old values to new values\n((“MCE_sample_only _roads@1“  &gt; 0 ) AND (”MCE_sample_only _roads@1” &lt;= 40 )) * 0.2 + ((“MCE_sample_only _roads@1“  &gt; 40 ) AND (”MCE_sample_only _roads@1” &lt;= 80 )) * 0.4 +\n((“MCE_sample_only _roads@1“  &gt; 80 ) AND (”MCE_sample_only _roads@1” &lt;= 120 )) * 0.6 +\n((“MCE_sample_only _roads@1“  &gt; 120 ) AND (”MCE_sample_only _roads@1” &lt;= 160 )) * 0.8 +\n((“MCE_sample_only _roads@1“  &gt; 160 ) AND (”MCE_sample_only _roads@1” &lt;= 210 )) * 1\nref: https://gis.stackexchange.com/questions/17712/how-to-perform-raster-reclassification-in-qgis"
   },
@@ -128,14 +128,14 @@
   {
     "objectID": "old_blog/pages/databases/Postgres (transections).html",
     "href": "old_blog/pages/databases/Postgres (transections).html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "begin;\n\n\nstatements; \n\ncommit;\n\nor \nrollback;"
   },
   {
     "objectID": "old_blog/pages/databases/Postgres (transections).html#savepoints",
     "href": "old_blog/pages/databases/Postgres (transections).html#savepoints",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "Savepoints",
     "text": "Savepoints\n\nrollback till the save point,\ngood if there are multiple batches of related transections, thus, if a batch have issues, one can roll back to the post batch save point.\nsaves a lot of time otherwise everything has to be rollbacked, aka complete rollback.\n\nsavepoint name;\nread committed isolation level where select can only see commited changes."
   },
@@ -163,7 +163,7 @@
   {
     "objectID": "old_blog/License.html",
     "href": "old_blog/License.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "To the extent possible under law, Karl Broman has waived all copyright and related or neighboring rights to “simple site”. This work is published from the United States."
   },
@@ -193,7 +193,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "Script&debug is all about my daily experience and interaction with different languages, libraries, frameworks and software. I work with python, php, Javascript, gdal, OpenLayers, Extjs, GeoExt, jQuery, Mapfish, Django, PostgreSQL, mySQL, QGIS, GeoServer, R etc."
+  },
+  {
+    "objectID": "about.html#note",
+    "href": "about.html#note",
+    "title": "About",
+    "section": "Note",
+    "text": "Note\nAll contents provided on this [Script & Debug] blog are for informational purposes only. The owner of this blog makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site.\nThe owner of [Script & Debug] will not be liable for any errors or omissions in this information nor for the availability of this information. The owner will not be liable for any losses, injuries, or damages from the display or use of this information. This terms and conditions is subject to change at anytime with or without notice."
   },
   {
     "objectID": "old_blog/ReadMe.html",
@@ -205,7 +212,7 @@
   {
     "objectID": "old_blog/pages/ide/atom/regex.html",
     "href": "old_blog/pages/ide/atom/regex.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "layout: page title: Regex in Atom description: Regex in Atom\n\n\n\nLast update: 29/10/2019\nfind space between 2 set of characters\n\\b \\b"
   },
@@ -219,7 +226,7 @@
   {
     "objectID": "old_blog/pages/databases/Postgres REST API.html",
     "href": "old_blog/pages/databases/Postgres REST API.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "PostgREST: Dead Simple APIs in Pure Postgres"
   },
@@ -240,7 +247,7 @@
   {
     "objectID": "old_blog/pages/qgis/plugins/my_most_used_plugins.html",
     "href": "old_blog/pages/qgis/plugins/my_most_used_plugins.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "Point Sampling tool\nTo extract data from raster and add it to a shape file. Read more about it here\n\n\nZonal Statistics plugin"
   },
@@ -261,7 +268,7 @@
   {
     "objectID": "old_blog/pages/android/locusMap/add_gpx.html",
     "href": "old_blog/pages/android/locusMap/add_gpx.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "layout: page title: How to import GPX points to LocusMap Free description: GPX LocusMap\n\n\n\nLast update: 27/10/2019 As you might have read in the previous blog, I like using LocusMap Free as it provides an opportunity to download free offline maps. When ever I am traveling I download these offline maps the route or destination. As mentioned in previous blog, LocusMap Free](https://play.google.com/store/apps/details?id=menion.android.locus&hl=en) allows users to create or load Point of Interest (POIs) and navigate to these POIs.\n\nAdd Point of Interest (POIs).\nWhy to add point when you don’t have map of location\nHow to import random survey points into LocusMap.\n\nDownload the .gpx pints into your phone.\nLoad Locus maps\nClick menu\nSelect Points\nPress the (+) blue button\nAdd a new folder (always add folder)\nName it according to the survey name\nCome back to the menu, select Points option and once inside Point screen press (+) button again.\nSelect option import (Add points from outside of locus)\nselect your .gpx file, you need to know where is it on your mobile.\nSelect the newly created folder (first option on the top)\npress import.\nList all points based on distance to ur current location\n\nFinally, click on 1 point and navigate to the point using guide on or compass."
   },
@@ -303,14 +310,14 @@
   {
     "objectID": "old_blog/pages/random/Disaster preparedness and Open Source GIS.html",
     "href": "old_blog/pages/random/Disaster preparedness and Open Source GIS.html",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "",
     "text": "I came across a nice short talk about the use to offline GIS in disaster preparedness title “Standalone GIS and Civil Defence Events” link here, the presentation does not go into the details of “how to” but more of “what can be done” among many options. However, a key aspect being discussed is the absence of communication network (or reliable network). Indeed reliable comm. network is a big issue especially when such networks are dependent on grid based electricity (I am not talking about solar powered networks).\nWhat the folks at the - Collecting information - Digitization of paper based information. Here, field papers can help a lot as it build for such scenerios and a varient can also help auto digitize the data. - managing tasks using Trello like project management tool (tasks like map this area etc. and progress )\nAs excellent as the above sounds, a good plan without rehercils or prep exercies might not work unless enough drills are done like in case of disaster - Higher level rolls are defined so people know what they need to do within the next few hours to few days. - Where to get the information and in which form. - Where to report and in which form."
   },
   {
     "objectID": "old_blog/pages/random/Disaster preparedness and Open Source GIS.html#blog-ideas",
     "href": "old_blog/pages/random/Disaster preparedness and Open Source GIS.html#blog-ideas",
-    "title": "scriptndebug",
+    "title": "ScriptNdebug",
     "section": "blog ideas",
     "text": "blog ideas\nDisaster preparedness and Open Source GIS, starting from data collection in low speed communication network or damaged communication network, how to collect data, transfer it and make it available to stakeholders in the forms of Decision support dashboards. A well thought (and tested) plan needs to be developed that can address aspects like what to collect, how to collect and transfer/report and which from to report in. Finally how the critical data be disseminated to stakeholders for quick and correct decision making based on evidence bing generated from crowed sourced data.\n\n“Building a Disaster Preparedness Plan: A Step-by-Step Guide”\n“Collecting Data in Low-Speed Communication Networks: Best Practices and Tools”\n“Data Transfer in Disaster Situations: Ensuring Accessibility and Reliability”\n“Creating Decision Support Dashboards for Effective Stakeholder Engagement”\n“Crowdsourcing Data for Disaster Preparedness: Strategies and Benefits”\n“Key Data Points to Collect in Disaster Situations: A Comprehensive Checklist”\n“Disaster Preparedness and Open Source GIS: Bridging the Gap”\n“Utilizing Open Source GIS for Real-Time Decision Making in Disaster Scenarios”\n“Ensuring Quick and Accurate Decision Making with Crowdsourced Data”\n“Disseminating Critical Data to Stakeholders: Best Practices and Tools”\n“Harnessing the Power of Open Source GIS in Disaster Preparedness”\n“Data Collection and Transfer in Damaged Communication Networks: Overcoming Challenges”\n“From Data Collection to Decision Making: Streamlining the Process in Disaster Situations”\n“Engaging Stakeholders through Decision Support Dashboards: A Case Study”\n“The Role of Open Source GIS in Evidence-Based Decision Making for Disaster Preparedness”\n\n\nIdea 13\nTitle: From Data Collection to Decision Making: Streamlining the Process of Monitoring restoration project Site: Medium and GRIT blog\n\n\nidea 2\nCollecting Data in Low-Speed Communication Networks\nData collection in low-speed communication networks is a critical aspect of many applications, such as IoT (Internet of Things) systems, remote monitoring, environmental sensing, and telemetry. These networks often operate in conditions where bandwidth, reliability, and speed are limited, necessitating specific techniques and strategies to optimize data transmission, reduce energy consumption, and ensure data integrity.\nHere are the key challenges and strategies for collecting data in such networks:\n\n\nChallenges in Low-Speed Communication Networks\n\nLimited Bandwidth: Low-speed networks often have restricted bandwidth, which limits the amount of data that can be transmitted in a given time period. This makes it difficult to send large amounts of data quickly.\nHigh Latency: Communication delays are common in low-speed networks, which impacts the timeliness of data collection and transmission. This is particularly critical in real-time monitoring systems.\nEnergy Constraints: Many low-speed communication networks operate on battery-powered devices or energy harvesting systems. The need to conserve energy limits the frequency of communication and the amount of data sent.\nPacket Loss and Errors: Low-speed networks are prone to higher packet loss and transmission errors, especially in wireless networks that experience interference or congestion. This increases the need for error detection and retransmission mechanisms.\nScalability: Low-speed networks often involve a large number of distributed nodes (e.g., IoT devices) sending small amounts of data. Scaling the data collection process while ensuring the reliability and accuracy of the data can be difficult.\nData Aggregation: Collecting data from multiple sources (e.g., sensors) and sending it to a central location can be challenging due to the limited data rate and the potential for collisions or congestion in the network.\n\n\n\n\nStrategies for Efficient Data Collection\nTo overcome these challenges, several strategies are employed in low-speed communication networks:\n\nData Compression:\n\nCompression algorithms reduce the size of the data before transmission, which helps to make the most of the available bandwidth. This is particularly useful when sending sensor readings or telemetry data that might be redundant or have repetitive patterns.\nLossy compression techniques, such as JPEG for images or MP3 for audio, might be used in some cases where some data loss is acceptable in exchange for bandwidth savings.\n\nData Aggregation:\n\nLocal Aggregation: In many sensor networks, data from multiple nodes can be aggregated locally before transmission. This reduces the total number of packets sent, which lowers energy consumption and alleviates congestion in the network.\nCluster-based Aggregation: Data from multiple devices can be collected by local cluster heads that aggregate and process the data before sending it to a central server. This reduces communication overhead and improves scalability.\n\nAdaptive Transmission:\n\nData Rate Adaptation: In many systems, the transmission rate can be adjusted dynamically based on the network conditions. For example, if congestion or interference is detected, the transmission rate can be reduced to minimize packet loss and avoid network overload.\nDuty Cycling: Devices can operate in low-power modes for most of the time and only transmit data periodically, thus conserving energy. This is particularly useful in battery-powered networks.\n\nError Detection and Correction:\n\nForward Error Correction (FEC): Redundant information is added to the transmitted data so that errors can be detected and corrected without needing retransmission. This is useful in reducing the need for retransmissions due to packet loss.\nAutomatic Repeat Request (ARQ): In case of errors or packet loss, data packets are retransmitted. This ensures that data integrity is maintained even in low-speed networks.\n\nEvent-Driven Data Collection:\n\nInstead of transmitting data continuously, devices can be set to send data only when certain predefined events or thresholds are triggered. This reduces the number of transmissions, conserves energy, and avoids unnecessary data transfer, which is beneficial in low-speed networks.\nFor example, in environmental sensing networks, data may only be transmitted when the temperature exceeds a certain threshold.\n\nData Fusion and Sensor Fusion:\n\nData Fusion: Data from multiple sensors or nodes can be combined in a way that reduces redundancy and improves the quality of the collected data. This can involve techniques like averaging, filtering, or machine learning algorithms to extract meaningful information from noisy or incomplete data.\nSensor Fusion: In scenarios with multiple types of sensors (e.g., temperature, humidity, motion), sensor fusion techniques combine readings from different sensors to create a more accurate or comprehensive understanding of the environment.\n\nOptimized Network Protocols:\n\nLow-speed networks often benefit from optimized protocols designed for constrained environments. Protocols such as Low Power Wide Area Networks (LPWAN) (e.g., LoRaWAN, Sigfox) and Bluetooth Low Energy (BLE) are specifically tailored for low-speed, low-power communication.\nTime-Slotted Protocols: These protocols divide the time into slots, and each node is assigned a specific time window for transmitting data. This reduces collision chances and helps with synchronization, especially in highly distributed networks.\n\nEdge Computing:\n\nBy processing data at the edge of the network (i.e., on local devices or gateways), only relevant or aggregated data needs to be transmitted to the central server, reducing the overall amount of data being sent. Edge computing can also perform real-time analytics, reducing the need for constant communication.\n\nLow-Power Communication Standards:\n\nNB-IoT (Narrowband IoT), LoRa (Long Range), and Zigbee are communication technologies designed to support low-speed, low-power communication in wide-area networks. These standards optimize energy efficiency while maintaining relatively low bandwidth and transmission rates.\n\nTime Synchronization:\n\nTime synchronization across distributed nodes is crucial for maintaining coherent data collection and ensuring that timestamps are accurate. Low-speed networks may use lightweight protocols like Network Time Protocol (NTP) or Precision Time Protocol (PTP) to synchronize devices.\n\n\n\n\n\nApplications of Low-Speed Communication Networks for Data Collection\n\nIoT (Internet of Things):\n\nIoT devices often operate in environments with limited bandwidth, such as remote locations, smart homes, agriculture, and industrial IoT. Techniques like data aggregation and compression help make data collection more efficient in these environments.\n\nEnvironmental Monitoring:\n\nLow-speed networks are used for monitoring environmental parameters (e.g., temperature, air quality, soil moisture) in remote or hard-to-reach areas. These systems typically involve battery-powered sensors that transmit data at low rates.\n\nSmart Cities:\n\nIn smart city applications, data is collected from a variety of sensors (e.g., traffic sensors, waste management, water quality monitoring). Efficient data collection in low-speed networks ensures the system remains scalable and energy-efficient.\n\nHealthcare:\n\nWearable health devices often operate in low-speed networks, collecting and transmitting vital health data (e.g., heart rate, blood pressure). Techniques like adaptive transmission and duty cycling are essential in such systems to conserve battery life.\n\nAgriculture:\n\nSmart farming relies on low-speed communication networks to collect data from soil sensors, weather stations, and livestock monitoring systems. Data aggregation and event-driven collection are commonly used in this domain to optimize resource use.\n\nSmart Metering:\n\nSmart meters that measure electricity, gas, or water consumption often transmit data at low speeds. The use of low-power communication technologies and data aggregation helps reduce communication overhead in these systems.\n\n\n\n\n\nConclusion\nCollecting data in low-speed communication networks requires careful consideration of bandwidth limitations, energy constraints, and data integrity. By employing techniques such as data compression, aggregation, adaptive transmission, and efficient network protocols, it is possible to optimize data collection processes. These strategies not only improve the efficiency and scalability of the network but also extend the operational life of battery-powered devices and ensure the reliability of data in challenging network conditions."
   },
