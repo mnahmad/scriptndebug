@@ -1,0 +1,16 @@
+---
+title: "Welcome To My Blog"
+author: "Muhammad N. Ahmad"
+date: "2025-08-20"
+categories: [post]
+---
+
+![](thumbnail.jpg)
+
+Off and on, I blog about some personal projects and other tasks I do. I was looking for simple way to document my work, so I can refer back to it and if possible help others as well.
+
+I started a blog site back in 2014 using [wordpress](https://scriptndebug.wordpress.com/). Since I was not hosting the wordpress website, thus, had couple of difficulties like maintenance was always an issue. I wanted a simple solution where I don't have to compile like Jekyll etc.
+
+I moved to a simple [solution](https://kbroman.org/simple_site/pages/independent_site.html)  by [karl Broman](https://kbroman.org), it was amazing but over a period of time, I realized it is was too simple. Don't get it wrong, it works but the UI etc. might require some work to imrpove thus I started looking for an other solution. 
+
+Few years back, I came across quarto and I think it will be enough for a blogging site (at least for now), it is simple and can easily be used with git pages. Yes, the site has to be build, but it is a small step I am willing to take toget a better looking blog. 
