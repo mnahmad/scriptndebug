@@ -4,14 +4,17 @@ project:
 
 
 website:
-  title: "scriptndebug"
+  title: "ScriptNdebug"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/mnahmad
       - icon: twitter
-        href: https://twitter.com
+        href: https://x.com/mnabiahmad
+      - icon: Linkedin
+        href: https://www.linkedin.com/in/muhammad-nabi-ahmad-2459a85
+
 format:
   html:
     theme: cosmo
