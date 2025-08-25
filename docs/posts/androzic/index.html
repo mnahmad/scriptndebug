@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Muhammad N Ahmad">
+<meta name="dcterms.date" content="2016-07-20">
 
-<title>scriptndebug – ScriptNdebug</title>
+<title>OziExplore – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +68,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">ScriptNdebug</span>
     </a>
   </div>
@@ -149,7 +91,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -177,185 +119,125 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">scriptndebug</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">OziExplore</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">post</div>
+                <div class="quarto-category">containers</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Muhammad N Ahmad </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 20, 2016</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="containers">containers <span class="quarto-category-count">(3)</span></div><div class="category" data-category="post">post <span class="quarto-category-count">(4)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>OziExplorer is a software that can create way points, paths from shape files for mobile devices. OziExplorer is a licensed software, thus, the mobile versions are also licenses for example OziExplorer for Android or OziExplorerCE (for windowsCE devices llike Trimble Juno 3B).</p>
+<section id="installation" class="level3">
+<h3 class="anchored" data-anchor-id="installation">Installation</h3>
+<section id="desktop" class="level5">
+<h5 class="anchored" data-anchor-id="desktop">Desktop</h5>
+</section>
+<section id="device" class="level5">
+<h5 class="anchored" data-anchor-id="device">Device</h5>
+<p>Usually, the mobile devices used for OziExploreCE has WindowsCE operating system. For such devices, windows mobile device centre is required on the desktop computer. If not installed, go to following link and install it.</p>
+<p><strong>Windows 7</strong></p>
+<p><a href="http://www.microsoft.com/windowsmobile/en-us/downloads/microsoft/device-center-download.mspx">Windows 7</a></p>
+<p><strong>Windowx XP</strong></p>
+<p>One extra step is required for XP that is to install Active Synx 4.5</p>
+<p>Now the device center is installed, let look at the OziExplorer installation steps</p>
+<ol type="1">
+<li>Go to OziExplorer website <a href="http://www.oziexplorer.com/">link</a>. See the website below</li>
+</ol>
+<p>Image: <img src="website.png" class="img-fluid" alt="Alt"></p>
+<ol start="2" type="1">
+<li>Click OziExplorereCE (pointed by red arrow)</li>
+</ol>
+<p>Image: <img src="ce_downloads.png" class="img-fluid" alt="Alt"></p>
+<ol start="3" type="1">
+<li>Select the option “Windows Mobile and Pocket PC”, shown below</li>
+</ol>
+<p>Image: <img src="ce_downloads3.png" class="img-fluid" alt="Alt"></p>
+<p>Note: this will download an executable file (with extension exe).</p>
+<ol start="4" type="1">
+<li><p>Now connect device with computer. It will take couple of minutes to synchronize the device with computer.</p></li>
+<li><p>Once Synchronized, double click on the executable file (the one which was downloaded in step 3). The installation should start.</p></li>
+<li><p>Finally, once the installation is done, provide license information. Start OziExplorerCE software on the device and wait for few second, a window will appear for Name of the person who owns the license and the license code.</p></li>
+</ol>
+</section>
+</section>
+<section id="how-to-load-points-and-export-as-waypoint" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-load-points-and-export-as-waypoint">How to load points and Export as waypoint</h3>
+<ol type="1">
+<li>Load shape file of points into Ozi desktop software.</li>
+</ol>
+<p>Note: better to prepare one column for labels as only one column will be exported to waypoint file. Thus, its better to prepare one column for the purpose of waypoint labeling. Also note that waypoint label has a limit of 8 characters , thus, it has to be short.</p>
+<ol start="2" type="1">
+<li><p>For exporting loaded (in step 1) points to waypoint file, Open menu “file” then select “save to file” then select “save points to file (set 1 only )”” then select “save points to waypoint file” option</p></li>
+<li><p>Manually, copy the waypoint file in ../OziExplorer/data/ folder on device.</p></li>
+<li><p>Start OziExplorer and goto “file - waypoint - waypoit list from file” to load waypoints into OziExplore software.</p></li>
+<li><p>Now you can select the option “goto nearest waypoint” to see the direction and distance of the nearest waypoint.</p></li>
+</ol>
+</section>
+<section id="track-oziexplorerce" class="level3">
+<h3 class="anchored" data-anchor-id="track-oziexplorerce">Track oziExplorerCE</h3>
+<p>Follow the steps below to make route/track on OziExploreCE</p>
+<ol type="1">
+<li>Start OziExplorerCE</li>
+<li>Goto Menu</li>
+<li>Select File</li>
+<li>Select Track log</li>
+<li>select Log Track to File</li>
+</ol>
+<p>Note: Log track to File option is toggle thus make sure it has a tick on left side</p>
+<p>After making route, export file as txt file by using the option</p>
+<p>OziExplorerCE -&gt; Menu -&gt; File -&gt; Track log -&gt; Track log -&gt; File-Export Track Tail to File.</p>
+<p>Also read the [configuration(http://www.oziexplorer3.com/ozice/help/ozice_d_working_tracks.html) file.</p>
+</section>
+<section id="how-to-download-data-from-oziexplorer" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-download-data-from-oziexplorer">How to download data from OZiExplorer</h2>
+<p>Export data Most of the time we only care about shape files, so here is how you can export data.</p>
+<ol type="1">
+<li>First load the data on to OziExplorer desktop software by using the option</li>
+</ol>
+<p>Menu File -&gt; load from file – (1) Load waypoints from file (2) Load tracks from file (mulit)</p>
+<p>Now Goto device data folder where you path/waypoints are and load.</p>
+<p>OR</p>
+<p>You can just open device-data folder and copy paste the files in a folder on your PC and load from there using the same option (Menu -&gt; File-load from file)</p>
+<p>Another option is to export the waypoints or tracks to a .txt file using the options on the Save Menu. Open the file in a text editor, you may be able to manipulate the data in a text editor to the format you require for the other software.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="post,containers" data-listing-date-sort="1468962000000" data-listing-file-modified-sort="1756138004830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
-<div class="thumbnail">
-<p><a href="./posts/androzic/index.html" class="no-external"></a></p><a href="./posts/androzic/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/androzic/bitnami_logo.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/androzic/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/androzic/index.html" class="no-external">OziExplore</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/androzic/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('containers'); return false;">
-containers
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/androzic/index.html" class="no-external">OziExplorer is a software that can create way points, paths from shape files for mobile devices. OziExplorer is a licensed software, thus, the mobile versions are also…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/androzic/index.html" class="no-external">
-<div class="listing-date">
-Jul 20, 2016
-</div>
-<div class="listing-author">
-Muhammad N Ahmad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="post,containers" data-listing-date-sort="1468011600000" data-listing-file-modified-sort="1755975446749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
-<div class="thumbnail">
-<p><a href="./posts/Continuumio_docker_image/index.html" class="no-external"></a></p><a href="./posts/Continuumio_docker_image/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/Continuumio_docker_image/docker-logo-svgrepo-com.svg" class="thumbnail-image"></p>
-</a><p><a href="./posts/Continuumio_docker_image/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external">Using Continuumio Docker image for python anaconda3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('containers'); return false;">
-containers
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external">Few months back I decided to try python anaconda for some of my data science tasks but wanted to isntall in a VM (so my other python pasths are not disturbed). On of the…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external">
-<div class="listing-date">
-Jul 9, 2016
-</div>
-<div class="listing-author">
-Muhammad N Ahmad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="post,containers" data-listing-date-sort="1462741200000" data-listing-file-modified-sort="1755975162672" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="312">
-<div class="thumbnail">
-<p><a href="./posts/bitnami/index.html" class="no-external"></a></p><a href="./posts/bitnami/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/bitnami/bitnami_logo.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/bitnami/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/bitnami/index.html" class="no-external">Using Continuumio Docker image for python anaconda3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/bitnami/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('containers'); return false;">
-containers
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/bitnami/index.html" class="no-external">There was a time, I used bitname stack, specically for mysql, it was nice and easy, however, now I usually use docker, thus, the post below is old and included here only for…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/bitnami/index.html" class="no-external">
-<div class="listing-date">
-May 9, 2016
-</div>
-<div class="listing-author">
-Muhammad N Ahmad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="post" data-listing-date-sort="1388523600000" data-listing-file-modified-sort="1755984508187" data-listing-date-modified-sort="1755637200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">Off and on, I blog about some personal projects and other tasks I do. I was looking for simple way to document my work, so I can refer back to it and if possible help others…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2014
-</div>
-<div class="listing-author">
-Muhammad N. Ahmad
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
