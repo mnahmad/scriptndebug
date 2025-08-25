@@ -3,7 +3,7 @@ title: "OziExplore"
 author: "Muhammad N Ahmad"
 date: "2016-07-20"
 categories: [post, containers]
-image: "bitnami_logo.png"
+image: "website.png"
 ---
 
 OziExplorer is a software that can create way points, paths from shape files for mobile devices. OziExplorer is a licensed software, thus, the mobile versions are also licenses for example OziExplorer for Android or OziExplorerCE (for windowsCE devices llike Trimble Juno 3B).
