@@ -2,7 +2,7 @@
 title: "OziExplore"
 author: "Muhammad N Ahmad"
 date: "2016-07-20"
-categories: [post, containers]
+categories: [post]
 image: "website.png"
 ---
 

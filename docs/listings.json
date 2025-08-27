@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/landsat57_downloader/index.html",
       "/posts/androzic/index.html",
       "/posts/Continuumio_docker_image/index.html",
       "/posts/bitnami/index.html",

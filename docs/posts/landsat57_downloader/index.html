@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Muhammad N Ahmad">
+<meta name="dcterms.date" content="2017-07-01">
 
-<title>scriptndebug – ScriptNdebug</title>
+<title>Landsat Images download – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +102,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">ScriptNdebug</span>
     </a>
   </div>
@@ -149,7 +125,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -177,215 +153,122 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">scriptndebug</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Landsat Images download</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">post</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Muhammad N Ahmad </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 1, 2017</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="containers">containers <span class="quarto-category-count">(2)</span></div><div class="category" data-category="post">post <span class="quarto-category-count">(5)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>Around a year ago, I came across <a href="https://pythonhosted.org/landsat-util/">landsat_util</a> that can be used to download Landsat 8 images. It can searches, process and download images from servers.</p>
+<p>But what if one has to download Landsat 5/7 images. I googled for such a utility and found an answer on <a href="http://gis.stackexchange.com/questions/124561/is-there-a-ftp-to-get-landsat-images">StackExchange</a>. The utility is called “LANDSAT-Download” and its written in python. Although one does not need to know python to run this program but its good to know as you might have to look at this script (as in my case, I will explain it later).</p>
+<section id="installation" class="level3">
+<h3 class="anchored" data-anchor-id="installation">Installation</h3>
+<p>The code for LANDSAT-Download is available at <a href="https://github.com/olivierhagolle/LANDSAT-Download">LANDSAT-Download</a> git repository. Download the code (fork if you want to enhance this code).</p>
+<p>Make sure you have python 2.7 installed on your computer</p>
+</section>
+<section id="usage" class="level3">
+<h3 class="anchored" data-anchor-id="usage">Usage</h3>
+<p>Usage is very simple, for Example, I wanted to see what options script can support, thus, used the following command</p>
+<pre><code>python download_landsat_scene.py -h</code></pre>
+<p>or</p>
+<pre><code>./download_landsat_scene.py -h</code></pre>
+<p>The script requires USGS EarthExplorer authentication this you have to register with USGS. Once you get login and password, save them in the file usgs.txt.</p>
+<p>Password file should be like</p>
+<pre><code>username password</code></pre>
+<p>For example</p>
+<pre><code>Tom Harrison
+</code></pre>
+<p>Note: No spaces or tabs at the end of the file.</p>
+<p>Check README.md for documentation as it explains usage with different options.</p>
+<p>In my case, I had to download Landsat 5 scenes from around 150 locations for specific years (2010-2011). I created a csv file with ID and PathRow (see below)</p>
+<pre><code>ID , PR
+1  , 168060
+2  , 169060
+3  , 170060
+4  , 171060</code></pre>
+<p>I wrote a bash script to read this CSV and loop through each PathRow (PR) shown below.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">clear</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="va">INPUT</span><span class="op">=</span>landsat_pathrow.csv</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="va">OLDIFS</span><span class="op">=</span><span class="va">$IFS</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="va">IFS</span><span class="op">=</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="ot">-f</span> <span class="va">$INPUT</span> <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="kw">{</span> <span class="bu">echo</span> <span class="st">"</span><span class="va">$INPUT</span><span class="st"> file not found"</span><span class="kw">;</span> <span class="bu">exit</span> 99<span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span>  landsat-Download-master_v3</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="va">counter</span><span class="op">=</span>0</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="bu">read</span> <span class="va">ID</span> <span class="va">PR</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="va">$PR</span> <span class="st">"#"</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">#make new folder with the name of PR</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="va">new_folder</span><span class="op">=</span><span class="st">"/home/user/landsat/LS5/"</span><span class="va">$PR</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># save messages in a file for later review</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="va">output</span><span class="op">=</span><span class="st">"/home/user/landsat/LS5/"</span><span class="va">$PR</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="va">$new_folder</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># some how mkdir without full path was not working</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="ex">/bin/mkdir</span> <span class="at">-p</span> <span class="va">$new_folder</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># output will go to a log file called results.txt</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="ex">./download_landsat_scene.py</span> <span class="at">-o</span> scene <span class="at">-b</span> LT5 <span class="at">-d</span> 20100101  <span class="at">-f</span> 20111231 <span class="at">-s</span> <span class="va">$PR</span> <span class="at">-c</span> 10 <span class="at">-u</span> usgs.txt <span class="at">--output</span> <span class="va">$new_folder</span> <span class="op">&gt;</span> <span class="va">$output</span>/result.txt</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span> <span class="op">&lt;</span> <span class="va">$INPUT</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="va">IFS</span><span class="op">=</span><span class="va">$OLDIFS</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>I found out that the script has to have ground station IDs to download the image, actually the script uses station IDs to generate a URL request. Thus, I needed to know <a href="http://landsat.usgs.gov/about_landsat5.php">Landsat 5 era</a> to see which stations were active during that era. I got <a href="http://landsat.usgs.gov/about_ground_stations.php">current ground stations</a> but I need historic LS 5 era ground stations, thus, I needed info. which i found from <a href="http://landsat.usgs.gov/Historical_IGS.php">this</a> document. I used the ground station IDs of Landsat 5 to modify the script (at 2 places) so that script can search for specific stations. You can see my small modification to the script at <a href="https://github.com/mnahmad/LANDSAT-Download/blob/b7d4ddaad2bf2bd0a2c247025dab8780a6600523/download_landsat_scene.py#L430">line430</a> and <a href="https://github.com/mnahmad/LANDSAT-Download/blob/b7d4ddaad2bf2bd0a2c247025dab8780a6600523/download_landsat_scene.py#L582">line582</a>.</p>
+<p>It worked for me, however, I faced some of the issues like</p>
+<ol type="1">
+<li><p>Connection reset by server.</p></li>
+<li><p>Some images can be seen on EarthExplorer but download_lantsat cannot find these images.</p></li>
+</ol>
+<p>Also read about L1T product and naming convention for Landsat.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="post" data-listing-date-sort="1498856400000" data-listing-file-modified-sort="1756305424834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="476">
-<div class="thumbnail">
-<p><a href="./posts/landsat57_downloader/index.html" class="no-external"></a></p><a href="./posts/landsat57_downloader/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/landsat57_downloader/landsat-4-5.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/landsat57_downloader/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/landsat57_downloader/index.html" class="no-external">Landsat Images download</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/landsat57_downloader/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/landsat57_downloader/index.html" class="no-external">Around a year ago, I came across landsat_util that can be used to download Landsat 8 images. It can searches, process and download images from servers.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/landsat57_downloader/index.html" class="no-external">
-<div class="listing-date">
-Jul 1, 2017
-</div>
-<div class="listing-author">
-Muhammad N Ahmad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="post" data-listing-date-sort="1468962000000" data-listing-file-modified-sort="1756149707518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
-<div class="thumbnail">
-<p><a href="./posts/androzic/index.html" class="no-external"></a></p><a href="./posts/androzic/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/androzic/website.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/androzic/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/androzic/index.html" class="no-external">OziExplore</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/androzic/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/androzic/index.html" class="no-external">OziExplorer is a software that can create way points, paths from shape files for mobile devices. OziExplorer is a licensed software, thus, the mobile versions are also…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/androzic/index.html" class="no-external">
-<div class="listing-date">
-Jul 20, 2016
-</div>
-<div class="listing-author">
-Muhammad N Ahmad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="post,containers" data-listing-date-sort="1468011600000" data-listing-file-modified-sort="1755975446749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
-<div class="thumbnail">
-<p><a href="./posts/Continuumio_docker_image/index.html" class="no-external"></a></p><a href="./posts/Continuumio_docker_image/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/Continuumio_docker_image/docker-logo-svgrepo-com.svg" class="thumbnail-image"></p>
-</a><p><a href="./posts/Continuumio_docker_image/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external">Using Continuumio Docker image for python anaconda3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('containers'); return false;">
-containers
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external">Few months back I decided to try python anaconda for some of my data science tasks but wanted to isntall in a VM (so my other python pasths are not disturbed). On of the…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external">
-<div class="listing-date">
-Jul 9, 2016
-</div>
-<div class="listing-author">
-Muhammad N Ahmad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="post,containers" data-listing-date-sort="1462741200000" data-listing-file-modified-sort="1755975162672" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="312">
-<div class="thumbnail">
-<p><a href="./posts/bitnami/index.html" class="no-external"></a></p><a href="./posts/bitnami/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/bitnami/bitnami_logo.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/bitnami/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/bitnami/index.html" class="no-external">Using Continuumio Docker image for python anaconda3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/bitnami/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('containers'); return false;">
-containers
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/bitnami/index.html" class="no-external">There was a time, I used bitname stack, specically for mysql, it was nice and easy, however, now I usually use docker, thus, the post below is old and included here only for…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/bitnami/index.html" class="no-external">
-<div class="listing-date">
-May 9, 2016
-</div>
-<div class="listing-author">
-Muhammad N Ahmad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="post" data-listing-date-sort="1388523600000" data-listing-file-modified-sort="1755984508187" data-listing-date-modified-sort="1755637200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">Off and on, I blog about some personal projects and other tasks I do. I was looking for simple way to document my work, so I can refer back to it and if possible help others…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2014
-</div>
-<div class="listing-author">
-Muhammad N. Ahmad
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
