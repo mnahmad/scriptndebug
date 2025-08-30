@@ -7,9 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Muhammad N Ahmad">
-<meta name="dcterms.date" content="2017-07-01">
+<meta name="dcterms.date" content="2019-05-04">
+<meta name="description" content="Band combination for Landsat 8 and Sentinel 2">
 
-<title>Landsat Images download – ScriptNdebug</title>
+<title>Band combination for Landsat 8 and Sentinel 2 – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -154,13 +121,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Landsat Images download</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">post</div>
+      <h1 class="title">Band combination for Landsat 8 and Sentinel 2</h1>
+                  <div>
+        <div class="description">
+          Band combination for Landsat 8 and Sentinel 2
+        </div>
+      </div>
+                          <div class="quarto-categories">
                 <div class="quarto-category">Satellite</div>
                 <div class="quarto-category">Landsat</div>
-                <div class="quarto-category">Landsat5</div>
                 <div class="quarto-category">Landsat8</div>
+                <div class="quarto-category">Sentinel</div>
+                <div class="quarto-category">Sentinel2</div>
               </div>
                   </div>
   </div>
@@ -178,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 1, 2017</p>
+        <p class="date">May 4, 2019</p>
       </div>
     </div>
     
@@ -197,77 +169,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>Around a year ago, I came across <a href="https://pythonhosted.org/landsat-util/">landsat_util</a> that can be used to download Landsat 8 images. It can searches, process and download images from servers.</p>
-<p>But what if one has to download Landsat 5/7 images. I googled for such a utility and found an answer on <a href="http://gis.stackexchange.com/questions/124561/is-there-a-ftp-to-get-landsat-images">StackExchange</a>. The utility is called “LANDSAT-Download” and its written in python. Although one does not need to know python to run this program but its good to know as you might have to look at this script (as in my case, I will explain it later).</p>
-<section id="installation" class="level3">
-<h3 class="anchored" data-anchor-id="installation">Installation</h3>
-<p>The code for LANDSAT-Download is available at <a href="https://github.com/olivierhagolle/LANDSAT-Download">LANDSAT-Download</a> git repository. Download the code (fork if you want to enhance this code).</p>
-<p>Make sure you have python 2.7 installed on your computer</p>
+<p>This post is a summery of the original discussion on <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a>, I just place it in one page for easy access.</p>
+<section id="landsat-8-band-combinations" class="level3">
+<h3 class="anchored" data-anchor-id="landsat-8-band-combinations">Landsat 8 band combinations</h3>
+<p>Natural Color 4 3 2</p>
+<p>False Color (urban) 7 6 4</p>
+<p>Color Infrared (vegetation) 5 4 3</p>
+<p>Agriculture 6 5 2</p>
+<p>Atmospheric Penetration 7 6 5</p>
+<p>Healthy Vegetation 5 6 2</p>
+<p>Land/Water 5 6 4</p>
+<p>Natural With Atmospheric Removal 7 5 3</p>
+<p>Shortwave Infrared 7 5 4</p>
+<p>Vegetation Analysis 6 5 4</p>
+<p>The above information is summarized from <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a></p>
+<p>Landsat scenes are categorised into 3 tiers <a href="https://www.usgs.gov/media/videos/landsat-collections-what-are-tiers">source</a> i.e.&nbsp;raw real time data, tier 1 (where RMSE is less than 12 meters) and tier 2 (where RMSE is more than 2 meters). Also read more <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1_RT">here</a></p>
 </section>
-<section id="usage" class="level3">
-<h3 class="anchored" data-anchor-id="usage">Usage</h3>
-<p>Usage is very simple, for Example, I wanted to see what options script can support, thus, used the following command</p>
-<pre><code>python download_landsat_scene.py -h</code></pre>
-<p>or</p>
-<pre><code>./download_landsat_scene.py -h</code></pre>
-<p>The script requires USGS EarthExplorer authentication this you have to register with USGS. Once you get login and password, save them in the file usgs.txt.</p>
-<p>Password file should be like</p>
-<pre><code>username password</code></pre>
-<p>For example</p>
-<pre><code>Tom Harrison
-</code></pre>
-<p>Note: No spaces or tabs at the end of the file.</p>
-<p>Check README.md for documentation as it explains usage with different options.</p>
-<p>In my case, I had to download Landsat 5 scenes from around 150 locations for specific years (2010-2011). I created a csv file with ID and PathRow (see below)</p>
-<pre><code>ID , PR
-1  , 168060
-2  , 169060
-3  , 170060
-4  , 171060</code></pre>
-<p>I wrote a bash script to read this CSV and loop through each PathRow (PR) shown below.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">clear</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="va">INPUT</span><span class="op">=</span>landsat_pathrow.csv</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="va">OLDIFS</span><span class="op">=</span><span class="va">$IFS</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="va">IFS</span><span class="op">=</span>,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="ot">-f</span> <span class="va">$INPUT</span> <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="kw">{</span> <span class="bu">echo</span> <span class="st">"</span><span class="va">$INPUT</span><span class="st"> file not found"</span><span class="kw">;</span> <span class="bu">exit</span> 99<span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span>  landsat-Download-master_v3</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="va">counter</span><span class="op">=</span>0</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="bu">read</span> <span class="va">ID</span> <span class="va">PR</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="va">$PR</span> <span class="st">"#"</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">#make new folder with the name of PR</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="va">new_folder</span><span class="op">=</span><span class="st">"/home/user/landsat/LS5/"</span><span class="va">$PR</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># save messages in a file for later review</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="va">output</span><span class="op">=</span><span class="st">"/home/user/landsat/LS5/"</span><span class="va">$PR</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="va">$new_folder</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># some how mkdir without full path was not working</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="ex">/bin/mkdir</span> <span class="at">-p</span> <span class="va">$new_folder</span></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># output will go to a log file called results.txt</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="ex">./download_landsat_scene.py</span> <span class="at">-o</span> scene <span class="at">-b</span> LT5 <span class="at">-d</span> 20100101  <span class="at">-f</span> 20111231 <span class="at">-s</span> <span class="va">$PR</span> <span class="at">-c</span> 10 <span class="at">-u</span> usgs.txt <span class="at">--output</span> <span class="va">$new_folder</span> <span class="op">&gt;</span> <span class="va">$output</span>/result.txt</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span> <span class="op">&lt;</span> <span class="va">$INPUT</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="va">IFS</span><span class="op">=</span><span class="va">$OLDIFS</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>I found out that the script has to have ground station IDs to download the image, actually the script uses station IDs to generate a URL request. Thus, I needed to know <a href="http://landsat.usgs.gov/about_landsat5.php">Landsat 5 era</a> to see which stations were active during that era. I got <a href="http://landsat.usgs.gov/about_ground_stations.php">current ground stations</a> but I need historic LS 5 era ground stations, thus, I needed info. which i found from <a href="http://landsat.usgs.gov/Historical_IGS.php">this</a> document. I used the ground station IDs of Landsat 5 to modify the script (at 2 places) so that script can search for specific stations. You can see my small modification to the script at <a href="https://github.com/mnahmad/LANDSAT-Download/blob/b7d4ddaad2bf2bd0a2c247025dab8780a6600523/download_landsat_scene.py#L430">line430</a> and <a href="https://github.com/mnahmad/LANDSAT-Download/blob/b7d4ddaad2bf2bd0a2c247025dab8780a6600523/download_landsat_scene.py#L582">line582</a>.</p>
-<p>It worked for me, however, I faced some of the issues like</p>
-<ol type="1">
-<li><p>Connection reset by server.</p></li>
-<li><p>Some images can be seen on EarthExplorer but download_lantsat cannot find these images.</p></li>
-</ol>
-<p>Also read about L1T product and naming convention for Landsat.</p>
+<section id="sentinel-2" class="level3">
+<h3 class="anchored" data-anchor-id="sentinel-2">Sentinel 2</h3>
+<p>Natural Colors: 4 3 2</p>
+<p>False color Infrared: 8 4 3</p>
+<p>False color Urban: 12 11 4</p>
+<p>Agriculture: 11 8 2</p>
+<p>Atmospheric penetration: 12 11 8a</p>
+<p>Healthy vegetation: 8 11 2</p>
+<p>Land/Water: 8 11 4</p>
+<p>Natural Colors with Atmospheric Removal: 12 8 3</p>
+<p>Shortwave Infrared: 12 8 4</p>
+<p>Vegetation Analysis: 11 8 4</p>
+<p>The above information is summarized from <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a></p>
+<p>Following image ESA website also explains the above information in a nice way.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="band_combination1.png" class="img-fluid figure-img"></p>
+<figcaption>Band Combination</figcaption>
+</figure>
+</div>
+<p>ESA’s Sentinel documentation for <a href="https://sentinel.esa.int/documents/247904/685211/Sentinel-2+Products+Specification+Document+%28PSD%29/0f7bedeb-9fbb-4b60-91aa-809162de456c">Sentinel 2 products</a></p>
 
 
 </section>
