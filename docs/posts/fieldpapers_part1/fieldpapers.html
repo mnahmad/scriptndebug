@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Muhammad N Ahmad">
-<meta name="dcterms.date" content="2019-05-04">
+<meta name="dcterms.date" content="2020-10-10">
 
-<title>Band combination for Landsat 8 and Sentinel 2 – ScriptNdebug</title>
+<title>Field Papers – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,13 +120,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Band combination for Landsat 8 and Sentinel 2</h1>
+      <h1 class="title">Field Papers</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Satellite</div>
-                <div class="quarto-category">Landsat</div>
-                <div class="quarto-category">Landsat8</div>
-                <div class="quarto-category">Sentinel</div>
-                <div class="quarto-category">Sentinel2</div>
+                <div class="quarto-category">Mapping</div>
               </div>
                   </div>
   </div>
@@ -144,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 4, 2019</p>
+        <p class="date">October 10, 2020</p>
       </div>
     </div>
     
@@ -163,46 +159,62 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This post is a summery of the original discussion on <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a>, I just place it in one page for easy access.</p>
-<section id="landsat-8-band-combinations" class="level3">
-<h3 class="anchored" data-anchor-id="landsat-8-band-combinations">Landsat 8 band combinations</h3>
-<p>Natural Color 4 3 2</p>
-<p>False Color (urban) 7 6 4</p>
-<p>Color Infrared (vegetation) 5 4 3</p>
-<p>Agriculture 6 5 2</p>
-<p>Atmospheric Penetration 7 6 5</p>
-<p>Healthy Vegetation 5 6 2</p>
-<p>Land/Water 5 6 4</p>
-<p>Natural With Atmospheric Removal 7 5 3</p>
-<p>Shortwave Infrared 7 5 4</p>
-<p>Vegetation Analysis 6 5 4</p>
-<p>The above information is summarized from <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a></p>
-<p>Landsat scenes are categorised into 3 tiers <a href="https://www.usgs.gov/media/videos/landsat-collections-what-are-tiers">source</a> i.e.&nbsp;raw real time data, tier 1 (where RMSE is less than 12 meters) and tier 2 (where RMSE is more than 2 meters). Also read more <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1_RT">here</a></p>
-</section>
-<section id="sentinel-2" class="level3">
-<h3 class="anchored" data-anchor-id="sentinel-2">Sentinel 2</h3>
-<p>Natural Colors: 4 3 2</p>
-<p>False color Infrared: 8 4 3</p>
-<p>False color Urban: 12 11 4</p>
-<p>Agriculture: 11 8 2</p>
-<p>Atmospheric penetration: 12 11 8a</p>
-<p>Healthy vegetation: 8 11 2</p>
-<p>Land/Water: 8 11 4</p>
-<p>Natural Colors with Atmospheric Removal: 12 8 3</p>
-<p>Shortwave Infrared: 12 8 4</p>
-<p>Vegetation Analysis: 11 8 4</p>
-<p>The above information is summarized from <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a></p>
-<p>Following image ESA website also explains the above information in a nice way.</p>
+<p><a href="http://fieldpapers.org/">Field papers</a> is an excellent tool for spatial field surveys and participatory GIS. It is very easy to use. All you have to do is</p>
+<ol type="1">
+<li>Register an account on <a href="http://fieldpapers.org/">http://fieldpapers.org/</a></li>
+<li>Click on Make an Atlas by panning and zooming to your required area.</li>
+<li>Now by looking at the image below, perform the tasks as marked on the following image</li>
+</ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="band_combination1.png" class="img-fluid figure-img"></p>
-<figcaption>Band Combination</figcaption>
+<p><img src="field_papers_arlas.png" class="img-fluid figure-img"></p>
+<figcaption>Field Papers</figcaption>
 </figure>
 </div>
-<p>ESA’s Sentinel documentation for <a href="https://sentinel.esa.int/documents/247904/685211/Sentinel-2+Products+Specification+Document+%28PSD%29/0f7bedeb-9fbb-4b60-91aa-809162de456c">Sentinel 2 products</a></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Add text here (if required to be added to the field paper print out.) One can use this option to add import instructions for field staff.<br>
+</label></li>
+<li><label><input type="checkbox" checked="">Use one page per image, thus, set both horizontal and vertical page options to 1.</label></li>
+<li><label><input type="checkbox" checked="">Set paper option to landscape (it helps in getting a bigger image).</label></li>
+<li><label><input type="checkbox" checked="">f using satellite images, use Mapbox (if possible) as base layer. Issue with Bing maps is that some times it shows blackboxes on images (all the time in my case)</label></li>
+</ul>
+<ol start="4" type="1">
+<li>When the above steps are completed, press option “Make Atlas”.</li>
+<li>Next, download the atlas as PDF as shown in the image below.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="field-papers-download.png" class="img-fluid figure-img"></p>
+<figcaption>Field Paper</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Note, the QR on paper sheet, it contains critical information like georeferencing information.</p>
+</blockquote>
+<ol start="6" type="1">
+<li><p>Print the downloaded PDF and provide it to field teams.</p></li>
+<li><p>Field teams need to draw point, line and polygons and provide labels on paper. Encourage field teams to provide extra information as notes on the same paper.</p></li>
+<li><p>When field teams returns the printed papers, Scan the papers (taking photo will also work but scanning will give better results)</p></li>
+<li><p>Upload the scanned field papers as .jpeg (or other formats) to field paper website website. Once uploaded the your image will look similar to the one bllow on Field Paper website.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="download_options.png" class="img-fluid figure-img"></p>
+<figcaption>Field Papers</figcaption>
+</figure>
+</div>
+<ol start="8" type="1">
+<li>Now from here you can do two thing</li>
+</ol>
+<ul>
+<li><p>Click iD and field paper website will take you to OSM web page. Login and you will see your scanned image as one of the layer on map. Now you can digitize your work directly in OSM.</p></li>
+<li><p>Click on download button and get a GeoTiff. Now use can any GIS(for example QGIS) software to (a) start a shape file (b) start digitizing.</p></li>
+</ul>
+<p><a href="http://gis.stackexchange.com/questions/192798/how-to-use-data-from-field-papers-to-qgis">reference</a>.</p>
+<p>Its pretty awesome :).</p>
+<p>Icon references:<br> <a href="https://icon-library.net/icon/twiter-icon-15.html">Twiter Icon #268986</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

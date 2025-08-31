@@ -6,16 +6,6 @@ categories: [Satellite, Landsat, Landsat8, Sentinel, Sentinel2]
 image: "band_combination1.png"
 ---
 
-
----
-layout: page
-title: Band combination for Landsat 8 and Sentinel 2
-tagline: Band combination for Landsat 8 and Sentinel 2
-description: Band combination for Landsat 8 and Sentinel 2
----
-
-
-
 This post is a summery of the original discussion on [ESA's discussion forum](http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7), I just place it in one page for easy access.
 
 ### Landsat 8 band combinations

@@ -1,9 +1,9 @@
 ---
-title: "Using Continuumio Docker image for python anaconda3"
+title: "Bitnami and mySQL"
 author: "Muhammad N Ahmad"
 date: "2016-05-09"
 date-modified:: "2019-05-04"
-categories: [post, containers]
+categories: [containers]
 image: "bitnami_logo.png"
 ---
 

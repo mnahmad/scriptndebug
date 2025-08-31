@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Muhammad N Ahmad">
-<meta name="dcterms.date" content="2019-05-04">
+<meta name="description" content="Field Papers">
 
-<title>Band combination for Landsat 8 and Sentinel 2 – ScriptNdebug</title>
+<title>Field Papers part 2 – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,33 +119,19 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Band combination for Landsat 8 and Sentinel 2</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Satellite</div>
-                <div class="quarto-category">Landsat</div>
-                <div class="quarto-category">Landsat8</div>
-                <div class="quarto-category">Sentinel</div>
-                <div class="quarto-category">Sentinel2</div>
-              </div>
-                  </div>
+      <h1 class="title">Field Papers part 2</h1>
+                  <div>
+        <div class="description">
+          Field Papers
+        </div>
+      </div>
+                </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Muhammad N Ahmad </p>
-            </div>
-    </div>
       
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">May 4, 2019</p>
-      </div>
-    </div>
     
       
     </div>
@@ -163,43 +148,38 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This post is a summery of the original discussion on <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a>, I just place it in one page for easy access.</p>
-<section id="landsat-8-band-combinations" class="level3">
-<h3 class="anchored" data-anchor-id="landsat-8-band-combinations">Landsat 8 band combinations</h3>
-<p>Natural Color 4 3 2</p>
-<p>False Color (urban) 7 6 4</p>
-<p>Color Infrared (vegetation) 5 4 3</p>
-<p>Agriculture 6 5 2</p>
-<p>Atmospheric Penetration 7 6 5</p>
-<p>Healthy Vegetation 5 6 2</p>
-<p>Land/Water 5 6 4</p>
-<p>Natural With Atmospheric Removal 7 5 3</p>
-<p>Shortwave Infrared 7 5 4</p>
-<p>Vegetation Analysis 6 5 4</p>
-<p>The above information is summarized from <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a></p>
-<p>Landsat scenes are categorised into 3 tiers <a href="https://www.usgs.gov/media/videos/landsat-collections-what-are-tiers">source</a> i.e.&nbsp;raw real time data, tier 1 (where RMSE is less than 12 meters) and tier 2 (where RMSE is more than 2 meters). Also read more <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1_RT">here</a></p>
+<p><a href="https://twitter.com/intent/tweet?text=Field%20Papers%20part%202%20https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers-part2.md%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a></p>
+<p><em>Last update: 10/10/2020</em></p>
+<p>I hope you have enjoyed <a href="https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers.html">part 1</a> of Field Papers. In part 2, we discus two use cases where Field Papers might come handy. The use cases are</p>
+<ol type="1">
+<li>Field data collection where
+<ul>
+<li>you need paper based maps to draw responses</li>
+<li>Record responses on the device with an offline satellite image</li>
+</ul></li>
+</ol>
+<section id="paper-based-maps-to-draw-responses" class="level3">
+<h3 class="anchored" data-anchor-id="paper-based-maps-to-draw-responses">Paper based maps to draw responses</h3>
+<p>In first case, the process is straight forward like 1. Goto Field Papers website 2. Select your area 3. Generate an atlas 4. Download atlas as pdf 5. Print pdf 6. Use printed copy in the field to draw your objects 7. Back from the field, scan the printed paper as png/jped etc. 8. Upload to field papers to convert it into a geo referenced Tiff file. 9. Download the geo referenced tiff file. 10. Open the tiff file in QGIS, and start digitizing.</p>
 </section>
-<section id="sentinel-2" class="level3">
-<h3 class="anchored" data-anchor-id="sentinel-2">Sentinel 2</h3>
-<p>Natural Colors: 4 3 2</p>
-<p>False color Infrared: 8 4 3</p>
-<p>False color Urban: 12 11 4</p>
-<p>Agriculture: 11 8 2</p>
-<p>Atmospheric penetration: 12 11 8a</p>
-<p>Healthy vegetation: 8 11 2</p>
-<p>Land/Water: 8 11 4</p>
-<p>Natural Colors with Atmospheric Removal: 12 8 3</p>
-<p>Shortwave Infrared: 12 8 4</p>
-<p>Vegetation Analysis: 11 8 4</p>
-<p>The above information is summarized from <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a></p>
-<p>Following image ESA website also explains the above information in a nice way.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="band_combination1.png" class="img-fluid figure-img"></p>
-<figcaption>Band Combination</figcaption>
-</figure>
-</div>
-<p>ESA’s Sentinel documentation for <a href="https://sentinel.esa.int/documents/247904/685211/Sentinel-2+Products+Specification+Document+%28PSD%29/0f7bedeb-9fbb-4b60-91aa-809162de456c">Sentinel 2 products</a></p>
+<section id="secord-responses-on-the-device" class="level3">
+<h3 class="anchored" data-anchor-id="secord-responses-on-the-device">Secord responses on the device</h3>
+<p>In second case, You can skip some of the above steps like 10, as all the object drawing will be happen on the device. All you have to do is</p>
+<ol type="1">
+<li>Goto Field Papers website</li>
+<li>Select your area</li>
+<li>Generate an atlas</li>
+<li>Download atlas as pdf</li>
+<li>Convert into png by using the following command (if on Linux)</li>
+</ol>
+<pre><code>convert -density 150 atlas-2apfrt1t.pdf -quality 90 atlas-2apfrt1t.png</code></pre>
+<ol start="6" type="1">
+<li>Upload to field papers for conversion to geo tiff</li>
+<li>Download geo tiff, open it in QGISs and start digitizing</li>
+</ol>
+<p>Note, you can also convert geo tif file to mbtiles for mobile use as well but that a topic for an other post.</p>
+<p>Note, it is also good to read this LearnOSM <a href="https://learnosm.org/en/mobile-mapping/field-papers/">post</a>.</p>
+<p>Icon references:<br> <a href="https://icon-library.net/icon/twiter-icon-15.html">Twiter Icon #268986</a></p>
 
 
 </section>

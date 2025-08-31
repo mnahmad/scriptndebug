@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/fieldpapers_part2/index.html",
+      "/posts/fieldpapers_part1/fieldpapers.html",
       "/posts/sentinel_band_combination/index.html",
       "/posts/landsat57_downloader/index.html",
       "/posts/androzic/index.html",
