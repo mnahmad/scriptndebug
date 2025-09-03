@@ -3,11 +3,11 @@ title: "Field Papers part 2"
 author: "Muhammad N Ahmad"
 date: "2020-10-15"
 categories: [Mapping]
-image: "field-large.gif"
+image: "field-large2.gif"
 ---
 
 
-I hope you have enjoyed [part 1](https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers.html) of Field Papers. In part 2, we discus two use cases where Field Papers might come handy. The use cases are
+I hope you have enjoyed part 1 of Field Papers. In part 2, we discus two use cases where Field Papers might come handy. The use cases are
 
 1. Field data collection  where
 	- you need paper based maps to draw responses
