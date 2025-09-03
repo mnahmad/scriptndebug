@@ -1,0 +1,19 @@
+---
+title: "Regex"
+author: "Muhammad N. Ahmad"
+date: "2019-10-29"
+date-modified: "2025-08-20"
+categories: [Regex]
+image: "regex.jpeg"
+---
+
+Find space between 2 set of characters
+
+```
+\b \b
+
+```
+
+You can find tones of other patterns at [Digital Fortress post](https://digitalfortress.tech/tips/top-15-commonly-used-regex/)
+
+For practice, visit [regexr.com](https://regexr.com/)
