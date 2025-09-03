@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Field Papers">
+<meta name="author" content="Muhammad N Ahmad">
+<meta name="dcterms.date" content="2020-10-15">
 
 <title>Field Papers part 2 – ScriptNdebug</title>
 <style>
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -120,18 +155,28 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Field Papers part 2</h1>
-                  <div>
-        <div class="description">
-          Field Papers
-        </div>
-      </div>
-                </div>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Mapping</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Muhammad N Ahmad </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 15, 2020</p>
+      </div>
+    </div>
     
       
     </div>
@@ -148,8 +193,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="https://twitter.com/intent/tweet?text=Field%20Papers%20part%202%20https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers-part2.md%20@mnabiahmad"><img src="https://mnahmad.github.io/scriptndebug/twiter-icon-15.jpg" height="25" width="25"></a></p>
-<p><em>Last update: 10/10/2020</em></p>
 <p>I hope you have enjoyed <a href="https://mnahmad.github.io/scriptndebug/pages/fieldpapers/fieldpapers.html">part 1</a> of Field Papers. In part 2, we discus two use cases where Field Papers might come handy. The use cases are</p>
 <ol type="1">
 <li>Field data collection where
@@ -172,14 +215,13 @@ ul.task-list li input[type="checkbox"] {
 <li>Download atlas as pdf</li>
 <li>Convert into png by using the following command (if on Linux)</li>
 </ol>
-<pre><code>convert -density 150 atlas-2apfrt1t.pdf -quality 90 atlas-2apfrt1t.png</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">convert</span> <span class="at">-density</span> 150 atlas-2apfrt1t.pdf <span class="at">-quality</span> 90 atlas-2apfrt1t.png</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="6" type="1">
 <li>Upload to field papers for conversion to geo tiff</li>
 <li>Download geo tiff, open it in QGISs and start digitizing</li>
 </ol>
 <p>Note, you can also convert geo tif file to mbtiles for mobile use as well but that a topic for an other post.</p>
 <p>Note, it is also good to read this LearnOSM <a href="https://learnosm.org/en/mobile-mapping/field-papers/">post</a>.</p>
-<p>Icon references:<br> <a href="https://icon-library.net/icon/twiter-icon-15.html">Twiter Icon #268986</a></p>
 
 
 </section>
