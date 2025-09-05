@@ -88,7 +88,14 @@
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
-    "text": "Off and on, I blog about some personal projects and other tasks I do. I was looking for simple way to document my work, so I can refer back to it and if possible help others as well.\nI started a blog site back in 2014 using wordpress. Since I was not hosting the wordpress website, thus, had couple of difficulties like maintenance was always an issue. I wanted a simple solution where I don’t have to compile like Jekyll etc.\nI moved to a simple solution by karl Broman, it was amazing but over a period of time, I realized it is was too simple. Don’t get it wrong, it works but the UI etc. might require some work to imrpove thus I started looking for an other solution.\nFew years back, I came across quarto and I think it will be enough for a blogging site (at least for now), it is simple and can easily be used with git pages. Yes, the site has to be build, but it is a small step I am willing to take toget a better looking blog."
+    "text": "Off and on, I blog about some personal projects and other tasks I do. I was looking for simple way to document my work, so I can refer back to it and if possible help others as well.\nI started a blog site back in 2014 using wordpress. Since I was not hosting the wordpress website, thus, had couple of difficulties like maintenance was always an issue. I wanted a simple solution where I don’t have to compile like Jekyll etc.\nI moved to a simple solution by karl Broman, it was amazing but over a period of time, I realized it is was too simple. Don’t get it wrong, it works but the UI etc. might require some work to imrpove thus I started looking for an other solution.\nFew years back, I came across quarto and I think it will be enough for a blogging site (at least for now), it is simple and can easily be used with git pages. Yes, the site has to be build, but it is a small step I am willing to take toget a better looking blog.\nIf anything here is confusing (or wrong!), or if I’ve missed important details, please submit an issue."
+  },
+  {
+    "objectID": "posts/welcome/index.html#note",
+    "href": "posts/welcome/index.html#note",
+    "title": "Welcome To My Blog",
+    "section": "Note",
+    "text": "Note\nAll contents provided on this [Script & Debug] blog are for informational purposes only. The owner of this blog makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site.\nThe owner of [Script & Debug] will not be liable for any errors or omissions in this information nor for the availability of this information. The owner will not be liable for any losses, injuries, or damages from the display or use of this information. This terms and conditions is subject to change at anytime with or without notice."
   },
   {
     "objectID": "posts/fieldpapers_part1/index.html",

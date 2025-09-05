@@ -15,3 +15,11 @@ I started a blog site back in 2014 using [wordpress](https://scriptndebug.wordpr
 I moved to a simple [solution](https://kbroman.org/simple_site/pages/independent_site.html)  by [karl Broman](https://kbroman.org), it was amazing but over a period of time, I realized it is was too simple. Don't get it wrong, it works but the UI etc. might require some work to imrpove thus I started looking for an other solution. 
 
 Few years back, I came across quarto and I think it will be enough for a blogging site (at least for now), it is simple and can easily be used with git pages. Yes, the site has to be build, but it is a small step I am willing to take toget a better looking blog. 
+
+If anything here is confusing (or _wrong_!), or if I've missed important details, please [submit an issue](https://github.com/mnahmad/scriptndebug/issues).
+
+## Note
+All contents provided on this [Script & Debug] blog are for informational purposes only. The owner of this blog makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site.
+
+The owner of [Script & Debug] will not be liable for any errors or omissions in this information nor for the availability of this information. The owner will not be liable for any losses, injuries, or damages from the display or use of this information. This terms and conditions is subject to change at anytime with or without notice.
+
