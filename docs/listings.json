@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/django_m2m/index.html",
       "/posts/fieldpapers_part2/index.html",
       "/posts/zonal_statistics1/index.html",
       "/posts/fieldpapers_part1/index.html",
