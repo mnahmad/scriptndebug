@@ -385,8 +385,4 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-
-### Templates
-
-
-### Views
+At this stage, one can check m2m model functioanlity by using djano shell. 
