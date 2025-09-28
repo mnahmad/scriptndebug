@@ -3,7 +3,7 @@ title: "Django app using M2M relationship models"
 author: "Muhammad N. Ahmad"
 date: "2021-06-29"
 date-modified: "2025-09-21"
-categories: [Django]
+categories: [Python, Django]
 image: "django_m2m.jpg"
 ---
 
