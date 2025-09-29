@@ -3,7 +3,7 @@ title: "Solve Pip error -No module named helpers- on mac"
 author: "Muhammad N. Ahmad"
 date: "2021-10-10"
 date-modified: "2025-09-28"
-categories: [pip, python]
+categories: [pip, Python]
 image: "pip_issue1.jpg"
 ---
 

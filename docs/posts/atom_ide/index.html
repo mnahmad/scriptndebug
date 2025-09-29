@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Muhammad N. Ahmad">
-<meta name="dcterms.date" content="2021-10-10">
+<meta name="dcterms.date" content="2017-11-15">
 
-<title>Solve Pip error -No module named helpers- on mac – ScriptNdebug</title>
+<title>Atom text editor – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,10 +120,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Solve Pip error -No module named helpers- on mac</h1>
+      <h1 class="title">Atom text editor</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">pip</div>
-                <div class="quarto-category">Python</div>
+                <div class="quarto-category">IDE</div>
               </div>
                   </div>
   </div>
@@ -141,14 +140,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 10, 2021</p>
+        <p class="date">November 15, 2017</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">September 28, 2025</p>
+        <p class="date-modified">September 29, 2025</p>
       </div>
     </div>
       
@@ -166,30 +165,66 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>After installing python3, every <code>pip install</code> ended up in error “No module named helpers” and when I tried installing “helpers” I got the same message. I Googled the issue and found this <a href="https://stackoverflow.com/questions/55069451/pip-error-importerror-no-module-named-helpers">post</a> but solution was linux related, thus, required some work to fix the issue on mac.</p>
-<p>Firts I tried to see where python2.7 is on my system so I ran the following command</p>
-<pre><code>whereis python2.7</code></pre>
-<p>I was pointed to <code>/usr/bin/python</code>, and when i checked the path, I see the following.</p>
-<pre><code>ls -l python
+<p>In the last few years, I tired many text editors like gedit, sublime, vi, vim and <a href="https://atom-editor.cc/">Atom</a>, the last one stuck with me for long. What I like about Atom is the packages, gedit and sublime also has packages for example I like cli panel in text editors, like Embedded Terminal in gedit</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="gedit.gif" class="img-fluid figure-img"></p>
+<figcaption>gedit</figcaption>
+</figure>
+</div>
+<p>ref: <a href="https://cs50.stackexchange.com/questions/2026/how-do-i-open-a-terminal-window-in-gedit">https://cs50.stackexchange.com/questions/2026/how-do-i-open-a-terminal-window-in-gedit</a></p>
+<p>However, I needed a text editor that can support a cli and a webbrowser plugin. Atom does that as it has a terminal-plus, see below (don’t install it before you read the complete blog) and browser-plus.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Atom.png" class="img-fluid figure-img"></p>
+<figcaption>atom</figcaption>
+</figure>
+</div>
+<section id="installation-on-linux" class="level3">
+<h3 class="anchored" data-anchor-id="installation-on-linux">Installation on Linux</h3>
+<p>Use the following commands on Ubunut to install Atom</p>
+<pre><code>sudo add-apt-repository ppa:webupd8team/atom</code></pre>
+<p>then</p>
+<pre><code>sudo apt update
 
-python     -&gt; ../../System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7
-pythonw2.7 -&gt; ../../System/Library/Frameworks/Python.framework/Versions/2.7/bin/pythonw2.7
-python2    -&gt; ../../System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7
-python2.7  -&gt; ../../System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7</code></pre>
-<p>__Note:__Some items were removed from the list above.</p>
-<p>Since the <a href="https://stackoverflow.com/questions/55069451/pip-error-importerror-no-module-named-helpers">post</a> was talking about site+packages, I tried to look for the folder but could not find it. Then i tried the command <code>which python</code> (and also confirmed the python site-package folder path from <a href="https://stackoverflow.com/questions/122327/how-do-i-find-the-location-of-my-python-site-packages-directory">stackoverflow</a> as well), it s was</p>
-<pre><code>which python
-
-/usr/local/bin/python
+sudo apt install atom
 </code></pre>
-<p>and the site-packages path was <code>/usr/local/lib/python2.7/site-packages</code>. Now I modifed the provided/accepted solutoin in this <a href="https://stackoverflow.com/questions/55069451/pip-error-importerror-no-module-named-helpers">post</a> according to my paths.</p>
-<pre><code>rm -rf /usr/local/lib/python2.7/site-packages
-python2.7 -m ensurepip
-pip install --upgrade pip
-</code></pre>
-<p>Now, I tried to insatll packages again with pip, it worked. I hope this blow will help others.</p>
+<p>ref: <a href="http://tipsonubuntu.com/2016/08/05/install-atom-text-editor-ubuntu-16-04/">http://tipsonubuntu.com/2016/08/05/install-atom-text-editor-ubuntu-16-04/</a></p>
+</section>
+<section id="packages" class="level3">
+<h3 class="anchored" data-anchor-id="packages">Packages</h3>
+<p>Some of the packages I like are</p>
+<pre><code>atom-bootstrap4 ver 1.4.0
+
+autocomplete-python 1.10.2</code></pre>
+<p>some other good autocomplete packages are</p>
+<pre><code>autocomplete-json
+
+atom-django 0.3.2</code></pre>
+<p>and some other packages</p>
+<pre><code>browser-plus 0.0.98
+
+emmet 2.4.3
+
+linter-flake8 2.2.1
+
+terminal-plus 0.14.5
+
+platformio-ide-terminal</code></pre>
+</section>
+<section id="some-issue" class="level3">
+<h3 class="anchored" data-anchor-id="some-issue">Some Issue</h3>
+<p>Some installed packages could not be loaded because they contain native modules that were compiled for an earlier version of Atom like with terminal-plus package</p>
+<p>Solution to terminal-plus package issue https://github.com/jeremyramin/terminal-plus/issues/402</p>
+<p>The solution worked on my unbunut 14 laptop, but I could not make it work on ubunut 16. I did some searching and then opted for “platformio-ide-terminal” as some one said it is not in development any more (the repo is at least one old https://github.com/jeremyramin/terminal-plus). The package “platformio-ide-terminal” works out of the box.</p>
+<p>Note: For color change (in package setting), restart Atom after colors are changed.</p>
+<p>if you want to remove atom, use the following command.</p>
+<pre><code>sudo apt remove --purge atom</code></pre>
+<p>What do you think, you want to give it a try.</p>
+<p><strong>Updates:</strong> Atom repository is archived since 2022 and no longer updated. Sad I wish they had continued.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
