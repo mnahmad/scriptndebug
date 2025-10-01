@@ -1,0 +1,64 @@
+---
+title: "GeoServer and CLI"
+author: "Muhammad N. Ahmad"
+date: "2019-12-01"
+date-modified: "2019-12-01"
+categories: [SLD, GeoServer, CLI]
+image: "geoserver_sld_issue1.jpg"
+---
+
+When one cannot open the publish tab (in GeoServer) on layer menu, it means some thing is wrong with styles (this can also be proven by looking at the same layer in preview, an error will confirm the style issue)
+
+```
+<ServiceExceptionReport version="1.1.1"><ServiceException code="NoDefaultStyle">
+      Could not find a style for layer geonode:layer_name, either none was specified or no default style is available for it
+</ServiceException></ServiceExceptionReport>
+```
+Now one cannot assign styles using the GeoServer GUI, but Command Line Interface (CLI) can help here. All we have to make sure is that the style exists and then curl can assign it to existing layer (see the command below)
+
+```bash
+curl -u admin:password -XPUT -H 'Content-type: text/xml' -d '<layer><defaultStyle><name>aet_yr_clim</name><workspace>geonode</workspace></defaultStyle></layer>' http://localhost:8080/geoserver/rest/layers/geonode:aet_yr_clim
+```
+
+Same command , different layer (pet_yr_60)
+
+```bash
+curl -u admin:password -XPUT -H 'Content-type: text/xml' -d '<layer><defaultStyle><name>pet_yr_60</name><workspace>geonode</workspace></defaultStyle></layer>' http://localhost:8080/geoserver/rest/layers/geonode:pet_yr_60
+
+
+```
+
+[ref](https://cartogeographers.blogspot.co.ke/2015/09/geoserver-could-not-find-style-for.html?showComment=1494846339992#c322262537691632468)
+
+[ref](http://geoserver.readthedocs.io/en/latest/rest/examples/curl.html)
+
+
+Now create store using curl, store name is ingaoe_85_distribution
+
+```bash
+curl -u admin:geoserver -v -XPOST -H 'Content-Type: application/xml' -d '<coverageStore><name>int_dec</name><workspace>restProba</workspace><enabled>true</enabled></coverageStore>' http://localhost:8080/geoserver/rest/workspaces/restProba/coveragestores
+
+
+curl -u admin:geoserver -v -XPUT -H 'Content-type: text/plain' -d 'file:/$home/int_dec.tif' http://localhost:8080/geoserver/rest/workspaces/restProba/coveragestores/int_dec/external.geotiff?configure=first\&coverageName=int_dec
+```
+
+working copy
+
+```bash
+curl -u admin:password -v -XPOST -H 'Content-Type: application/xml' -d '<coverageStore><type>GeoTIFF</type><name>ingaoe_85_distribution</name><workspace>geonode</workspace><enabled>true</enabled></coverageStore>' http://localhost:8080/geoserver/rest/workspaces/geonode/coveragestores
+
+
+
+curl -u admin:password -v -XPUT -H 'Content-type: text/plain' -d 'file:data/geonode/ingaoe_85_distribution/ingaoe_85_distribution.geotiff' http://localhost:8080/geoserver/rest/workspaces/geonode/coveragestores/ingaoe_85_distribution/external.geotiff?configure=first\&coverageName=ingaoe_85_distribution
+```
+
+and for styles
+
+```bash
+curl -u admin:password  -XPUT -H 'Content-type: text/xml' -d '<layer><defaultStyle><name>species_distribution</name><workspace>geonode</workspace></defaultStyle></layer>' http://localhost:8080/geoserver/rest/layers/geonode:ingaoe_85_distribution
+```
+
+[ref](https://gis.stackexchange.com/questions/37779/adding-a-new-coveragestore-in-a-certain-workspace-by-rest)
+
+
+__Note__GeoServer version mentioned in this post is an old version, thus, the problem might have not existed by now. 
