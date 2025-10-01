@@ -1,0 +1,29 @@
+---
+title: "How to download Offline maps for LocusMap"
+author: "Muhammad N. Ahmad"
+date: "2019-10-13"
+date-modified: "2019-10-13"
+categories: [App, Map]
+image: "local_map1.jpg"
+---
+
+LocusMap is a perfect app to use for navigation, plus it can store maps offline as well, it has a free version as wel, thus, the usecase is strong. This blog details the process of downoaod and configuring local maps to your device. 
+
+__Note__ You need to register with LocusMap server to use this option.  
+
+1. Click on menu and goto "Maps"
+
+2. Select "On-line" option
+
+3. Select "OSM-Other" option , the list will expand with more options, we are interested in "OpenTopoMap".
+
+4. Click the submenu (the tree vertical dots) for "OpenTopoMap" and select "Download"
+
+5. Now you need to select an area to download, you can download a country level map (will take alot of time), select area (best option), or this screen (also the best option)
+
+6. Let's select "This screen", this will bring one tiled map (based on your screen bounding box(Bbox)).
+
+7. Now select select "Select area" option to download maps of selected area.
+
+
+__Note__ Also check OSM app called OSMAnd.
