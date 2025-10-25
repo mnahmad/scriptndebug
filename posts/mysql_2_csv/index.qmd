@@ -1,0 +1,73 @@
+---
+title: "Export data as CVS from MySQL Database"
+author: "Muhammad N. Ahmad"
+date: "2019-11-11"
+date-modified: "2025-10-25"
+categories: [MySQL,CSV, Ubuntu]
+image: "mysql.jpg"
+---
+
+Anyone working with databses knows that ocne in while one has to export data as CSV. Yes one can connect database directly with EDA tools but then one has to allow persmisison of external tools to connect with database (if on a different server),thus, CSV might be an easy option.
+
+
+restart mysql.
+
+```sql
+sudo /usr/local/mysql/support-files/mysql.server restart
+```
+
+On Mac, mysql server is at /usr/local/mysql/support-files Or /usr/local/mysql-8.0.17-macos10.14-x86_64/support-files , thus, the above command could be.
+
+```sql
+sudo /usr/local/mysql-8.0.17-macos10.14-x86_64/support-files/mysql.server restart
+```
+
+
+First see where MYSQL is allowed to save the CSVs.
+
+```sql
+SHOW VARIABLES LIKE "secure_file_priv";
+```
+
+the above command should returns
+
+1. NULL (means no path is set)
+2. Path where a file can be saved by mysql
+
+
+If the output of __secure_file_priv__ is NULL, then you have to add the path to your my.ini (or my.cnf in case of mac)
+
+On mac, mysql is at /usr/local/mysql or /usr/local/mysql-8.0.17-macos10.14-x86_64  but my.cnf file is at ~/ folder. It would also be at ./etc/mysql/my.cnf 
+
+To add __secure_file_priv__ do the following
+
+```bash
+vim my.cnf
+```
+
+and then add the following in the file
+
+```sql
+secure_file_priv = 'your/path/to/save/file'
+```
+
+Now the query to save the results as CVS.
+
+```sql
+select a, b, c from foo
+INTO OUTFILE '/your/selected/destination/file.csv'
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n';
+```
+
+IF you want to enclose some fields with special characters, like `'` comma etc, do the follwoing 
+
+```sql
+select * from foo as a
+INTO OUTFILE '/your/selected/destination/file.csv'
+OPTIONALLY ENCLOSED BY '"'
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\r\n';
+```
+
+Let me know in comments if this blog has helped. 

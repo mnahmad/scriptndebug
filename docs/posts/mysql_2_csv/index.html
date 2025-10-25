@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Muhammad N. Ahmad">
-<meta name="dcterms.date" content="2014-01-01">
+<meta name="dcterms.date" content="2019-11-11">
 
-<title>Welcome To My Blog – ScriptNdebug</title>
+<title>Export data as CVS from MySQL Database – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -120,9 +154,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog</h1>
+      <h1 class="title">Export data as CVS from MySQL Database</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">post</div>
+                <div class="quarto-category">MySQL</div>
+                <div class="quarto-category">CSV</div>
+                <div class="quarto-category">Ubuntu</div>
               </div>
                   </div>
   </div>
@@ -140,14 +176,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 1, 2014</p>
+        <p class="date">November 11, 2019</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">August 20, 2025</p>
+        <p class="date-modified">October 25, 2025</p>
       </div>
     </div>
       
@@ -165,19 +201,38 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
-<p>Off and on, I blog about some personal projects and other tasks I do. The goal of blogging was to document my work, in the most simpleist way possible (without complicating the publishing process), so I can refer back to it and if possible help others as well.</p>
-<p>I started a blog site back in 2014 using <a href="https://scriptndebug.wordpress.com/">wordpress</a>. Since I was not hosting the wordpress website, thus, had couple of difficulties like maintenance was always an issue. I wanted a simple solution where I don’t have to compile like Jekyll etc.</p>
-<p>I moved to a simple <a href="https://kbroman.org/simple_site/pages/independent_site.html">solution</a> by <a href="https://kbroman.org">karl Broman</a>, it was amazing but over a period of time, I realized it is was too simple. Don’t get it wrong, it works but the UI etc. might require some work to imrpove thus I started looking for an other solution.</p>
-<p>Few years back, I came across quarto and I think it will be enough for a blogging site (at least for now), it is simple and can easily be used with git pages. Yes, the site has to be build, but it is a small step I am willing to take toget a better looking blog.</p>
-<p>If anything here is confusing (or <em>wrong</em>!), or if I’ve missed important details, please <a href="https://github.com/mnahmad/scriptndebug/issues">submit an issue</a>.</p>
-<section id="note" class="level2">
-<h2 class="anchored" data-anchor-id="note">Note</h2>
-<p>All contents provided on this [Script &amp; Debug] blog are for informational purposes only. The owner of this blog makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site.</p>
-<p>The owner of [Script &amp; Debug] will not be liable for any errors or omissions in this information nor for the availability of this information. The owner will not be liable for any losses, injuries, or damages from the display or use of this information. This terms and conditions is subject to change at anytime with or without notice.</p>
+<p>Anyone working with databses knows that ocne in while one has to export data as CSV. Yes one can connect database directly with EDA tools but then one has to allow persmisison of external tools to connect with database (if on a different server),thus, CSV might be an easy option.</p>
+<p>restart mysql.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sudo <span class="op">/</span>usr<span class="op">/</span><span class="kw">local</span><span class="op">/</span>mysql<span class="op">/</span>support<span class="op">-</span>files<span class="op">/</span>mysql.server restart</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On Mac, mysql server is at /usr/local/mysql/support-files Or /usr/local/mysql-8.0.17-macos10.14-x86_64/support-files , thus, the above command could be.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sudo <span class="op">/</span>usr<span class="op">/</span><span class="kw">local</span><span class="op">/</span>mysql<span class="op">-</span><span class="dv">8</span>.<span class="fl">0.17</span><span class="op">-</span>macos10<span class="fl">.14</span><span class="op">-</span>x86_64<span class="op">/</span>support<span class="op">-</span>files<span class="op">/</span>mysql.server restart</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>First see where MYSQL is allowed to save the CSVs.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>SHOW VARIABLES <span class="kw">LIKE</span> <span class="ot">"secure_file_priv"</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>the above command should returns</p>
+<ol type="1">
+<li>NULL (means no path is set)</li>
+<li>Path where a file can be saved by mysql</li>
+</ol>
+<p>If the output of <strong>secure_file_priv</strong> is NULL, then you have to add the path to your my.ini (or my.cnf in case of mac)</p>
+<p>On mac, mysql is at /usr/local/mysql or /usr/local/mysql-8.0.17-macos10.14-x86_64 but my.cnf file is at ~/ folder. It would also be at ./etc/mysql/my.cnf</p>
+<p>To add <strong>secure_file_priv</strong> do the following</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vim</span> my.cnf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and then add the following in the file</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>secure_file_priv <span class="op">=</span> <span class="st">'your/path/to/save/file'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now the query to save the results as CVS.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">select</span> a, b, c <span class="kw">from</span> foo</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">INTO</span> OUTFILE <span class="st">'/your/selected/destination/file.csv'</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>FIELDS TERMINATED <span class="kw">BY</span> <span class="st">','</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>LINES TERMINATED <span class="kw">BY</span> <span class="st">'</span><span class="ch">\r\n</span><span class="st">'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>IF you want to enclose some fields with special characters, like <code>'</code> comma etc, do the follwoing</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">select</span> <span class="op">*</span> <span class="kw">from</span> foo <span class="kw">as</span> a</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">INTO</span> OUTFILE <span class="st">'/your/selected/destination/file.csv'</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>OPTIONALLY ENCLOSED <span class="kw">BY</span> <span class="st">'"'</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>FIELDS TERMINATED <span class="kw">BY</span> <span class="st">','</span> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>LINES TERMINATED <span class="kw">BY</span> <span class="st">'</span><span class="ch">\r\n</span><span class="st">'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let me know in comments if this blog has helped.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

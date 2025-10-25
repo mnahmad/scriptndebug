@@ -8,7 +8,7 @@ categories: [post]
 
 ![](thumbnail.jpg)
 
-Off and on, I blog about some personal projects and other tasks I do. I was looking for simple way to document my work, so I can refer back to it and if possible help others as well.
+Off and on, I blog about some personal projects and other tasks I do. The goal of blogging was to document my work, in the most simpleist way possible (without complicating the publishing process), so I can refer back to it and if possible help others as well.
 
 I started a blog site back in 2014 using [wordpress](https://scriptndebug.wordpress.com/). Since I was not hosting the wordpress website, thus, had couple of difficulties like maintenance was always an issue. I wanted a simple solution where I don't have to compile like Jekyll etc.
 
