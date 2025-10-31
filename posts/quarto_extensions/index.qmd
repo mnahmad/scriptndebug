@@ -3,8 +3,8 @@ title: "Quarto Extension"
 author: "Muhammad N. Ahmad"
 date: "2025-10-31"
 date-modified: "2025-10-31"
-categories: [Regex]
-image: "regex.jpeg"
+categories: [Quarto, Extensions]
+image: "quarto_extension1.png"
 filters:
   - social-share
 share:
@@ -33,12 +33,18 @@ This is an amazing extions that can add a social media post to your document.
 My Linkedin post:
 {{< share-post https://www.linkedin.com/feed/update/urn:li:activity:7335234505370169344 >}}
 
-markdown of the above post 
-```markdown
-{{< share-post https://www.linkedin.com/feed/update/urn:li:activity:7335234505370169344 >}}
+Below is the markdown of the above post. 
+
 ```
 
-My Twitter post:
+{{< share-post https://www.linkedin.com/feed/update/urn:li:activity:7335234505370169344 >}}
+
+```
+
+Ooops, markdown is not appearing
+
+I tried Twitter post, not sure why itis not appearing. 
+
 {{< share-post https://x.com/mnabiahmad/status/1790665983985586553 >}}
 
 Twitter post as markdown
