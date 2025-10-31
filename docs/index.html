@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,15 +32,17 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,7 +114,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -131,13 +133,15 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">ScriptNdebug</span>
     </a>
@@ -196,7 +200,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(19)</span></div><div class="category" data-category="App">App <span class="quarto-category-count">(1)</span></div><div class="category" data-category="CLI">CLI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="CSV">CSV <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Django">Django <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GDAL">GDAL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GEE">GEE <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GPX">GPX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GeoServer">GeoServer <span class="quarto-category-count">(1)</span></div><div class="category" data-category="IDE">IDE <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Landsat">Landsat <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Landsat5">Landsat5 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Landsat8">Landsat8 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Map">Map <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Mapping">Mapping <span class="quarto-category-count">(2)</span></div><div class="category" data-category="MySQL">MySQL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QGIS">QGIS <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Regex">Regex <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SLD">SLD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Satellite">Satellite <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Sentinel">Sentinel <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Sentinel2">Sentinel2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ubuntu">Ubuntu <span class="quarto-category-count">(1)</span></div><div class="category" data-category="containers">containers <span class="quarto-category-count">(2)</span></div><div class="category" data-category="pip">pip <span class="quarto-category-count">(1)</span></div><div class="category" data-category="post">post <span class="quarto-category-count">(3)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(19)</span></div><div class="category" data-category="QXBw">App <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q0xJ">CLI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29udGFpbmVycw==">containers <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q1NW">CSV <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGphbmdv">Django <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R0RBTA==">GDAL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R0VF">GEE <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2VvU2VydmVy">GeoServer <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R1BY">GPX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SURF">IDE <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFuZHNhdA==">Landsat <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TGFuZHNhdDU=">Landsat5 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFuZHNhdDg=">Landsat8 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWFw">Map <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFwcGluZw==">Mapping <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TXlTUUw=">MySQL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGlw">pip <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cG9zdA==">post <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UUdJUw==">QGIS <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVnZXg=">Regex <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2F0ZWxsaXRl">Satellite <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U2VudGluZWw=">Sentinel <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2VudGluZWwy">Sentinel2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U0xE">SLD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RhdGlzdGljcw==">statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VWJ1bnR1">Ubuntu <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -210,30 +214,26 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="pip,Python" data-listing-date-sort="1633813200000" data-listing-file-modified-sort="1759088752110" data-listing-date-modified-sort="1759006800000" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
-<div class="thumbnail">
-<p><a href="./posts/pip_issue1/index.html" class="no-external"></a></p><a href="./posts/pip_issue1/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/pip_issue1/pip_issue1.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/pip_issue1/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="0" data-categories="cGlwJTJDUHl0aG9u" data-listing-date-sort="1633813200000" data-listing-file-modified-sort="1761427186217" data-listing-date-modified-sort="1759006800000" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
+<div class="thumbnail"><a href="./posts/pip_issue1/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/pip_issue1/pip_issue1.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/pip_issue1/index.html" class="no-external">Solve Pip error -No module named helpers- on mac</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/pip_issue1/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('pip'); return false;">
-pip
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGlw'); return false;">pip</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/pip_issue1/index.html" class="no-external">After installing python3, every <code>pip install</code> ended up in error “No module named helpers” and when I tried installing “helpers” I got the same message. I Googled the issue and…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/pip_issue1/index.html" class="no-external">
+After installing python3, every <code>pip install</code> ended up in error “No module named helpers” and when I tried installing “helpers” I got the same message. I Googled the issue and…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/pip_issue1/index.html" class="no-external">
@@ -246,30 +246,26 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Python,Django" data-listing-date-sort="1624914000000" data-listing-file-modified-sort="1759086947094" data-listing-date-modified-sort="1758402000000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1403">
-<div class="thumbnail">
-<p><a href="./posts/django_m2m/index.html" class="no-external"></a></p><a href="./posts/django_m2m/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/django_m2m/django_m2m.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/django_m2m/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="1" data-categories="UHl0aG9uJTJDRGphbmdv" data-listing-date-sort="1624914000000" data-listing-file-modified-sort="1761427186212" data-listing-date-modified-sort="1758402000000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1403">
+<div class="thumbnail"><a href="./posts/django_m2m/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/django_m2m/django_m2m.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/django_m2m/index.html" class="no-external">Django app using M2M relationship models</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/django_m2m/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGphbmdv'); return false;">Django</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Django'); return false;">
-Django
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/django_m2m/index.html" class="no-external">Django is an amazing python framework, this blog is an implementation of Djano many to many model.</a>
-</div>
+<div class="delink listing-description"><a href="./posts/django_m2m/index.html" class="no-external">
+Django is an amazing python framework, this blog is an implementation of Djano many to many model.
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/django_m2m/index.html" class="no-external">
@@ -282,27 +278,24 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Mapping" data-listing-date-sort="1602709200000" data-listing-file-modified-sort="1756925673694" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="244">
-<div class="thumbnail">
-<p><a href="./posts/fieldpapers_part2/index.html" class="no-external"></a></p><a href="./posts/fieldpapers_part2/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/fieldpapers_part2/field-large2.gif" class="thumbnail-image"></p>
-</a><p><a href="./posts/fieldpapers_part2/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="2" data-categories="TWFwcGluZw==" data-listing-date-sort="1602709200000" data-listing-file-modified-sort="1761427186215" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="244">
+<div class="thumbnail"><a href="./posts/fieldpapers_part2/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/fieldpapers_part2/field-large2.gif" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/fieldpapers_part2/index.html" class="no-external">Field Papers part 2</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/fieldpapers_part2/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Mapping'); return false;">
-Mapping
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFwcGluZw=='); return false;">Mapping</div>
+
 </div>
-</div>
-<div class="listing-description">
-<a href="./posts/fieldpapers_part2/index.html" class="no-external">I hope you have enjoyed part 1 of Field Papers. In part 2, we discus two use cases where Field Papers might come handy. The use cases are</a>
-</div>
+<div class="delink listing-description"><a href="./posts/fieldpapers_part2/index.html" class="no-external">
+I hope you have enjoyed part 1 of Field Papers. In part 2, we discus two use cases where Field Papers might come handy. The use cases are
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/fieldpapers_part2/index.html" class="no-external">
@@ -315,27 +308,24 @@ Muhammad N Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="statistics" data-listing-date-sort="1602277200000" data-listing-file-modified-sort="1757619163517" data-listing-date-modified-sort="1602277200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="209">
-<div class="thumbnail">
-<p><a href="./posts/zonal_statistics1/index.html" class="no-external"></a></p><a href="./posts/zonal_statistics1/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/zonal_statistics1/zonal1.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/zonal_statistics1/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="3" data-categories="c3RhdGlzdGljcw==" data-listing-date-sort="1602277200000" data-listing-file-modified-sort="1761427186227" data-listing-date-modified-sort="1602277200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="209">
+<div class="thumbnail"><a href="./posts/zonal_statistics1/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/zonal_statistics1/zonal1.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/zonal_statistics1/index.html" class="no-external">Summery of Zonal, Focal, local and Global operations</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/zonal_statistics1/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
-statistics
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljcw=='); return false;">statistics</div>
+
 </div>
-</div>
-<div class="listing-description">
-<a href="./posts/zonal_statistics1/index.html" class="no-external">Its always helpful to know some of the basic spatial statistical concepts while working with GIS datasets especially raster datasets. Following are some basic concepts</a>
-</div>
+<div class="delink listing-description"><a href="./posts/zonal_statistics1/index.html" class="no-external">
+Its always helpful to know some of the basic spatial statistical concepts while working with GIS datasets especially raster datasets. Following are some basic concepts
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/zonal_statistics1/index.html" class="no-external">
@@ -348,27 +338,24 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Mapping" data-listing-date-sort="1602277200000" data-listing-file-modified-sort="1756672975915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="361">
-<div class="thumbnail">
-<p><a href="./posts/fieldpapers_part1/index.html" class="no-external"></a></p><a href="./posts/fieldpapers_part1/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/fieldpapers_part1/field-large.gif" class="thumbnail-image"></p>
-</a><p><a href="./posts/fieldpapers_part1/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="4" data-categories="TWFwcGluZw==" data-listing-date-sort="1602277200000" data-listing-file-modified-sort="1761427186215" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="361">
+<div class="thumbnail"><a href="./posts/fieldpapers_part1/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/fieldpapers_part1/field-large.gif" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/fieldpapers_part1/index.html" class="no-external">Field Papers</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/fieldpapers_part1/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Mapping'); return false;">
-Mapping
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFwcGluZw=='); return false;">Mapping</div>
+
 </div>
-</div>
-<div class="listing-description">
-<a href="./posts/fieldpapers_part1/index.html" class="no-external">Field papers is an excellent tool for spatial field surveys and participatory GIS. It is very easy to use. All you have to do is</a>
-</div>
+<div class="delink listing-description"><a href="./posts/fieldpapers_part1/index.html" class="no-external">
+Field papers is an excellent tool for spatial field surveys and participatory GIS. It is very easy to use. All you have to do is
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/fieldpapers_part1/index.html" class="no-external">
@@ -381,30 +368,26 @@ Muhammad N Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="QGIS,GEE" data-listing-date-sort="1584219600000" data-listing-file-modified-sort="1757328547694" data-listing-date-modified-sort="1586034000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="344">
-<div class="thumbnail">
-<p><a href="./posts/qgis_gee_plugins/index.html" class="no-external"></a></p><a href="./posts/qgis_gee_plugins/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/qgis_gee_plugins/QGIS_logo_2017.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/qgis_gee_plugins/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="5" data-categories="UUdJUyUyQ0dFRQ==" data-listing-date-sort="1584219600000" data-listing-file-modified-sort="1761427186221" data-listing-date-modified-sort="1586034000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="344">
+<div class="thumbnail"><a href="./posts/qgis_gee_plugins/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/qgis_gee_plugins/QGIS_logo_2017.png" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/qgis_gee_plugins/index.html" class="no-external">Google Earth Engine plugin</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/qgis_gee_plugins/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QGIS'); return false;">
-QGIS
+
+<div class="listing-category" onclick="window.quartoListingCategory('UUdJUw=='); return false;">QGIS</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('R0VF'); return false;">GEE</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('GEE'); return false;">
-GEE
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/qgis_gee_plugins/index.html" class="no-external">Few days back I read about Google Earth Engine (GEE) plugin for QGIS(3.8). The installation was straight forward (by using the QGIS plugins menu option Manage and Install…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/qgis_gee_plugins/index.html" class="no-external">
+Few days back I read about Google Earth Engine (GEE) plugin for QGIS(3.8). The installation was straight forward (by using the QGIS plugins menu option Manage and Install…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/qgis_gee_plugins/index.html" class="no-external">
@@ -417,33 +400,28 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="SLD,GeoServer,CLI" data-listing-date-sort="1575147600000" data-listing-file-modified-sort="1759336032113" data-listing-date-modified-sort="1575147600000" data-listing-reading-time-sort="2" data-listing-word-count-sort="210">
-<div class="thumbnail">
-<p><a href="./posts/geoserver_sld_issue/index.html" class="no-external"></a></p><a href="./posts/geoserver_sld_issue/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/geoserver_sld_issue/geoserver_sld_issue1.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/geoserver_sld_issue/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="6" data-categories="U0xEJTJDR2VvU2VydmVyJTJDQ0xJ" data-listing-date-sort="1575147600000" data-listing-file-modified-sort="1761427186216" data-listing-date-modified-sort="1575147600000" data-listing-reading-time-sort="2" data-listing-word-count-sort="210">
+<div class="thumbnail"><a href="./posts/geoserver_sld_issue/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/geoserver_sld_issue/geoserver_sld_issue1.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/geoserver_sld_issue/index.html" class="no-external">GeoServer and CLI</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/geoserver_sld_issue/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('SLD'); return false;">
-SLD
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0xE'); return false;">SLD</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('R2VvU2VydmVy'); return false;">GeoServer</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q0xJ'); return false;">CLI</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('GeoServer'); return false;">
-GeoServer
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('CLI'); return false;">
-CLI
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/geoserver_sld_issue/index.html" class="no-external">When one cannot open the publish tab (in GeoServer) on layer menu, it means some thing is wrong with styles (this can also be proven by looking at the same layer in preview…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/geoserver_sld_issue/index.html" class="no-external">
+When one cannot open the publish tab (in GeoServer) on layer menu, it means some thing is wrong with styles (this can also be proven by looking at the same layer in preview…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/geoserver_sld_issue/index.html" class="no-external">
@@ -456,33 +434,28 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="MySQL,CSV,Ubuntu" data-listing-date-sort="1573419600000" data-listing-file-modified-sort="1761404484778" data-listing-date-modified-sort="1761339600000" data-listing-reading-time-sort="2" data-listing-word-count-sort="225">
-<div class="thumbnail">
-<p><a href="./posts/mysql_2_csv/index.html" class="no-external"></a></p><a href="./posts/mysql_2_csv/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/mysql_2_csv/mysql.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/mysql_2_csv/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="7" data-categories="TXlTUUwlMkNDU1YlMkNVYnVudHU=" data-listing-date-sort="1573419600000" data-listing-file-modified-sort="1761427186216" data-listing-date-modified-sort="1761339600000" data-listing-reading-time-sort="2" data-listing-word-count-sort="225">
+<div class="thumbnail"><a href="./posts/mysql_2_csv/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/mysql_2_csv/mysql.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/mysql_2_csv/index.html" class="no-external">Export data as CVS from MySQL Database</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/mysql_2_csv/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('MySQL'); return false;">
-MySQL
+
+<div class="listing-category" onclick="window.quartoListingCategory('TXlTUUw='); return false;">MySQL</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q1NW'); return false;">CSV</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VWJ1bnR1'); return false;">Ubuntu</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('CSV'); return false;">
-CSV
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ubuntu'); return false;">
-Ubuntu
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/mysql_2_csv/index.html" class="no-external">Anyone working with databses knows that ocne in while one has to export data as CSV. Yes one can connect database directly with EDA tools but then one has to allow…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/mysql_2_csv/index.html" class="no-external">
+Anyone working with databses knows that ocne in while one has to export data as CSV. Yes one can connect database directly with EDA tools but then one has to allow…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/mysql_2_csv/index.html" class="no-external">
@@ -495,30 +468,26 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="QGIS,GPX" data-listing-date-sort="1572642000000" data-listing-file-modified-sort="1757099113031" data-listing-date-modified-sort="1572728400000" data-listing-reading-time-sort="3" data-listing-word-count-sort="520">
-<div class="thumbnail">
-<p><a href="./posts/random_points_gpx/index.html" class="no-external"></a></p><a href="./posts/random_points_gpx/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/random_points_gpx/QGIS_logo_2017.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/random_points_gpx/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="8" data-categories="UUdJUyUyQ0dQWA==" data-listing-date-sort="1572642000000" data-listing-file-modified-sort="1761427186223" data-listing-date-modified-sort="1572728400000" data-listing-reading-time-sort="3" data-listing-word-count-sort="520">
+<div class="thumbnail"><a href="./posts/random_points_gpx/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/random_points_gpx/QGIS_logo_2017.png" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/random_points_gpx/index.html" class="no-external">How to generate random points in QGIS and export as GP</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/random_points_gpx/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QGIS'); return false;">
-QGIS
+
+<div class="listing-category" onclick="window.quartoListingCategory('UUdJUw=='); return false;">QGIS</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('R1BY'); return false;">GPX</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('GPX'); return false;">
-GPX
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/random_points_gpx/index.html" class="no-external">Some time field survey require random field locations to remove bias from the data collection. QGIS can generate random points for a field survey</a>
-</div>
+<div class="delink listing-description"><a href="./posts/random_points_gpx/index.html" class="no-external">
+Some time field survey require random field locations to remove bias from the data collection. QGIS can generate random points for a field survey
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/random_points_gpx/index.html" class="no-external">
@@ -531,27 +500,24 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Regex" data-listing-date-sort="1572296400000" data-listing-file-modified-sort="1756928496947" data-listing-date-modified-sort="1755637200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
-<div class="thumbnail">
-<p><a href="./posts/regex/index.html" class="no-external"></a></p><a href="./posts/regex/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/regex/regex.jpeg" class="thumbnail-image"></p>
-</a><p><a href="./posts/regex/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="9" data-categories="UmVnZXg=" data-listing-date-sort="1572296400000" data-listing-file-modified-sort="1761893779627" data-listing-date-modified-sort="1767128400000" data-listing-reading-time-sort="11" data-listing-word-count-sort="2093">
+<div class="thumbnail"><a href="./posts/regex/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/regex/regex.jpeg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/regex/index.html" class="no-external">Regex</a>
+<a href="./posts/regex/index.html" class="no-external">Regex 101</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/regex/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Regex'); return false;">
-Regex
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmVnZXg='); return false;">Regex</div>
+
 </div>
-</div>
-<div class="listing-description">
-<a href="./posts/regex/index.html" class="no-external">Find space between 2 set of characters</a>
-</div>
+<div class="delink listing-description"><a href="./posts/regex/index.html" class="no-external">
+This post is written to help with basic regex patteren matching (plus for me to quickly refer something that I have already figured out).
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/regex/index.html" class="no-external">
@@ -564,30 +530,26 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="App,Map" data-listing-date-sort="1570914000000" data-listing-file-modified-sort="1759327911752" data-listing-date-modified-sort="1570914000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="160">
-<div class="thumbnail">
-<p><a href="./posts/locus_localmaps/index.html" class="no-external"></a></p><a href="./posts/locus_localmaps/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/locus_localmaps/local_map1.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/locus_localmaps/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="10" data-categories="QXBwJTJDTWFw" data-listing-date-sort="1570914000000" data-listing-file-modified-sort="1761427186216" data-listing-date-modified-sort="1570914000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="160">
+<div class="thumbnail"><a href="./posts/locus_localmaps/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/locus_localmaps/local_map1.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/locus_localmaps/index.html" class="no-external">How to download Offline maps for LocusMap</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/locus_localmaps/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('App'); return false;">
-App
+
+<div class="listing-category" onclick="window.quartoListingCategory('QXBw'); return false;">App</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFw'); return false;">Map</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Map'); return false;">
-Map
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/locus_localmaps/index.html" class="no-external">LocusMap is a perfect app to use for navigation, plus it can store maps offline as well, it has a free version as wel, thus, the usecase is strong. This blog details the…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/locus_localmaps/index.html" class="no-external">
+LocusMap is a perfect app to use for navigation, plus it can store maps offline as well, it has a free version as wel, thus, the usecase is strong. This blog details the…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/locus_localmaps/index.html" class="no-external">
@@ -600,39 +562,32 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Satellite,Landsat,Landsat8,Sentinel,Sentinel2" data-listing-date-sort="1556917200000" data-listing-file-modified-sort="1756552495454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
-<div class="thumbnail">
-<p><a href="./posts/sentinel_band_combination/index.html" class="no-external"></a></p><a href="./posts/sentinel_band_combination/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/sentinel_band_combination/band_combination1.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/sentinel_band_combination/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="11" data-categories="U2F0ZWxsaXRlJTJDTGFuZHNhdCUyQ0xhbmRzYXQ4JTJDU2VudGluZWwlMkNTZW50aW5lbDI=" data-listing-date-sort="1556917200000" data-listing-file-modified-sort="1761427186227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
+<div class="thumbnail"><a href="./posts/sentinel_band_combination/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/sentinel_band_combination/band_combination1.png" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/sentinel_band_combination/index.html" class="no-external">Band combination for Landsat 8 and Sentinel 2</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/sentinel_band_combination/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Satellite'); return false;">
-Satellite
+
+<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRl'); return false;">Satellite</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZHNhdA=='); return false;">Landsat</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZHNhdDg='); return false;">Landsat8</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U2VudGluZWw='); return false;">Sentinel</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U2VudGluZWwy'); return false;">Sentinel2</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Landsat'); return false;">
-Landsat
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Landsat8'); return false;">
-Landsat8
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Sentinel'); return false;">
-Sentinel
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Sentinel2'); return false;">
-Sentinel2
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/sentinel_band_combination/index.html" class="no-external">This post is a summery of the original discussion on ESA’s discussion forum, I just place it in one page for easy access.</a>
-</div>
+<div class="delink listing-description"><a href="./posts/sentinel_band_combination/index.html" class="no-external">
+This post is a summery of the original discussion on ESA’s discussion forum, I just place it in one page for easy access.
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/sentinel_band_combination/index.html" class="no-external">
@@ -645,27 +600,24 @@ Muhammad N Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="GDAL" data-listing-date-sort="1519074000000" data-listing-file-modified-sort="1757013993812" data-listing-date-modified-sort="1556917200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="126">
-<div class="thumbnail">
-<p><a href="./posts/gdal_tips/index.html" class="no-external"></a></p><a href="./posts/gdal_tips/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/gdal_tips/gdalicon.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/gdal_tips/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="12" data-categories="R0RBTA==" data-listing-date-sort="1519074000000" data-listing-file-modified-sort="1761427186216" data-listing-date-modified-sort="1556917200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="126">
+<div class="thumbnail"><a href="./posts/gdal_tips/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/gdal_tips/gdalicon.webp" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/gdal_tips/index.html" class="no-external">GDAL tips</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/gdal_tips/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('GDAL'); return false;">
-GDAL
+
+<div class="listing-category" onclick="window.quartoListingCategory('R0RBTA=='); return false;">GDAL</div>
+
 </div>
-</div>
-<div class="listing-description">
-<a href="./posts/gdal_tips/index.html" class="no-external">This blog is about Gdal commands and their usage with examples.</a>
-</div>
+<div class="delink listing-description"><a href="./posts/gdal_tips/index.html" class="no-external">
+This blog is about Gdal commands and their usage with examples.
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/gdal_tips/index.html" class="no-external">
@@ -678,27 +630,24 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="IDE" data-listing-date-sort="1510693200000" data-listing-file-modified-sort="1759171840540" data-listing-date-modified-sort="1759093200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="265">
-<div class="thumbnail">
-<p><a href="./posts/atom_ide/index.html" class="no-external"></a></p><a href="./posts/atom_ide/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/atom_ide/atom_ide.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/atom_ide/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="13" data-categories="SURF" data-listing-date-sort="1510693200000" data-listing-file-modified-sort="1761427186212" data-listing-date-modified-sort="1759093200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="265">
+<div class="thumbnail"><a href="./posts/atom_ide/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/atom_ide/atom_ide.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/atom_ide/index.html" class="no-external">Atom text editor</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/atom_ide/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('IDE'); return false;">
-IDE
+
+<div class="listing-category" onclick="window.quartoListingCategory('SURF'); return false;">IDE</div>
+
 </div>
-</div>
-<div class="listing-description">
-<a href="./posts/atom_ide/index.html" class="no-external">In the last few years, I tired many text editors like gedit, sublime, vi, vim and Atom, the last one stuck with me for long. What I like about Atom is the packages, gedit…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/atom_ide/index.html" class="no-external">
+In the last few years, I tired many text editors like gedit, sublime, vi, vim and Atom, the last one stuck with me for long. What I like about Atom is the packages, gedit…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/atom_ide/index.html" class="no-external">
@@ -711,36 +660,30 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="Satellite,Landsat,Landsat5,Landsat8" data-listing-date-sort="1498856400000" data-listing-file-modified-sort="1756552471496" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="476">
-<div class="thumbnail">
-<p><a href="./posts/landsat57_downloader/index.html" class="no-external"></a></p><a href="./posts/landsat57_downloader/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/landsat57_downloader/landsat-4-5.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/landsat57_downloader/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="14" data-categories="U2F0ZWxsaXRlJTJDTGFuZHNhdCUyQ0xhbmRzYXQ1JTJDTGFuZHNhdDg=" data-listing-date-sort="1498856400000" data-listing-file-modified-sort="1761427186216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="476">
+<div class="thumbnail"><a href="./posts/landsat57_downloader/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/landsat57_downloader/landsat-4-5.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/landsat57_downloader/index.html" class="no-external">Landsat Images download</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/landsat57_downloader/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Satellite'); return false;">
-Satellite
+
+<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRl'); return false;">Satellite</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZHNhdA=='); return false;">Landsat</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZHNhdDU='); return false;">Landsat5</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGFuZHNhdDg='); return false;">Landsat8</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Landsat'); return false;">
-Landsat
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Landsat5'); return false;">
-Landsat5
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Landsat8'); return false;">
-Landsat8
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/landsat57_downloader/index.html" class="no-external">Around a year ago, I came across landsat_util that can be used to download Landsat 8 images. It can searches, process and download images from servers.</a>
-</div>
+<div class="delink listing-description"><a href="./posts/landsat57_downloader/index.html" class="no-external">
+Around a year ago, I came across landsat_util that can be used to download Landsat 8 images. It can searches, process and download images from servers.
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/landsat57_downloader/index.html" class="no-external">
@@ -753,27 +696,24 @@ Muhammad N Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="post" data-listing-date-sort="1468962000000" data-listing-file-modified-sort="1756149707518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
-<div class="thumbnail">
-<p><a href="./posts/androzic/index.html" class="no-external"></a></p><a href="./posts/androzic/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/androzic/website.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/androzic/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="15" data-categories="cG9zdA==" data-listing-date-sort="1468962000000" data-listing-file-modified-sort="1761427186210" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
+<div class="thumbnail"><a href="./posts/androzic/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/androzic/website.png" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/androzic/index.html" class="no-external">OziExplore</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/androzic/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
+
+<div class="listing-category" onclick="window.quartoListingCategory('cG9zdA=='); return false;">post</div>
+
 </div>
-</div>
-<div class="listing-description">
-<a href="./posts/androzic/index.html" class="no-external">OziExplorer is a software that can create way points, paths from shape files for mobile devices. OziExplorer is a licensed software, thus, the mobile versions are also…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/androzic/index.html" class="no-external">
+OziExplorer is a software that can create way points, paths from shape files for mobile devices. OziExplorer is a licensed software, thus, the mobile versions are also…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/androzic/index.html" class="no-external">
@@ -786,30 +726,26 @@ Muhammad N Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="post,containers" data-listing-date-sort="1468011600000" data-listing-file-modified-sort="1755975446749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
-<div class="thumbnail">
-<p><a href="./posts/Continuumio_docker_image/index.html" class="no-external"></a></p><a href="./posts/Continuumio_docker_image/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/Continuumio_docker_image/docker-logo-svgrepo-com.svg" class="thumbnail-image"></p>
-</a><p><a href="./posts/Continuumio_docker_image/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="16" data-categories="cG9zdCUyQ2NvbnRhaW5lcnM=" data-listing-date-sort="1468011600000" data-listing-file-modified-sort="1761427186208" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
+<div class="thumbnail"><a href="./posts/Continuumio_docker_image/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/Continuumio_docker_image/docker-logo-svgrepo-com.svg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/Continuumio_docker_image/index.html" class="no-external">Using Continuumio Docker image for python anaconda3</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
+
+<div class="listing-category" onclick="window.quartoListingCategory('cG9zdA=='); return false;">post</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29udGFpbmVycw=='); return false;">containers</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('containers'); return false;">
-containers
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Continuumio_docker_image/index.html" class="no-external">Few months back I decided to try python anaconda for some of my data science tasks but wanted to isntall in a VM (so my other python pasths are not disturbed). On of the…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/Continuumio_docker_image/index.html" class="no-external">
+Few months back I decided to try python anaconda for some of my data science tasks but wanted to isntall in a VM (so my other python pasths are not disturbed). On of the…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/Continuumio_docker_image/index.html" class="no-external">
@@ -822,27 +758,24 @@ Muhammad N Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="containers" data-listing-date-sort="1462741200000" data-listing-file-modified-sort="1756552514462" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="312">
-<div class="thumbnail">
-<p><a href="./posts/bitnami/index.html" class="no-external"></a></p><a href="./posts/bitnami/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/bitnami/bitnami_logo.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/bitnami/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="17" data-categories="Y29udGFpbmVycw==" data-listing-date-sort="1462741200000" data-listing-file-modified-sort="1761427186212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="312">
+<div class="thumbnail"><a href="./posts/bitnami/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/bitnami/bitnami_logo.png" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/bitnami/index.html" class="no-external">Bitnami and mySQL</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/bitnami/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('containers'); return false;">
-containers
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29udGFpbmVycw=='); return false;">containers</div>
+
 </div>
-</div>
-<div class="listing-description">
-<a href="./posts/bitnami/index.html" class="no-external">There was a time, I used bitname stack, specically for mysql, it was nice and easy, however, now I usually use docker, thus, the post below is old and included here only for…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/bitnami/index.html" class="no-external">
+There was a time, I used bitname stack, specically for mysql, it was nice and easy, however, now I usually use docker, thus, the post below is old and included here only for…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/bitnami/index.html" class="no-external">
@@ -855,27 +788,24 @@ Muhammad N Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="post" data-listing-date-sort="1388523600000" data-listing-file-modified-sort="1761397501497" data-listing-date-modified-sort="1755637200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="312">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="18" data-categories="cG9zdA==" data-listing-date-sort="1388523600000" data-listing-file-modified-sort="1761427186227" data-listing-date-modified-sort="1755637200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="312">
+<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
+
 <p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('post'); return false;">
-post
+
+<div class="listing-category" onclick="window.quartoListingCategory('cG9zdA=='); return false;">post</div>
+
 </div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">Off and on, I blog about some personal projects and other tasks I do. The goal of blogging was to document my work, in the most simpleist way possible (without complicating…</a>
-</div>
+<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
+Off and on, I blog about some personal projects and other tasks I do. The goal of blogging was to document my work, in the most simpleist way possible (without complicating…
+</a></div>
 </div>
 <div class="metadata">
 <a href="./posts/welcome/index.html" class="no-external">
@@ -889,244 +819,246 @@ Muhammad N. Ahmad
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1134,185 +1066,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 
 

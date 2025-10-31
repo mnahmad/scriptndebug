@@ -1,12 +1,30 @@
 ---
-title: "Regex"
+title: "Regex 101"
 author: "Muhammad N. Ahmad"
 date: "2019-10-29"
-date-modified: "2025-08-20"
+date-modified: "2025-12-31"
 categories: [Regex]
 image: "regex.jpeg"
+filters:
+  - social-share
+share:
+  permalink: "https://mnahmad.github.io/scriptndebug/posts/regex/index.html"
+  description: "Regex 101"
+  twitter: true
+  facebook: true
+  reddit: true
+  stumble: true
+  tumblr: true
+  linkedin: true
+  email: true
+  mastodon: true
+  bsky: true
+
 ---
 
+This post is written to help with basic regex patteren matching (plus for me to quickly refer something that I have already figured out).
+
+# Find spaces
 Find space between 2 set of characters
 
 ```
@@ -17,3 +35,64 @@ Find space between 2 set of characters
 You can find tones of other patterns at [Digital Fortress post](https://digitalfortress.tech/tips/top-15-commonly-used-regex/)
 
 For practice, visit [regexr.com](https://regexr.com/)
+
+
+()  all spaces 
+(.) all spaces + one character before space
+
+## Well know tokens 
+
+| Taken   | meaning                                                                                                                                                                                                                                      |
+| :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ^       | match at the beginning of string or line                                                                                                                                                                                                     |
+| ()      | group multiple tokens togather and create a capture group for extracting substring                                                                                                                                                           |
+| \\< \\> | match characters \< or \> or \s etc.                                                                                                                                                                                                         |
+| *       | all characters                                                                                                                                                                                                                               |
+| .       | match any character except line break                                                                                                                                                                                                        |
+| +       | match one or more of precedding tokens                                                                                                                                                                                                       |
+| ?       | Makes the preceding quantifier lazy, causing it to match as few characters as possible. By default, quantifiers are greedy, and will match as many characters as possible. see [Make preceding token lazy](#Make%20preceding%20token%20lazy) |
+| [ ]     | match any character in this set                                                                                                                                                                                                              |
+| \\s      | space see [remove leading space](#remove%20leading%20space)                                                                                                                                                                                  |
+
+## Some examples 
+#### Make preceding token lazy
+
+Show b and next one or more characters (+ is one or more token).
+```bash
+b\w+?
+```
+Results:
+>from b, be , bee, beee
+>be, bee , be will be selected as ? made the preceding token (+ ) lazy so instead of selecting multiple character the token ? has forced to be lazy and get satisfied with 1 character
+
+#### Get all text before a character
+
+```bash
+^(.+?)│
+
+where character is |
+
+OR
+
+^(.+)\.
+
+where character is .
+
+ ```
+
+#### Get all character within < and > 
+
+```bash
+\<.*?\>
+
+```
+#### remove leading space 
+
+```bash
+
+^[\s]
+
+```
+
+
+
