@@ -2,7 +2,7 @@
 title: "Regex 101"
 author: "Muhammad N. Ahmad"
 date: "2019-10-29"
-date-modified: "2025-12-31"
+date-modified: "2025-10-31"
 categories: [Regex]
 image: "regex.jpeg"
 filters:

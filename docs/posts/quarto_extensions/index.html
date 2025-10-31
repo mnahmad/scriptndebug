@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Muhammad N. Ahmad">
-<meta name="dcterms.date" content="2019-10-29">
+<meta name="dcterms.date" content="2025-10-31">
 
-<title>Regex 101 – ScriptNdebug</title>
+<title>Quarto Extension – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -107,6 +72,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+.linkedin-post,
+.text-post-media,
+.pinterest-rendered,
+.twitter-tweet-rendered,
+.instagram-media, 
+.mastodon-embed {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+</style>
+<style>
+.linkedin-post,
+.text-post-media,
+.pinterest-rendered,
+.twitter-tweet-rendered,
+.instagram-media, 
+.mastodon-embed {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+</style>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -161,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Regex 101</h1>
+      <h1 class="title">Quarto Extension</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Regex</div>
               </div>
@@ -181,7 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 29, 2019</p>
+        <p class="date">October 31, 2025</p>
       </div>
     </div>
     
@@ -206,96 +195,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>This post is written to help with basic regex patteren matching (plus for me to quickly refer something that I have already figured out).</p>
-<section id="find-spaces" class="level1">
-<h1>Find spaces</h1>
-<p>Find space between 2 set of characters</p>
-<pre><code>\b \b
-</code></pre>
-<p>You can find tones of other patterns at <a href="https://digitalfortress.tech/tips/top-15-commonly-used-regex/">Digital Fortress post</a></p>
-<p>For practice, visit <a href="https://regexr.com/">regexr.com</a></p>
-<p>() all spaces (.) all spaces + one character before space</p>
-<section id="well-know-tokens" class="level2">
-<h2 class="anchored" data-anchor-id="well-know-tokens">Well know tokens</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Taken</th>
-<th style="text-align: left;">meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">^</td>
-<td style="text-align: left;">match at the beginning of string or line</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">()</td>
-<td style="text-align: left;">group multiple tokens togather and create a capture group for extracting substring</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">\&lt; \&gt;</td>
-<td style="text-align: left;">match characters &lt; or &gt; or etc.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">*</td>
-<td style="text-align: left;">all characters</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">.</td>
-<td style="text-align: left;">match any character except line break</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">+</td>
-<td style="text-align: left;">match one or more of precedding tokens</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">Makes the preceding quantifier lazy, causing it to match as few characters as possible. By default, quantifiers are greedy, and will match as many characters as possible. see <a href="#Make%20preceding%20token%20lazy">Make preceding token lazy</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">[ ]</td>
-<td style="text-align: left;">match any character in this set</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">\s</td>
-<td style="text-align: left;">space see <a href="#remove%20leading%20space">remove leading space</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="some-examples" class="level2">
-<h2 class="anchored" data-anchor-id="some-examples">Some examples</h2>
-<section id="make-preceding-token-lazy" class="level4">
-<h4 class="anchored" data-anchor-id="make-preceding-token-lazy">Make preceding token lazy</h4>
-<p>Show b and next one or more characters (+ is one or more token).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">b\w+?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Results: &gt;from b, be , bee, beee &gt;be, bee , be will be selected as ? made the preceding token (+ ) lazy so instead of selecting multiple character the token ? has forced to be lazy and get satisfied with 1 character</p>
-</section>
-<section id="get-all-text-before-a-character" class="level4">
-<h4 class="anchored" data-anchor-id="get-all-text-before-a-character">Get all text before a character</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">^</span><span class="er">(</span><span class="bu">.</span>+<span class="pp">?</span><span class="kw">)</span><span class="ex">│</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">where</span> character is <span class="kw">|</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">OR</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">^</span><span class="er">(</span><span class="bu">.</span>+<span class="kw">)</span><span class="ex">\.</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">where</span> character is .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="get-all-character-within-and" class="level4">
-<h4 class="anchored" data-anchor-id="get-all-character-within-and">Get all character within &lt; and &gt;</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">\&lt;.*?\&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="remove-leading-space" class="level4">
-<h4 class="anchored" data-anchor-id="remove-leading-space">remove leading space</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">^[\s]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Quarto is amazing, for reproducable reports, quick dashboards, websites and blogging sites like mine. Quarto has an extension ecosystem as well, so I started playing with these extensions, thus, this post will document some of example works around these extensions.</p>
+<section id="share-post" class="level2">
+<h2 class="anchored" data-anchor-id="share-post">Share-post</h2>
+<p>This is an amazing extions that can add a social media post to your document. I tried adding it to this post, but somehome in preview it is now working.</p>
+<p>Test: <iframe src="https://sciencemastodon.com/@gdyson/111371030805595929/embed" class="mastodon-embed" style="max-width: 100%; border: 0;" width="400" allowfullscreen="allowfullscreen"></iframe></p>
+<p>My Linkedin post: <iframe class="linkedin-post" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7335234505370169344" height="1062" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
+<p>My Twitter post: </p>
+<p>Twitter post as markdown</p>
+<pre><code></code></pre>
+Twitter post using twitter’s option
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+For UKPack NbS project (funded by UKPack), <a href="https://twitter.com/CIFOR_ICRAF?ref_src=twsrc%5Etfw"><span class="citation" data-cites="CIFOR_ICRAF">@CIFOR_ICRAF</span></a> conducted a capacity building workshop at county level to leverage citizen science for critical data collection to help in decision making.<a href="https://twitter.com/OfficialMakueni?ref_src=twsrc%5Etfw"><span class="citation" data-cites="OfficialMakueni">@OfficialMakueni</span></a>, <a href="https://twitter.com/UKinKenya?ref_src=twsrc%5Etfw"><span class="citation" data-cites="UKinKenya">@UKinKenya</span></a>, <a href="https://twitter.com/lawinowiecki?ref_src=twsrc%5Etfw"><span class="citation" data-cites="lawinowiecki">@lawinowiecki</span></a><a href="https://twitter.com/hashtag/RegreeningApp?src=hash&amp;ref_src=twsrc%5Etfw">#RegreeningApp</a> <a href="https://t.co/75BGH6BCBb">pic.twitter.com/75BGH6BCBb</a>
+</p>
+— Muhammad Ahmad (<span class="citation" data-cites="mnabiahmad">@mnabiahmad</span>) <a href="https://twitter.com/mnabiahmad/status/1790665983985586553?ref_src=twsrc%5Etfw">May 15, 2024</a>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -701,6 +619,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 </div> <!-- /content -->
 <div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;text=Regex 101" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;title=Regex 101" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=Regex 101&amp;body=Check out this link:https://mnahmad.github.io/scriptndebug/posts/regex/index.html" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://mnahmad.github.io/scriptndebug/posts/regex/index.html" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;title=Regex 101" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a><a href="https://www.stumbleupon.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;title=Regex 101" target="_blank" class="stumbleupon"><i class="fa-brands fa-stumbleupon fa-fw fa-lg"></i></a><a href="https://www.tumblr.com/share/link?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;name=Regex 101" target="_blank" class="tumblr"><i class="fa-brands fa-tumblr fa-fw fa-lg"></i></a><a href="javascript:void(0);" onclick="var mastodon_instance=prompt('Mastodon Instance / Server Name?'); if(typeof mastodon_instance==='string' &amp;&amp; mastodon_instance.length){this.href='https://'+mastodon_instance+'/share?text=Regex 101 https://mnahmad.github.io/scriptndebug/posts/regex/index.html'}else{return false;}" target="_blank" class="mastodon"><i class="fa-brands fa-mastodon fa-fw fa-lg"></i></a><a href="https://bsky.app/intent/compose?text=https://mnahmad.github.io/scriptndebug/posts/regex/index.html Regex 101" target="_blank" class="bsky"><i class="fa-brands fa-bluesky"></i></a></div></div>
+<script src="https://sciencemastodon.com/embed.js" async="async"></script>
+<script src="https://www.linkedin.com/embed.js" async="async"></script>
 
 
 

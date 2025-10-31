@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/quarto_extensions/index.html",
       "/posts/pip_issue1/index.html",
       "/posts/django_m2m/index.html",
       "/posts/fieldpapers_part2/index.html",
