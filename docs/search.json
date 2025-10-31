@@ -158,7 +158,7 @@
     "href": "posts/quarto_extensions/index.html#share-post",
     "title": "Quarto Extension",
     "section": "Share-post",
-    "text": "Share-post\nThis is an amazing extions that can add a social media post to your document. I tried adding it to this post, but somehome in preview it is now working.\nTest: \nMy Linkedin post: \nMy Twitter post: \nTwitter post as markdown\n\nTwitter post using twitter’s option\n\n\nFor UKPack NbS project (funded by UKPack), @CIFOR_ICRAF conducted a capacity building workshop at county level to leverage citizen science for critical data collection to help in decision making.@OfficialMakueni, @UKinKenya, @lawinowiecki#RegreeningApp pic.twitter.com/75BGH6BCBb\n\n— Muhammad Ahmad (@mnabiahmad) May 15, 2024"
+    "text": "Share-post\nThis is an amazing extions that can add a social media post to your document.\nMy Linkedin post: \nmarkdown of the above post\n\nMy Twitter post: \nTwitter post as markdown\n\nSomehow the twitter post is not appearing, thus, I tired using twitter’s embed option and it shows (see below).\n\n\nFor UKPack NbS project (funded by UKPack), @CIFOR_ICRAF conducted a capacity building workshop at county level to leverage citizen science for critical data collection to help in decision making.@OfficialMakueni, @UKinKenya, @lawinowiecki#RegreeningApp pic.twitter.com/75BGH6BCBb\n\n— Muhammad Ahmad (@mnabiahmad) May 15, 2024"
   },
   {
     "objectID": "posts/fieldpapers_part1/index.html",
