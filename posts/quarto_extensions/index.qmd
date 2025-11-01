@@ -57,5 +57,21 @@ Somehow the twitter post is not appearing, thus, I tired using twitter's embed o
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">For UKPack NbS project (funded by UKPack), <a href="https://twitter.com/CIFOR_ICRAF?ref_src=twsrc%5Etfw">@CIFOR_ICRAF</a> conducted a capacity building workshop at county level to leverage citizen science for critical data collection to help in decision making.<a href="https://twitter.com/OfficialMakueni?ref_src=twsrc%5Etfw">@OfficialMakueni</a>, <a href="https://twitter.com/UKinKenya?ref_src=twsrc%5Etfw">@UKinKenya</a>, <a href="https://twitter.com/lawinowiecki?ref_src=twsrc%5Etfw">@lawinowiecki</a><a href="https://twitter.com/hashtag/RegreeningApp?src=hash&amp;ref_src=twsrc%5Etfw">#RegreeningApp</a> <a href="https://t.co/75BGH6BCBb">pic.twitter.com/75BGH6BCBb</a></p>&mdash; Muhammad Ahmad (@mnabiahmad) <a href="https://twitter.com/mnabiahmad/status/1790665983985586553?ref_src=twsrc%5Etfw">May 15, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+## Quarto social share
+[Quarto social share](https://github.com/schochastics/quarto-social-share) is an other amazing extension. I am using this extension in this post as well so you can check at the bottom. 
+
+It is very easy to use and the offical [git repo](Quarto social share) expians everything. 
 
 
+## quarto-quizdown
+Will cover this soon. 
+[Quiz down](https://github.com/parmsam/quarto-quizdown?tab=readme-ov-file)
+
+
+## Quarto Badges
+Small but looks cool. Will cover this soon. 
+[Badges](https://github.com/mcanouil/quarto-badge)
+
+## Lightbox
+Will cover this soon. 
+[Light box](https://github.com/quarto-ext/lightbox)

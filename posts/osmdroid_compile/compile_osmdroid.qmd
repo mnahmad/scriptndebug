@@ -7,6 +7,7 @@ categories: [OSM, osmdroid, Compile]
 image: "quarto_extension1.png"
 filters:
   - social-share
+  - lightbox
 share:
   permalink: "https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html"
   description: "How to compile and build osmdroid"
@@ -111,13 +112,13 @@ Total time: 6.795 secs
 
 This one was hard to address, read this [issue](http://stackoverflow.com/questions/35450417/errorcause-failed-to-find-target-with-hash-string-google-inc-google-apis23) and applied but no change and then saw this [link](http://stackoverflow.com/questions/33417537/failed-to-find-target-with-hash-string-android-23) and when checked found out that I do not have Google APIs 23 (see my setup in below image).
 
-![api_error](api_error.png)
+![api_error](api_error.png){.lightbox}
 
 I installed the API library. Compiled again and the compile process started, it took some time.
 
 Finally, the build was successful, goto folder /home/user/AndroidStudioProjects/osmdroid/osmdroid/build/generated and the jar file was there.
 
-![build_successful](build_successful.png)
+![build_successful](build_successful.png){.lightbox}
 
 If you wanted to read about gradlew, read this [answer](http://stackoverflow.com/questions/39627231/difference-between-using-gradlew-and-gradle)
 

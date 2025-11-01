@@ -80,6 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/social-share-1.0.0/social-share.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/social-share-1.0.0/all.min.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -274,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This one was hard to address, read this <a href="http://stackoverflow.com/questions/35450417/errorcause-failed-to-find-target-with-hash-string-google-inc-google-apis23">issue</a> and applied but no change and then saw this <a href="http://stackoverflow.com/questions/33417537/failed-to-find-target-with-hash-string-android-23">link</a> and when checked found out that I do not have Google APIs 23 (see my setup in below image).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="api_error.png" class="img-fluid figure-img"></p>
+<p><a href="api_error.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="api_error"><img src="api_error.png" class="img-fluid figure-img" alt="api_error"></a></p>
 <figcaption>api_error</figcaption>
 </figure>
 </div>
@@ -282,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Finally, the build was successful, goto folder /home/user/AndroidStudioProjects/osmdroid/osmdroid/build/generated and the jar file was there.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="build_successful.png" class="img-fluid figure-img"></p>
+<p><a href="build_successful.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="build_successful"><img src="build_successful.png" class="img-fluid figure-img" alt="build_successful"></a></p>
 <figcaption>build_successful</figcaption>
 </figure>
 </div>
@@ -702,6 +705,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 </div> <!-- /content -->
 <div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html&amp;text=How to compile and build osmdroid" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html&amp;title=How to compile and build osmdroid" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=How to compile and build osmdroid&amp;body=Check out this link:https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html&amp;title=How to compile and build osmdroid" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a><a href="https://www.stumbleupon.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html&amp;title=How to compile and build osmdroid" target="_blank" class="stumbleupon"><i class="fa-brands fa-stumbleupon fa-fw fa-lg"></i></a><a href="https://www.tumblr.com/share/link?url=https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html&amp;name=How to compile and build osmdroid" target="_blank" class="tumblr"><i class="fa-brands fa-tumblr fa-fw fa-lg"></i></a><a href="javascript:void(0);" onclick="var mastodon_instance=prompt('Mastodon Instance / Server Name?'); if(typeof mastodon_instance==='string' &amp;&amp; mastodon_instance.length){this.href='https://'+mastodon_instance+'/share?text=How to compile and build osmdroid https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html'}else{return false;}" target="_blank" class="mastodon"><i class="fa-brands fa-mastodon fa-fw fa-lg"></i></a><a href="https://bsky.app/intent/compose?text=https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html How to compile and build osmdroid" target="_blank" class="bsky"><i class="fa-brands fa-bluesky"></i></a></div></div>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
