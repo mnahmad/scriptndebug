@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Muhammad N. Ahmad">
-<meta name="dcterms.date" content="2025-10-31">
+<meta name="dcterms.date" content="2017-01-01">
 
-<title>Quarto Extension – ScriptNdebug</title>
+<title>How to compile and build osmdroid – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,30 +107,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>
-.linkedin-post,
-.text-post-media,
-.pinterest-rendered,
-.twitter-tweet-rendered,
-.instagram-media, 
-.mastodon-embed {
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-</style>
-<style>
-.linkedin-post,
-.text-post-media,
-.pinterest-rendered,
-.twitter-tweet-rendered,
-.instagram-media, 
-.mastodon-embed {
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-</style>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -150,10 +161,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Quarto Extension</h1>
+      <h1 class="title">How to compile and build osmdroid</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Quarto</div>
-                <div class="quarto-category">Extensions</div>
+                <div class="quarto-category">OSM</div>
+                <div class="quarto-category">osmdroid</div>
+                <div class="quarto-category">Compile</div>
               </div>
                   </div>
   </div>
@@ -171,14 +183,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 31, 2025</p>
+        <p class="date">January 1, 2017</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">October 31, 2025</p>
+        <p class="date-modified">November 1, 2025</p>
       </div>
     </div>
       
@@ -196,30 +208,96 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Quarto is amazing, for reproducable reports, quick dashboards, websites and blogging sites like mine. Quarto has an extension ecosystem as well, so I started playing with these extensions, thus, this post will document some of example works around these extensions.</p>
-<section id="share-post" class="level2">
-<h2 class="anchored" data-anchor-id="share-post">Share-post</h2>
-<p>This is an amazing extions that can add a social media post to your document.</p>
-<p>My Linkedin post: <iframe class="linkedin-post" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7335234505370169344" height="1062" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
-<p>Below is the markdown of the above post.</p>
-<pre><code>
+<p>Osmdroid is a Java package for android that provides mapping functionalities. I been working with this package for the past one year. Its has certain advantages</p>
+<ul>
+<li>Easy to use</li>
+<li>Open Source</li>
+<li>No key required</li>
+</ul>
+<p>Taking the advantge of being open source, I wanted to make a small change as follows</p>
+<p>Objectives 1. Change PNGs for location (person, arrow) When GPS gets a fix, there are two default icons for location, but I needed one (cross-hair).</p>
+<ol start="2" type="1">
+<li>Change the name of the device folder from osmdroid to my_app_name</li>
+</ol>
+<p>First thing first, download the source from osmdroid git <a href="https://github.com/osmdroid/osmdroid">repo</a> and make the required changes.</p>
+<p>First task was easy, I just renamed the default icons and copied my icon with the default icons name.</p>
+<p>Second objective required code level change at multiple places (at least this was my understanding at the time of this task)</p>
+<p>Follow the steps given by <a href="https://github.com/osmdroid/osmdroid/wiki/how-to-build-osmdroid-from-source">osmroid build from source page</a>, I used the second option that is “build with gradle”.</p>
+<p>As explained by documentation, I went to the folder where I had downloaded osmdroid and ran the following command</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gradlew</span> clean install</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Oops, got error</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Building version 5<span class="fu">.6.5-SNAPSHOT</span> of your project...</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>WARNING<span class="in">:</span> No Android release signing configuration provided!</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>FAILURE<span class="in">:</span> Build failed with an exception.</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> What went wrong<span class="in">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> A problem occurred configuring project '<span class="in">:GoogleWrapperSample</span>'.</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> SDK location not found. Define location with sdk<span class="fu">.dir</span> in the local<span class="fu">.properties</span> file or with an ANDROID_HOME environment variable.</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Try<span class="in">:</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>BUILD FAILED</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>Total time<span class="in">:</span> 2 mins 29<span class="fu">.653</span> secs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>I searched couple of options and <a href="http://stackoverflow.com/questions/26356359/error-android-home-is-not-set-and-android-command-not-in-your-path-you-must-ful">this</a> and <a href="https://spring.io/guides/gs/android/">this</a> put me in the right direction. Summery of these post is that I had to find SDK location, thus, according to this <a href="http://stackoverflow.com/questions/19794200/gradle-android-and-the-android-home-sdk-location">link</a> I had to create local.properties file in root folder of osmdroid , I did that plus added ANDROID_HOME as follows</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> ANDROID_HOME=/home/opiyo/Android/Sdk</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>this solved the above issue but now a new issue came</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>----------------------- error -----------------------</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>===================================================================</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>==<span class="op">&gt;</span> WARNING<span class="in">:</span> No Android release signing configuration provided! &lt;==</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>===================================================================</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>FAILURE<span class="in">:</span> Build failed with an exception.</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> What went wrong<span class="in">:</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>A problem occurred configuring project '<span class="in">:GoogleWrapperSample</span>'.</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> failed to find target with hash string 'Google Inc.<span class="in">:Google</span> APIs<span class="in">:</span>23' in<span class="in">:</span> /home/opiyo/Android/Sdk</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Try<span class="in">:</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>BUILD FAILED</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>Total time<span class="in">:</span> 6<span class="fu">.795</span> secs</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>-----------------------------------------------------</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This one was hard to address, read this <a href="http://stackoverflow.com/questions/35450417/errorcause-failed-to-find-target-with-hash-string-google-inc-google-apis23">issue</a> and applied but no change and then saw this <a href="http://stackoverflow.com/questions/33417537/failed-to-find-target-with-hash-string-android-23">link</a> and when checked found out that I do not have Google APIs 23 (see my setup in below image).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="api_error.png" class="img-fluid figure-img"></p>
+<figcaption>api_error</figcaption>
+</figure>
+</div>
+<p>I installed the API library. Compiled again and the compile process started, it took some time.</p>
+<p>Finally, the build was successful, goto folder /home/user/AndroidStudioProjects/osmdroid/osmdroid/build/generated and the jar file was there.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="build_successful.png" class="img-fluid figure-img"></p>
+<figcaption>build_successful</figcaption>
+</figure>
+</div>
+<p>If you wanted to read about gradlew, read this <a href="http://stackoverflow.com/questions/39627231/difference-between-using-gradlew-and-gradle">answer</a></p>
+<p>For PNGs change the path was</p>
+<p>https://github.com/osmdroid/osmdroid/tree/master/osmdroid-android/src/main/res/drawable</p>
+<p>on local it was at following</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/user/AndroidStudioProjects/osmdroid/osmdroid/osmdroid-android/src/main/res/drawable</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Following helped in adding lib to my project.</p>
+<p>https://stackoverflow.com/questions/29826717/how-to-import-a-aar-file-into-android-studio-1-1-0-and-use-it-in-my-code</p>
+<p>http://abhiandroid.com/androidstudio/import-add-external-jar-files-android-studio.html</p>
+<p>https://github.com/MagicMicky/FreemiumLibrary/wiki/Import-the-library-in-Android-Studio</p>
+<p>and http://stackoverflow.com/questions/16608135/android-studio-add-jar-as-library</p>
 
-</code></pre>
-<p>Ooops, markdown is not appearing</p>
-<p>I tried Twitter post, not sure why itis not appearing.</p>
-<p>Twitter post as markdown</p>
-<pre><code></code></pre>
-<p>Somehow the twitter post is not appearing, thus, I tired using twitter’s embed option and it shows (see below).</p>
-<blockquote class="twitter-tweet blockquote">
-<p lang="en" dir="ltr">
-For UKPack NbS project (funded by UKPack), <a href="https://twitter.com/CIFOR_ICRAF?ref_src=twsrc%5Etfw"><span class="citation" data-cites="CIFOR_ICRAF">@CIFOR_ICRAF</span></a> conducted a capacity building workshop at county level to leverage citizen science for critical data collection to help in decision making.<a href="https://twitter.com/OfficialMakueni?ref_src=twsrc%5Etfw"><span class="citation" data-cites="OfficialMakueni">@OfficialMakueni</span></a>, <a href="https://twitter.com/UKinKenya?ref_src=twsrc%5Etfw"><span class="citation" data-cites="UKinKenya">@UKinKenya</span></a>, <a href="https://twitter.com/lawinowiecki?ref_src=twsrc%5Etfw"><span class="citation" data-cites="lawinowiecki">@lawinowiecki</span></a><a href="https://twitter.com/hashtag/RegreeningApp?src=hash&amp;ref_src=twsrc%5Etfw">#RegreeningApp</a> <a href="https://t.co/75BGH6BCBb">pic.twitter.com/75BGH6BCBb</a>
-</p>
-— Muhammad Ahmad (<span class="citation" data-cites="mnabiahmad">@mnabiahmad</span>) <a href="https://twitter.com/mnabiahmad/status/1790665983985586553?ref_src=twsrc%5Etfw">May 15, 2024</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -623,9 +701,7 @@ For UKPack NbS project (funded by UKPack), <a href="https://twitter.com/CIFOR_IC
   });
   </script>
 </div> <!-- /content -->
-<div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;text=Quarto Extension" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;title=Quarto Extension" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=Quarto Extension&amp;body=Check out this link:https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;title=Quarto Extension" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a><a href="https://www.stumbleupon.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;title=Quarto Extension" target="_blank" class="stumbleupon"><i class="fa-brands fa-stumbleupon fa-fw fa-lg"></i></a><a href="https://www.tumblr.com/share/link?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;name=Quarto Extension" target="_blank" class="tumblr"><i class="fa-brands fa-tumblr fa-fw fa-lg"></i></a><a href="javascript:void(0);" onclick="var mastodon_instance=prompt('Mastodon Instance / Server Name?'); if(typeof mastodon_instance==='string' &amp;&amp; mastodon_instance.length){this.href='https://'+mastodon_instance+'/share?text=Quarto Extension https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/'}else{return false;}" target="_blank" class="mastodon"><i class="fa-brands fa-mastodon fa-fw fa-lg"></i></a><a href="https://bsky.app/intent/compose?text=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/ Quarto Extension" target="_blank" class="bsky"><i class="fa-brands fa-bluesky"></i></a></div></div>
-<script src="https://www.linkedin.com/embed.js" async="async"></script>
-<script src="https://www.linkedin.com/embed.js" async="async"></script>
+<div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;text=How to compile and build osmdroid" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;title=How to compile and build osmdroid" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=How to compile and build osmdroid&amp;body=Check out this link:https://mnahmad.github.io/scriptndebug/posts/regex/index.html" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://mnahmad.github.io/scriptndebug/posts/regex/index.html" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;title=How to compile and build osmdroid" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a><a href="https://www.stumbleupon.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;title=How to compile and build osmdroid" target="_blank" class="stumbleupon"><i class="fa-brands fa-stumbleupon fa-fw fa-lg"></i></a><a href="https://www.tumblr.com/share/link?url=https://mnahmad.github.io/scriptndebug/posts/regex/index.html&amp;name=How to compile and build osmdroid" target="_blank" class="tumblr"><i class="fa-brands fa-tumblr fa-fw fa-lg"></i></a><a href="javascript:void(0);" onclick="var mastodon_instance=prompt('Mastodon Instance / Server Name?'); if(typeof mastodon_instance==='string' &amp;&amp; mastodon_instance.length){this.href='https://'+mastodon_instance+'/share?text=How to compile and build osmdroid https://mnahmad.github.io/scriptndebug/posts/regex/index.html'}else{return false;}" target="_blank" class="mastodon"><i class="fa-brands fa-mastodon fa-fw fa-lg"></i></a><a href="https://bsky.app/intent/compose?text=https://mnahmad.github.io/scriptndebug/posts/regex/index.html How to compile and build osmdroid" target="_blank" class="bsky"><i class="fa-brands fa-bluesky"></i></a></div></div>
 
 
 

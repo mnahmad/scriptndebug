@@ -8,8 +8,8 @@ image: "quarto_extension1.png"
 filters:
   - social-share
 share:
-  permalink: "https://mnahmad.github.io/scriptndebug/posts/regex/index.html"
-  description: "Regex 101"
+  permalink: "https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/"
+  description: "Quarto Extension"
   twitter: true
   facebook: true
   reddit: true
