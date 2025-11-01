@@ -8,7 +8,7 @@ image: "quarto_extension1.png"
 filters:
   - social-share
 share:
-  permalink: "https://mnahmad.github.io/scriptndebug/posts/regex/index.html"
+  permalink: "https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html"
   description: "How to compile and build osmdroid"
   twitter: true
   facebook: true
