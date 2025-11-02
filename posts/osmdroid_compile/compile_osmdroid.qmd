@@ -4,10 +4,10 @@ author: "Muhammad N. Ahmad"
 date: "2017-01-01"
 date-modified: "2025-11-01"
 categories: [OSM, osmdroid, Compile]
-image: "quarto_extension1.png"
+image: "osmdroid.png"
 filters:
   - social-share
-  - lightbox
+  
 share:
   permalink: "https://mnahmad.github.io/scriptndebug/posts/osmdroid_compile/compile_osmdroid.qmd.html"
   description: "How to compile and build osmdroid"

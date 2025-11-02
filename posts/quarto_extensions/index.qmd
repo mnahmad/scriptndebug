@@ -75,3 +75,5 @@ Small but looks cool. Will cover this soon.
 ## Lightbox
 Will cover this soon. 
 [Light box](https://github.com/quarto-ext/lightbox)
+
+Note, no need of install as this extension is now part of deafult installation. 
