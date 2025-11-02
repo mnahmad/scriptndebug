@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>scriptndebug – ScriptNdebug</title>
+<title>ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -182,7 +182,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">scriptndebug</h1>
+      <h1 class="title">ScriptNdebug</h1>
                       </div>
   </div>
     
@@ -213,6 +213,31 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="UXVhcnRvJTJDRXh0ZW5zaW9ucw==" data-listing-date-sort="1761858000000" data-listing-file-modified-sort="1762109950436" data-listing-date-modified-sort="1761858000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="243">
 <div class="thumbnail"><a href="./posts/quarto_extensions/index.html" class="no-external">
@@ -500,7 +525,7 @@ Muhammad N. Ahmad
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="UUdJUyUyQ0dQWA==" data-listing-date-sort="1572642000000" data-listing-file-modified-sort="1761427186223" data-listing-date-modified-sort="1572728400000" data-listing-reading-time-sort="3" data-listing-word-count-sort="520">
+<div class="quarto-post image-right" data-index="9" data-categories="UUdJUyUyQ0dQWA==" data-listing-date-sort="1572642000000" data-listing-file-modified-sort="1762110926130" data-listing-date-modified-sort="1572728400000" data-listing-reading-time-sort="3" data-listing-word-count-sort="520">
 <div class="thumbnail"><a href="./posts/random_points_gpx/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/random_points_gpx/QGIS_logo_2017.png" class="thumbnail-image">
