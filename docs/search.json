@@ -186,21 +186,14 @@
     "href": "posts/odk_intro/index.html#odkcollect",
     "title": "Introduction to ODK",
     "section": "ODKCollect",
-    "text": "ODKCollect\nODK Collect is the androind app, read more about it at this link, note this link is updated as this blog is almost 8 yeares told."
+    "text": "ODKCollect\nODK Collect is the androind app that is connected with the server to download survey forms, it is an offline app, thus, does not require internet during data collection, read more about it at this link, note this link is updated as this blog is almost 8 yeares told.\nOne interesting thing about OKD Collect is that one can load raster data to device by converting raster format to MBTiles and then load it to GeoODK, with this one can view any raster data in the field without internet access. Note, since this blog is old, thus, please read details on the offical GeoODK site at thislink."
   },
   {
     "objectID": "posts/odk_intro/index.html#aggregate",
     "href": "posts/odk_intro/index.html#aggregate",
     "title": "Introduction to ODK",
     "section": "Aggregate",
-    "text": "Aggregate\nAggregate is (was as of now) was a the server side where forms were uplaoded (in the form of xml). Aggrigate was written in Java and had a simple but effective interface. I used it couple for couple of years before moving to ODK Central (and that is a story for an other day)."
-  },
-  {
-    "objectID": "posts/odk_intro/index.html#odk-other-than-point-geom",
-    "href": "posts/odk_intro/index.html#odk-other-than-point-geom",
-    "title": "Introduction to ODK",
-    "section": "ODK other than point geom",
-    "text": "ODK other than point geom\nhttp://geoodk.com/xlsform_converter.php\nNote, this post is old, however, tells a story of an era of ODK."
+    "text": "Aggregate\nAggregate is (was as of now) was a the server side where forms were uplaoded (in the form of xml). Aggrigate was written in Java and had a simple but effective interface. I used it couple for couple of years before moving to ODK Central (and that is a story for an other day).\nNote, this post is old, however, tells a story of an era of ODK."
   },
   {
     "objectID": "posts/regex/index.html",
