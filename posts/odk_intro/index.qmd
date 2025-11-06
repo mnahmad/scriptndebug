@@ -37,5 +37,4 @@ One interesting thing about OKD Collect is that one can load raster data to devi
 ## Aggregate
 Aggregate is (was as of now) was a the server side where forms were uplaoded (in the form of xml). Aggrigate was written in Java and had a simple but effective interface. I used it couple for couple of years before moving to ODK Central (and that is a story for an other day). 
 
-
 **Note, this post is old, however, tells a story of an era of ODK.**

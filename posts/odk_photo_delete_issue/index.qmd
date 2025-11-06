@@ -1,0 +1,98 @@
+---
+title: "ODK Aggregate form delete issue"
+author: "Muhammad N. Ahmad"
+date: "2017-02-10"
+date-modified: "2025-11-06"
+categories: [ODK]
+image: "odk.png"
+---
+
+I started using ODK Aggregarte Server since 2016, created many surveys and collected thouands of records including photos. Few years down the line, I had an issue of delete some forms form ODK Aggregate server. On the aggregate interface, the delete tasks complested but I could still see the form even after few days. 
+
+Actually, I had some images in survey forms, thus, the size of the tables got bigger and bigger (one table was around 950 MB). Thus, my hypothesis was that the images are the main culpruts.
+
+The solution was to delete images from tables directly and then delete forms. In ODK aggregate, the photos are stored as Binary Large Objects (BLOB), thus, in ODK aggregate database, following is the BLOB table.
+
+```
+_PHOTO_BLB
+```
+
+Note: If you form name is  test (and it has a picture element), the table name will be TEST_PHOTO_BLB, plus  there will be some referencing tables for the images as well like 
+
+```
+_PHOTOS_PHOTO_E_BN          
+_PHOTOS_PHOTO_E_REF
+```
+
+In my case, since I had East, West, Noth and South thus the following tables. 
+
+```
+_PHOTOS_PHOTO_E_BLB
+_PHOTOS_PHOTO_W_BLB
+_PHOTOS_PHOTO_N_BLB
+_PHOTOS_PHOTO_S_BLB
+```
+
+Now no matter what is the structre of your survey, the table structure for the above 3 (BLB, BN, REF) tables will remain the same, See below
+
+BLB:
+
+| Field                 | Type        | Null | Key | Default | Extra |
+:-----------------------:-------------:------:-----:---------:-------:
+| _URI                  | varchar(80) | NO   | MUL | NULL    |       |
+| _CREATOR_URI_USER     | varchar(80) | NO   |     | NULL    |       |
+| _CREATION_DATE        | datetime    | NO   |     | NULL    |       |
+| _LAST_UPDATE_URI_USER | varchar(80) | YES  |     | NULL    |       |
+| _LAST_UPDATE_DATE     | datetime    | NO   | MUL | NULL    |       |
+| _TOP_LEVEL_AURI       | varchar(80) | YES  |     | NULL    |       |
+| VALUE                 | longblob    | NO   |     | NULL    |       |
+
+7 rows in set (0.00 sec)
+
+
+BN:
+
+| Field                 | Type          | Null | Key | Default | Extra |
+:-----------------------:---------------:------:-----:---------:-------:
+| _URI                  | varchar(80)   | NO   | MUL | NULL    |       |
+| _CREATOR_URI_USER     | varchar(80)   | NO   |     | NULL    |       |
+| _CREATION_DATE        | datetime      | NO   |     | NULL    |       |
+| _LAST_UPDATE_URI_USER | varchar(80)   | YES  |     | NULL    |       |
+| _LAST_UPDATE_DATE     | datetime      | NO   | MUL | NULL    |       |
+| _PARENT_AURI          | varchar(80)   | YES  | MUL | NULL    |       |
+| _ORDINAL_NUMBER       | int(9)        | NO   |     | NULL    |       |
+| _TOP_LEVEL_AURI       | varchar(80)   | YES  |     | NULL    |       |
+| UNROOTED_FILE_PATH    | varchar(4096) | YES  |     | NULL    |       |
+| CONTENT_TYPE          | varchar(80)   | YES  |     | NULL    |       |
+| CONTENT_LENGTH        | int(9)        | YES  |     | NULL    |       |
+| CONTENT_HASH          | varchar(255)  | YES  |     | NULL    |       |
+
+12 rows in set (0.00 sec)
+
+REF:
+
+| Field                 | Type        | Null | Key | Default | Extra |
+:-----------------------:-------------:------:-----:---------:-------:
+| _URI                  | varchar(80) | NO   | MUL | NULL    |       |
+| _CREATOR_URI_USER     | varchar(80) | NO   |     | NULL    |       |
+| _CREATION_DATE        | datetime    | NO   |     | NULL    |       |
+| _LAST_UPDATE_URI_USER | varchar(80) | YES  |     | NULL    |       |
+| _LAST_UPDATE_DATE     | datetime    | NO   | MUL | NULL    |       |
+| _DOM_AURI             | varchar(80) | NO   | MUL | NULL    |       |
+| _SUB_AURI             | varchar(80) | NO   |     | NULL    |       |
+| _TOP_LEVEL_AURI       | varchar(80) | YES  |     | NULL    |       |
+| PART                  | int(9)      | NO   |     | NULL    |       |
+
+
+Now that I know where the images were (if you have not see them by now, they are in VALUE field in PHOTO_BLB table), all I had to do was to update this field with null.
+
+```sql
+update mytable_PHOTO_BLB set VALUE='';
+```
+
+I confirmed from aggregate server interface that table now have no images.
+
+Finally, I deleted the form. It took couple of minutes for the delete process to completly delete every thing from aggreagte database, however, it worked and I could see forms delted. 
+
+
+**Note, this post is old, however, tells a story of an era of ODK.**
