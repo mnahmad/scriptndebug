@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Muhammad N. Ahmad">
-<meta name="dcterms.date" content="2017-02-10">
 
-<title>ODK Aggregate form delete issue – ScriptNdebug</title>
+<title>index – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -156,44 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">ODK Aggregate form delete issue</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">ODK</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Muhammad N. Ahmad </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">February 10, 2017</p>
-      </div>
-    </div>
-    
-      <div>
-      <div class="quarto-title-meta-heading">Modified</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date-modified">November 6, 2025</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -203,12 +164,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-
 <p>I started using ODK Aggregarte Server since 2016, created many surveys and collected thouands of records including photos. Few years down the line, I had an issue of delete some forms form ODK Aggregate server. On the aggregate interface, the delete tasks complested but I could still see the form even after few days.</p>
 <p>Actually, I had some images in survey forms, thus, the size of the tables got bigger and bigger (one table was around 950 MB). Thus, my hypothesis was that the images are the main culpruts.</p>
 <p>The solution was to delete images from tables directly and then delete forms. In ODK aggregate, the photos are stored as Binary Large Objects (BLOB), thus, in ODK aggregate database, following is the BLOB table.</p>
 <pre><code>_PHOTO_BLB</code></pre>
-<p>Note: If you form name is test (and it has a picture element), the table name will be TEST_PHOTO_BLB, plus there will be some referencing tables for the images as well like</p>
+<p>Note|: If you form name is test (and it has a picture element), the table name will be TEST_PHOTO_BLB, plus there will be some referencing tables for the images as well like</p>
 <pre><code>_PHOTOS_PHOTO_E_BN          
 _PHOTOS_PHOTO_E_REF</code></pre>
 <p>In my case, since I had East, West, Noth and South thus the following tables.</p>
@@ -218,16 +178,300 @@ _PHOTOS_PHOTO_N_BLB
 _PHOTOS_PHOTO_S_BLB</code></pre>
 <p>Now no matter what is the structre of your survey, the table structure for the above 3 (BLB, BN, REF) tables will remain the same, See below</p>
 <p>BLB:</p>
-<div class="line-block">Field | Type | Null | Key | Default | Extra |</div>
-<p>:———————–:————-:——:—–:———:——-: | _URI | varchar(80) | NO | MUL | NULL | | | _CREATOR_URI_USER | varchar(80) | NO | | NULL | | | _CREATION_DATE | datetime | NO | | NULL | | | _LAST_UPDATE_URI_USER | varchar(80) | YES | | NULL | | | _LAST_UPDATE_DATE | datetime | NO | MUL | NULL | | | _TOP_LEVEL_AURI | varchar(80) | YES | | NULL | | | VALUE | longblob | NO | | NULL | |</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 20%">
+<col style="width: 10%">
+<col style="width: 8%">
+<col style="width: 14%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Null</th>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_URI</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_CREATOR_URI_USER</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_CREATION_DATE</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_LAST_UPDATE_URI_USER</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_LAST_UPDATE_DATE</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_TOP_LEVEL_AURI</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">VALUE</td>
+<td style="text-align: left;">longblob</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
 <p>7 rows in set (0.00 sec)</p>
 <p>BN:</p>
-<div class="line-block">Field | Type | Null | Key | Default | Extra |</div>
-<p>:———————–:—————:——:—–:———:——-: | _URI | varchar(80) | NO | MUL | NULL | | | _CREATOR_URI_USER | varchar(80) | NO | | NULL | | | _CREATION_DATE | datetime | NO | | NULL | | | _LAST_UPDATE_URI_USER | varchar(80) | YES | | NULL | | | _LAST_UPDATE_DATE | datetime | NO | MUL | NULL | | | _PARENT_AURI | varchar(80) | YES | MUL | NULL | | | _ORDINAL_NUMBER | int(9) | NO | | NULL | | | _TOP_LEVEL_AURI | varchar(80) | YES | | NULL | | | UNROOTED_FILE_PATH | varchar(4096) | YES | | NULL | | | CONTENT_TYPE | varchar(80) | YES | | NULL | | | CONTENT_LENGTH | int(9) | YES | | NULL | | | CONTENT_HASH | varchar(255) | YES | | NULL | |</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 22%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 14%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Null</th>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_URI</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_CREATOR_URI_USER</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_CREATION_DATE</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_LAST_UPDATE_URI_USER</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_LAST_UPDATE_DATE</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_PARENT_AURI</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_ORDINAL_NUMBER</td>
+<td style="text-align: left;">int(9)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_TOP_LEVEL_AURI</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">UNROOTED_FILE_PATH</td>
+<td style="text-align: left;">varchar(4096)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CONTENT_TYPE</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CONTENT_LENGTH</td>
+<td style="text-align: left;">int(9)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CONTENT_HASH</td>
+<td style="text-align: left;">varchar(255)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
 <p>12 rows in set (0.00 sec)</p>
 <p>REF:</p>
-<div class="line-block">Field | Type | Null | Key | Default | Extra |</div>
-<p>:———————–:————-:——:—–:———:——-: | _URI | varchar(80) | NO | MUL | NULL | | | _CREATOR_URI_USER | varchar(80) | NO | | NULL | | | _CREATION_DATE | datetime | NO | | NULL | | | _LAST_UPDATE_URI_USER | varchar(80) | YES | | NULL | | | _LAST_UPDATE_DATE | datetime | NO | MUL | NULL | | | _DOM_AURI | varchar(80) | NO | MUL | NULL | | | _SUB_AURI | varchar(80) | NO | | NULL | | | _TOP_LEVEL_AURI | varchar(80) | YES | | NULL | | | PART | int(9) | NO | | NULL | |</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 20%">
+<col style="width: 10%">
+<col style="width: 8%">
+<col style="width: 14%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Null</th>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_URI</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_CREATOR_URI_USER</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_CREATION_DATE</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_LAST_UPDATE_URI_USER</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_LAST_UPDATE_DATE</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_DOM_AURI</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_SUB_AURI</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_TOP_LEVEL_AURI</td>
+<td style="text-align: left;">varchar(80)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PART</td>
+<td style="text-align: left;">int(9)</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
 <p>Now that I know where the images were (if you have not see them by now, they are in VALUE field in PHOTO_BLB table), all I had to do was to update this field with null.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">update</span> mytable_PHOTO_BLB <span class="kw">set</span> <span class="fu">VALUE</span><span class="op">=</span><span class="st">''</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>I confirmed from aggregate server interface that table now have no images.</p>

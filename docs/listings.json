@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/odk_photo_delete_issue/index.html",
       "/posts/quarto_extensions/index.html",
       "/posts/pip_issue1/index.html",
       "/posts/django_m2m/index.html",
@@ -18,7 +19,6 @@
       "/posts/gdal_tips/index.html",
       "/posts/atom_ide/index.html",
       "/posts/landsat57_downloader/index.html",
-      "/posts/odk_photo_delete_issue/index.html",
       "/posts/odk_intro/index.html",
       "/posts/osmdroid_compile/compile_osmdroid.html",
       "/posts/androzic/index.html",

@@ -1,10 +1,10 @@
 ---
-title: "ODK Aggregate form delete issue"
-author: "Muhammad N. Ahmad"
-date: "2017-02-10"
-date-modified: "2025-11-06"
-categories: [ODK]
-image: "odk.png"
+title|: "ODK Aggregate form delete issue"
+author|: "Muhammad N. Ahmad"
+date|: "2017-02-10"
+date-modified|: "2025-11-06"
+categories|: [ODK]
+image|: "odk.png"
 ---
 
 I started using ODK Aggregarte Server since 2016, created many surveys and collected thouands of records including photos. Few years down the line, I had an issue of delete some forms form ODK Aggregate server. On the aggregate interface, the delete tasks complested but I could still see the form even after few days. 
@@ -17,7 +17,7 @@ The solution was to delete images from tables directly and then delete forms. In
 _PHOTO_BLB
 ```
 
-Note: If you form name is  test (and it has a picture element), the table name will be TEST_PHOTO_BLB, plus  there will be some referencing tables for the images as well like 
+Note|: If you form name is  test (and it has a picture element), the table name will be TEST_PHOTO_BLB, plus  there will be some referencing tables for the images as well like 
 
 ```
 _PHOTOS_PHOTO_E_BN          
@@ -38,7 +38,7 @@ Now no matter what is the structre of your survey, the table structure for the a
 BLB:
 
 | Field                 | Type        | Null | Key | Default | Extra |
-:-----------------------:-------------:------:-----:---------:-------:
+|:-----------------------|:-------------|:------|:-----|:---------|:-------|
 | _URI                  | varchar(80) | NO   | MUL | NULL    |       |
 | _CREATOR_URI_USER     | varchar(80) | NO   |     | NULL    |       |
 | _CREATION_DATE        | datetime    | NO   |     | NULL    |       |
@@ -50,10 +50,11 @@ BLB:
 7 rows in set (0.00 sec)
 
 
+
 BN:
 
 | Field                 | Type          | Null | Key | Default | Extra |
-:-----------------------:---------------:------:-----:---------:-------:
+|:-----------------------|:---------------|:------|:-----|:---------|:-------|
 | _URI                  | varchar(80)   | NO   | MUL | NULL    |       |
 | _CREATOR_URI_USER     | varchar(80)   | NO   |     | NULL    |       |
 | _CREATION_DATE        | datetime      | NO   |     | NULL    |       |
@@ -69,10 +70,11 @@ BN:
 
 12 rows in set (0.00 sec)
 
+
 REF:
 
 | Field                 | Type        | Null | Key | Default | Extra |
-:-----------------------:-------------:------:-----:---------:-------:
+|:-----------------------|:-------------|:------|:-----|:---------|:-------|
 | _URI                  | varchar(80) | NO   | MUL | NULL    |       |
 | _CREATOR_URI_USER     | varchar(80) | NO   |     | NULL    |       |
 | _CREATION_DATE        | datetime    | NO   |     | NULL    |       |
