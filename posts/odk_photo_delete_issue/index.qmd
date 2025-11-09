@@ -1,10 +1,10 @@
 ---
-title|: "ODK Aggregate form delete issue"
-author|: "Muhammad N. Ahmad"
-date|: "2017-09-10"
-date-modified|: "2025-11-06"
-categories|: [ODK]
-image|: "odk.png"
+title: "ODK Aggregate form delete issue"
+author: "Muhammad N. Ahmad"
+date: "2017-09-10"
+date-modified: "2025-11-06"
+categories: [ODK]
+image: "odk.png"
 ---
 
 I started using ODK Aggregarte Server since 2016, created many surveys and collected thouands of records including photos. Few years down the line, I had an issue of delete some forms form ODK Aggregate server. On the aggregate interface, the delete tasks complested but I could still see the form even after few days. 
