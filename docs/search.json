@@ -67,14 +67,14 @@
     "href": "posts/quarto_extensions/index.html#share-post",
     "title": "Quarto Extension",
     "section": "Share-post",
-    "text": "Share-post\nThis is an amazing extions that can add a social media post to your document.\nMy Linkedin post: \nBelow is the markdown of the above post.\n\n\n\nOoops, markdown is not appearing\nI tried Twitter post, not sure why itis not appearing.\nTwitter post as markdown\n\nSomehow the twitter post is not appearing, thus, I tired using twitter’s embed option and it shows (see below).\n\n\nFor UKPack NbS project (funded by UKPack), @CIFOR_ICRAF conducted a capacity building workshop at county level to leverage citizen science for critical data collection to help in decision making.@OfficialMakueni, @UKinKenya, @lawinowiecki#RegreeningApp pic.twitter.com/75BGH6BCBb\n\n— Muhammad Ahmad (@mnabiahmad) May 15, 2024"
+    "text": "Share-post\nThis is an amazing extions that can add a social media post to your document. I wish they had named it Embed-post rather than share-post. Below is an example.\nMy Linkedin post: \nBelow is the markdown of the above post (it does not appear till the time I add space between {{ and &lt;.)\n\n{{ &lt; share-post https://www.linkedin.com/feed/update/urn:li:activity:7335234505370169344 &gt; }}\n\nOoops, markdown is not appearing, not sure why.\nI tried Twitter post, initially had some challages and still it is not working.\nTwitter post as markdown and it does not appear till the time I add space between {{ and &lt;.\n{{ &lt; share-post https://x.com/mnabiahmad/status/1790665983985586553 &gt; }} \nSomehow the twitter post is not appearing, thus, I tired using twitter’s embed option and it shows (see below).\n\n\nFor UKPack NbS project (funded by UKPack), @CIFOR_ICRAF conducted a capacity building workshop at county level to leverage citizen science for critical data collection to help in decision making.@OfficialMakueni, @UKinKenya, @lawinowiecki#RegreeningApp pic.twitter.com/75BGH6BCBb\n\n— Muhammad Ahmad (@mnabiahmad) May 15, 2024"
   },
   {
     "objectID": "posts/quarto_extensions/index.html#quarto-social-share",
     "href": "posts/quarto_extensions/index.html#quarto-social-share",
     "title": "Quarto Extension",
     "section": "Quarto social share",
-    "text": "Quarto social share\nQuarto social share is an other amazing extension. I am using this extension in this post as well so you can check at the bottom.\nIt is very easy to use and the offical git repo expians everything."
+    "text": "Quarto social share\nQuarto social share is an other amazing extension. I am using this extension in this post as well so you can check at the bottom.\nIt is very easy to use and the offical github repo expians everything."
   },
   {
     "objectID": "posts/quarto_extensions/index.html#quarto-quizdown",

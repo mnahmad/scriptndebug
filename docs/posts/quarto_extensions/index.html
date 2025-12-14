@@ -84,18 +84,6 @@ ul.task-list li input[type="checkbox"] {
     margin-right: auto !important;
 }
 </style>
-<style>
-.linkedin-post,
-.text-post-media,
-.pinterest-rendered,
-.twitter-tweet-rendered,
-.instagram-media, 
-.mastodon-embed {
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-</style>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -199,16 +187,16 @@ ul.task-list li input[type="checkbox"] {
 <p>Quarto is amazing, for reproducable reports, quick dashboards, websites and blogging sites like mine. Quarto has an extension ecosystem as well, so I started playing with these extensions, thus, this post will document some of example works around these extensions.</p>
 <section id="share-post" class="level2">
 <h2 class="anchored" data-anchor-id="share-post">Share-post</h2>
-<p>This is an amazing extions that can add a social media post to your document.</p>
+<p>This is an amazing extions that can add a social media post to your document. I wish they had named it Embed-post rather than share-post. Below is an example.</p>
 <p>My Linkedin post: <iframe class="linkedin-post" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7335234505370169344" height="1062" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
-<p>Below is the markdown of the above post.</p>
+<p>Below is the markdown of the above post (it does not appear till the time I add space between <code>{{</code> and <code>&lt;</code>.)</p>
 <pre><code>
-
+{{ &lt; share-post https://www.linkedin.com/feed/update/urn:li:activity:7335234505370169344 &gt; }}
 </code></pre>
-<p>Ooops, markdown is not appearing</p>
-<p>I tried Twitter post, not sure why itis not appearing.</p>
-<p>Twitter post as markdown</p>
-<pre><code></code></pre>
+<p>Ooops, markdown is not appearing, not sure why.</p>
+<p>I tried Twitter post, initially had some challages and still it is not working.</p>
+<p>Twitter post as markdown and it does not appear till the time I add space between <code>{{</code> and <code>&lt;</code>.</p>
+<pre><code>{{ &lt; share-post https://x.com/mnabiahmad/status/1790665983985586553 &gt; }} </code></pre>
 <p>Somehow the twitter post is not appearing, thus, I tired using twitter’s embed option and it shows (see below).</p>
 <blockquote class="twitter-tweet blockquote">
 <p lang="en" dir="ltr">
@@ -221,7 +209,7 @@ For UKPack NbS project (funded by UKPack), <a href="https://twitter.com/CIFOR_IC
 <section id="quarto-social-share" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-social-share">Quarto social share</h2>
 <p><a href="https://github.com/schochastics/quarto-social-share">Quarto social share</a> is an other amazing extension. I am using this extension in this post as well so you can check at the bottom.</p>
-<p>It is very easy to use and the offical <a href="Quarto social share">git repo</a> expians everything.</p>
+<p>It is very easy to use and the offical <a href="https://github.com/schochastics/quarto-social-share">github repo</a> expians everything.</p>
 </section>
 <section id="quarto-quizdown" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-quizdown">quarto-quizdown</h2>
@@ -642,7 +630,6 @@ For UKPack NbS project (funded by UKPack), <a href="https://twitter.com/CIFOR_IC
   </script>
 </div> <!-- /content -->
 <div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;text=Quarto Extension" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;title=Quarto Extension" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=Quarto Extension&amp;body=Check out this link:https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;title=Quarto Extension" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a><a href="https://www.stumbleupon.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;title=Quarto Extension" target="_blank" class="stumbleupon"><i class="fa-brands fa-stumbleupon fa-fw fa-lg"></i></a><a href="https://www.tumblr.com/share/link?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;name=Quarto Extension" target="_blank" class="tumblr"><i class="fa-brands fa-tumblr fa-fw fa-lg"></i></a><a href="javascript:void(0);" onclick="var mastodon_instance=prompt('Mastodon Instance / Server Name?'); if(typeof mastodon_instance==='string' &amp;&amp; mastodon_instance.length){this.href='https://'+mastodon_instance+'/share?text=Quarto Extension https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/'}else{return false;}" target="_blank" class="mastodon"><i class="fa-brands fa-mastodon fa-fw fa-lg"></i></a><a href="https://bsky.app/intent/compose?text=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/ Quarto Extension" target="_blank" class="bsky"><i class="fa-brands fa-bluesky"></i></a></div></div>
-<script src="https://www.linkedin.com/embed.js" async="async"></script>
 <script src="https://www.linkedin.com/embed.js" async="async"></script>
 
 

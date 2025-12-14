@@ -27,40 +27,40 @@ format:
 Quarto is amazing, for reproducable reports, quick dashboards, websites and blogging sites like mine. Quarto has an extension ecosystem as well, so I started playing with these extensions, thus, this post will document some of example works around these extensions. 
 
 ## Share-post
-This is an amazing extions that can add a social media post to your document. 
-
+This is an amazing extions that can add a social media post to your document. I wish they had named it Embed-post rather than share-post. Below is an example. 
 
 My Linkedin post:
 {{< share-post https://www.linkedin.com/feed/update/urn:li:activity:7335234505370169344 >}}
 
-Below is the markdown of the above post. 
+Below is the markdown of the above post (it does not appear till the time I add space between `{{` and `<`.)
 
 ```
 
-{{< share-post https://www.linkedin.com/feed/update/urn:li:activity:7335234505370169344 >}}
+{{ < share-post https://www.linkedin.com/feed/update/urn:li:activity:7335234505370169344 > }}
 
 ```
 
-Ooops, markdown is not appearing
+Ooops, markdown is not appearing, not sure why. 
 
-I tried Twitter post, not sure why itis not appearing. 
+I tried Twitter post, initially had some challages and still it is not working. 
 
-{{< share-post https://x.com/mnabiahmad/status/1790665983985586553 >}}
+{{< share-post https://x.com/mnabiahmad/status/1790665983985586553?s=20 >}}
 
-Twitter post as markdown
+Twitter post as markdown and it does not appear till the time I add space between `{{` and `<`.
 
 ```
-{{< share-post https://x.com/mnabiahmad/status/1790665983985586553 >}}
+{{ < share-post https://x.com/mnabiahmad/status/1790665983985586553 > }} 
 ```
 
 Somehow the twitter post is not appearing, thus, I tired using twitter's embed option and it shows (see below).
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">For UKPack NbS project (funded by UKPack), <a href="https://twitter.com/CIFOR_ICRAF?ref_src=twsrc%5Etfw">@CIFOR_ICRAF</a> conducted a capacity building workshop at county level to leverage citizen science for critical data collection to help in decision making.<a href="https://twitter.com/OfficialMakueni?ref_src=twsrc%5Etfw">@OfficialMakueni</a>, <a href="https://twitter.com/UKinKenya?ref_src=twsrc%5Etfw">@UKinKenya</a>, <a href="https://twitter.com/lawinowiecki?ref_src=twsrc%5Etfw">@lawinowiecki</a><a href="https://twitter.com/hashtag/RegreeningApp?src=hash&amp;ref_src=twsrc%5Etfw">#RegreeningApp</a> <a href="https://t.co/75BGH6BCBb">pic.twitter.com/75BGH6BCBb</a></p>&mdash; Muhammad Ahmad (@mnabiahmad) <a href="https://twitter.com/mnabiahmad/status/1790665983985586553?ref_src=twsrc%5Etfw">May 15, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
 ## Quarto social share
 [Quarto social share](https://github.com/schochastics/quarto-social-share) is an other amazing extension. I am using this extension in this post as well so you can check at the bottom. 
 
-It is very easy to use and the offical [git repo](Quarto social share) expians everything. 
+It is very easy to use and the offical [github repo ](https://github.com/schochastics/quarto-social-share) expians everything. 
 
 
 ## quarto-quizdown
