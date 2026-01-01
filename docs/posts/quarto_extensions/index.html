@@ -285,28 +285,28 @@ plot(1:10, rnorm(10))</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="r-graph" data-glightbox="description: .lightbox-desc-2;title:Simple demo R plot;" title="Simple demo R plot"><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672" alt="Simple demo R plot"></a></p>
+<p><a href="index_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-2;title:Simple demo R plot;" data-gallery="r-graph" title="Simple demo R plot"><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672" alt="Simple demo R plot"></a></p>
 <figcaption>Simple demo R plot</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Python require jupyter extension (working)</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Prepare data (if only one list is provided, it is used for the y-axis, </span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#    and the x-axis defaults to the index starting at 0)</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>y_values <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Create and customize the plot</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plt.plot(y_values) <span class="co"># Plots the data on the Axes</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X-axis Label'</span>) <span class="co"># Adds a label to the x-axis</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Y-axis Label'</span>) <span class="co"># Adds a label to the y-axis</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'My Simple Matplotlib Plot'</span>) <span class="co"># Adds a title</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>) <span class="co"># Adds a grid for better visualization</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Display the plot</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>plt.show() <span class="co"># Shows the figure window</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Python require jupyter extension (working on it as it is a bit complicated, require jupyter package)</p>
+<pre><code>import matplotlib.pyplot as plt
+
+# 1. Prepare data (if only one list is provided, it is used for the y-axis, 
+#    and the x-axis defaults to the index starting at 0)
+y_values = [1, 4, 2, 3]
+
+# 2. Create and customize the plot
+plt.plot(y_values) # Plots the data on the Axes
+plt.xlabel('X-axis Label') # Adds a label to the x-axis
+plt.ylabel('Y-axis Label') # Adds a label to the y-axis
+plt.title('My Simple Matplotlib Plot') # Adds a title
+plt.grid(True) # Adds a grid for better visualization
+
+# 3. Display the plot
+plt.show() # Shows the figure window</code></pre>
 </section>
 <section id="quarto-quizdown" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-quizdown">quarto-quizdown</h2>
