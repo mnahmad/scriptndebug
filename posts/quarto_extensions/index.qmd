@@ -130,8 +130,9 @@ plot(1:10, rnorm(10))
 ```
 
 
-Python require jupyter extension (working)
-```
+Python require jupyter extension (working on it as it is a bit complicated, require jupyter package)
+
+```{python}
 import matplotlib.pyplot as plt
 
 # 1. Prepare data (if only one list is provided, it is used for the y-axis, 
