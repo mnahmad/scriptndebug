@@ -2,11 +2,14 @@
 title: "Quarto Extension"
 author: "Muhammad N. Ahmad"
 date: "2025-10-31"
-date-modified: "2025-12-14"
+date-modified: "2026-01-01"
 categories: [Quarto, Extensions]
 image: "quarto_extension1.png"
 filters:
   - social-share
+
+
+
 share:
   permalink: "https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/"
   description: "Quarto Extension"
@@ -104,12 +107,14 @@ Some examples, current badge {{< badge current 1.0.0 >}}, future badge {{< badge
 
 
 ## Lightbox
-Allow zoom functionality on photos, no need of installation as this extension is now part of deafult installation.  
+Allow photos to appear in separate popup (and a bit of zoom-in on photos), no need of installation as this extension is now part of deafult installation.  
 [Light box](https://github.com/quarto-ext/lightbox)
 
 An example below 
 
-![A Lovely Image](quarto_extension1.png)
+![A Lovely Image](quarto_extension1.png){.lightbox}
+
+The best part is that it can be used with code block as well, see the code block below (note R extension is needed for VSCode)
 
 ## quarto-quizdown
 This extension deserves a post of its own,github repo for [Quiz down](https://github.com/parmsam/quarto-quizdown?tab=readme-ov-file).

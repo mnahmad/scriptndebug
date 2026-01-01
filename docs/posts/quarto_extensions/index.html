@@ -46,6 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/social-share-1.0.0/social-share.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/social-share-1.0.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/badge/badge.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -167,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">December 14, 2025</p>
+        <p class="date-modified">January 1, 2026</p>
       </div>
     </div>
       
@@ -228,15 +231,16 @@ extensions:
 </section>
 <section id="lightbox" class="level2">
 <h2 class="anchored" data-anchor-id="lightbox">Lightbox</h2>
-<p>Allow zoom functionality on photos, no need of installation as this extension is now part of deafult installation.<br>
+<p>Allow photos to appear in separate popup (and a bit of zoom-in on photos), no need of installation as this extension is now part of deafult installation.<br>
 <a href="https://github.com/quarto-ext/lightbox">Light box</a></p>
 <p>An example below</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="quarto_extension1.png" class="img-fluid figure-img"></p>
+<p><a href="quarto_extension1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A Lovely Image"><img src="quarto_extension1.png" class="img-fluid figure-img" alt="A Lovely Image"></a></p>
 <figcaption>A Lovely Image</figcaption>
 </figure>
 </div>
+<p>The best part is that it can be used with code block as well, see the code block below (note R extension is needed for VSCode)</p>
 </section>
 <section id="quarto-quizdown" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-quizdown">quarto-quizdown</h2>
@@ -649,6 +653,38 @@ extensions:
 </div> <!-- /content -->
 <div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;text=Quarto Extension" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;title=Quarto Extension" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=Quarto Extension&amp;body=Check out this link:https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;title=Quarto Extension" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a><a href="https://www.stumbleupon.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;title=Quarto Extension" target="_blank" class="stumbleupon"><i class="fa-brands fa-stumbleupon fa-fw fa-lg"></i></a><a href="https://www.tumblr.com/share/link?url=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/&amp;name=Quarto Extension" target="_blank" class="tumblr"><i class="fa-brands fa-tumblr fa-fw fa-lg"></i></a><a href="javascript:void(0);" onclick="var mastodon_instance=prompt('Mastodon Instance / Server Name?'); if(typeof mastodon_instance==='string' &amp;&amp; mastodon_instance.length){this.href='https://'+mastodon_instance+'/share?text=Quarto Extension https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/'}else{return false;}" target="_blank" class="mastodon"><i class="fa-brands fa-mastodon fa-fw fa-lg"></i></a><a href="https://bsky.app/intent/compose?text=https://mnahmad.github.io/scriptndebug/posts/quarto_extensions/ Quarto Extension" target="_blank" class="bsky"><i class="fa-brands fa-bluesky"></i></a></div></div>
 <script src="https://www.linkedin.com/embed.js" async="async"></script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

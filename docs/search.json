@@ -88,7 +88,7 @@
     "href": "posts/quarto_extensions/index.html#lightbox",
     "title": "Quarto Extension",
     "section": "Lightbox",
-    "text": "Lightbox\nAllow zoom functionality on photos, no need of installation as this extension is now part of deafult installation.\nLight box\nAn example below\n\n\n\nA Lovely Image"
+    "text": "Lightbox\nAllow photos to appear in separate popup (and a bit of zoom-in on photos), no need of installation as this extension is now part of deafult installation.\nLight box\nAn example below\n\n\n\nA Lovely Image\n\n\nThe best part is that it can be used with code block as well, see the code block below (note R extension is needed for VSCode)"
   },
   {
     "objectID": "posts/quarto_extensions/index.html#quarto-quizdown",
