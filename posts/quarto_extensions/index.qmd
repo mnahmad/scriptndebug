@@ -104,17 +104,42 @@ extensions:
 
 Some examples, current badge {{< badge current 1.0.0 >}}, future badge {{< badge future 2.0.0 >}}, old badge {{< badge old 0.1.0 >}}, hmm old page is not appearing .
 
-
-
 ## Lightbox
-Allow photos to appear in separate popup (and a bit of zoom-in on photos), no need of installation as this extension is now part of deafult installation.  
-[Light box](https://github.com/quarto-ext/lightbox)
+Allow photos to appear in separate popup (and a bit of zoom-in on photos), no need of installation as this extension is now part of deafult installation. You can read more about at [Light box repo](https://github.com/quarto-ext/lightbox)
 
 An example below 
 
-![A Lovely Image](quarto_extension1.png){.lightbox}
+![Image using lightbox extension](quarto_extension1.png){.lightbox}
 
-The best part is that it can be used with code block as well, see the code block below (note R extension is needed for VSCode)
+The best part is that it can be used with code block as well, see the code block below. Note you also need [R](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) extension to run R code in VSCode. Of course, you need to install R on your machine + rmarkdown and languageserver package in R by using `install.packages("rmarkdown")`. 
+
+```{r}
+#| fig-cap: Simple demo R plot 
+#| lightbox:
+#|   group: r-graph
+#|   description: This is 1 to 10 plot
+plot(1:10, rnorm(10))
+```
+
+
+Python require jupyter extension (working)
+```
+import matplotlib.pyplot as plt
+
+# 1. Prepare data (if only one list is provided, it is used for the y-axis, 
+#    and the x-axis defaults to the index starting at 0)
+y_values = [1, 4, 2, 3]
+
+# 2. Create and customize the plot
+plt.plot(y_values) # Plots the data on the Axes
+plt.xlabel('X-axis Label') # Adds a label to the x-axis
+plt.ylabel('Y-axis Label') # Adds a label to the y-axis
+plt.title('My Simple Matplotlib Plot') # Adds a title
+plt.grid(True) # Adds a grid for better visualization
+
+# 3. Display the plot
+plt.show() # Shows the figure window
+```
 
 ## quarto-quizdown
 This extension deserves a post of its own,github repo for [Quiz down](https://github.com/parmsam/quarto-quizdown?tab=readme-ov-file).
