@@ -1,5 +1,5 @@
 ---
-title: "How to generate random points in QGIS and export as GP"
+title: "How to generate random points in QGIS and export as GPX"
 author: "Muhammad N. Ahmad"
 date: "2019-11-02"
 date-modified: "2019-11-03"

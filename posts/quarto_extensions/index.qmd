@@ -2,7 +2,7 @@
 title: "Quarto Extension"
 author: "Muhammad N. Ahmad"
 date: "2025-10-31"
-date-modified: "2025-10-31"
+date-modified: "2025-12-14"
 categories: [Quarto, Extensions]
 image: "quarto_extension1.png"
 filters:
