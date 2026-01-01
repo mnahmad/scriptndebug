@@ -45,6 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/social-share-1.0.0/social-share.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/social-share-1.0.0/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/badge/badge.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -211,18 +212,35 @@ For UKPack NbS project (funded by UKPack), <a href="https://twitter.com/CIFOR_IC
 <p><a href="https://github.com/schochastics/quarto-social-share">Quarto social share</a> is an other amazing extension. I am using this extension in this post as well so you can check at the bottom.</p>
 <p>It is very easy to use and the offical <a href="https://github.com/schochastics/quarto-social-share">github repo</a> expians everything.</p>
 </section>
-<section id="quarto-quizdown" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-quizdown">quarto-quizdown</h2>
-<p>Will cover this soon. <a href="https://github.com/parmsam/quarto-quizdown?tab=readme-ov-file">Quiz down</a></p>
-</section>
 <section id="quarto-badges" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-badges">Quarto Badges</h2>
-<p>Small but looks cool. Will cover this soon. <a href="https://github.com/mcanouil/quarto-badge">Badges</a></p>
+<p><a href="https://github.com/mcanouil/quarto-badge">Qyarto Badges</a> are small visual improvement but looks cool and has option of becoming a link.</p>
+<p>First install the extions using <code>quarto add mcanouil/quarto-badge</code> command. Second, defind badge style either in the post under extension heading (see code section below) or in _quarto.yml file.</p>
+<pre><code>.
+.
+extensions:
+  badge:
+    - key: current
+      colour: springgreen
+      href: https://github.com/mcanouil/quarto-badge/releases/tag/{{value}}
+</code></pre>
+<p>Some examples, current badge <span class="badge rounded-pill quarto-badge " style="background-color: springgreen;">1.0.0</span>, future badge <span class="badge rounded-pill quarto-badge bg-danger"><a href="https://github.com/mcanouil/quarto-badge" class="quarto-badge-href">2.0.0</a></span>, old badge <span class="badge rounded-pill quarto-badge #D3D3D3">0.1.0</span>, hmm old page is not appearing .</p>
 </section>
 <section id="lightbox" class="level2">
 <h2 class="anchored" data-anchor-id="lightbox">Lightbox</h2>
-<p>Will cover this soon. <a href="https://github.com/quarto-ext/lightbox">Light box</a></p>
-<p>Note, no need of install as this extension is now part of deafult installation.</p>
+<p>Allow zoom functionality on photos, no need of installation as this extension is now part of deafult installation.<br>
+<a href="https://github.com/quarto-ext/lightbox">Light box</a></p>
+<p>An example below</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="quarto_extension1.png" class="img-fluid figure-img"></p>
+<figcaption>A Lovely Image</figcaption>
+</figure>
+</div>
+</section>
+<section id="quarto-quizdown" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-quizdown">quarto-quizdown</h2>
+<p>This extension deserves a post of its own,github repo for <a href="https://github.com/parmsam/quarto-quizdown?tab=readme-ov-file">Quiz down</a>.</p>
 
 
 </section>

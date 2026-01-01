@@ -77,25 +77,25 @@
     "text": "Quarto social share\nQuarto social share is an other amazing extension. I am using this extension in this post as well so you can check at the bottom.\nIt is very easy to use and the offical github repo expians everything."
   },
   {
-    "objectID": "posts/quarto_extensions/index.html#quarto-quizdown",
-    "href": "posts/quarto_extensions/index.html#quarto-quizdown",
-    "title": "Quarto Extension",
-    "section": "quarto-quizdown",
-    "text": "quarto-quizdown\nWill cover this soon. Quiz down"
-  },
-  {
     "objectID": "posts/quarto_extensions/index.html#quarto-badges",
     "href": "posts/quarto_extensions/index.html#quarto-badges",
     "title": "Quarto Extension",
     "section": "Quarto Badges",
-    "text": "Quarto Badges\nSmall but looks cool. Will cover this soon. Badges"
+    "text": "Quarto Badges\nQyarto Badges are small visual improvement but looks cool and has option of becoming a link.\nFirst install the extions using quarto add mcanouil/quarto-badge command. Second, defind badge style either in the post under extension heading (see code section below) or in _quarto.yml file.\n.\n.\nextensions:\n  badge:\n    - key: current\n      colour: springgreen\n      href: https://github.com/mcanouil/quarto-badge/releases/tag/{{value}}\n\nSome examples, current badge 1.0.0, future badge 2.0.0, old badge 0.1.0, hmm old page is not appearing ."
   },
   {
     "objectID": "posts/quarto_extensions/index.html#lightbox",
     "href": "posts/quarto_extensions/index.html#lightbox",
     "title": "Quarto Extension",
     "section": "Lightbox",
-    "text": "Lightbox\nWill cover this soon. Light box\nNote, no need of install as this extension is now part of deafult installation."
+    "text": "Lightbox\nAllow zoom functionality on photos, no need of installation as this extension is now part of deafult installation.\nLight box\nAn example below\n\n\n\nA Lovely Image"
+  },
+  {
+    "objectID": "posts/quarto_extensions/index.html#quarto-quizdown",
+    "href": "posts/quarto_extensions/index.html#quarto-quizdown",
+    "title": "Quarto Extension",
+    "section": "quarto-quizdown",
+    "text": "quarto-quizdown\nThis extension deserves a post of its own,github repo for Quiz down."
   },
   {
     "objectID": "posts/welcome/index.html",

@@ -20,8 +20,29 @@ share:
   mastodon: true
   bsky: true
 
+
 format: 
   html: default
+
+extensions:
+badge:
+    - key: current
+      colour: springgreen
+    - key: future
+      class: bg-danger
+      href: https://github.com/mcanouil/quarto-badge
+    - key: deprecated
+      class: bg-warning
+      href: https://github.com/mcanouil/quarto-badge/releases/tag/{{value}}
+    - key: stable
+      colour: "#28a745"
+    - key: beta
+      colour: "#ffc107"
+    - key: experimental
+      class: bg-info
+    - key: old
+      class: "#D3D3D3"  
+
 ---
 
 Quarto is amazing, for reproducable reports, quick dashboards, websites and blogging sites like mine. Quarto has an extension ecosystem as well, so I started playing with these extensions, thus, this post will document some of example works around these extensions. 
@@ -62,18 +83,35 @@ Somehow the twitter post is not appearing, thus, I tired using twitter's embed o
 
 It is very easy to use and the offical [github repo ](https://github.com/schochastics/quarto-social-share) expians everything. 
 
-
-## quarto-quizdown
-Will cover this soon. 
-[Quiz down](https://github.com/parmsam/quarto-quizdown?tab=readme-ov-file)
-
-
 ## Quarto Badges
-Small but looks cool. Will cover this soon. 
-[Badges](https://github.com/mcanouil/quarto-badge)
+[Qyarto Badges](https://github.com/mcanouil/quarto-badge) are small visual improvement but looks cool and has option of becoming a link. 
+
+First install the extions using `quarto add mcanouil/quarto-badge` command. Second, defind badge style either in the post under extension heading (see code section below) or in _quarto.yml file. 
+
+```
+.
+.
+extensions:
+  badge:
+    - key: current
+      colour: springgreen
+      href: https://github.com/mcanouil/quarto-badge/releases/tag/{{value}}
+
+```
+
+Some examples, current badge {{< badge current 1.0.0 >}}, future badge {{< badge future 2.0.0 >}}, old badge {{< badge old 0.1.0 >}}, hmm old page is not appearing .
+
+
 
 ## Lightbox
-Will cover this soon. 
+Allow zoom functionality on photos, no need of installation as this extension is now part of deafult installation.  
 [Light box](https://github.com/quarto-ext/lightbox)
 
-Note, no need of install as this extension is now part of deafult installation. 
+An example below 
+
+![A Lovely Image](quarto_extension1.png)
+
+## quarto-quizdown
+This extension deserves a post of its own,github repo for [Quiz down](https://github.com/parmsam/quarto-quizdown?tab=readme-ov-file).
+
+
