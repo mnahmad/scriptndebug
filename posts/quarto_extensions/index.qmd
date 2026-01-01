@@ -113,6 +113,14 @@ An example below
 
 The best part is that it can be used with code block as well, see the code block below. Note you also need [R](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) extension to run R code in VSCode. Of course, you need to install R on your machine + rmarkdown and languageserver package in R by using `install.packages("rmarkdown")`. 
 
+```
+#| fig-cap: Simple demo R plot 
+#| lightbox:
+#|   group: r-graph
+#|   description: This is 1 to 10 plot
+plot(1:10, rnorm(10))
+```
+
 ```{r}
 #| fig-cap: Simple demo R plot 
 #| lightbox:
