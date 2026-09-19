@@ -5,6 +5,7 @@ project:
 
 website:
   title: "ScriptNdebug"
+  google-analytics: "G-GZ4EJ7Y9J0"
   navbar:
     right:
       - about.qmd

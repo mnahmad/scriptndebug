@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Muhammad N Ahmad">
-<meta name="dcterms.date" content="2019-05-04">
+<meta name="author" content="Muhammad N. Ahmad">
+<meta name="dcterms.date" content="2026-01-14">
 
-<title>Band combination for Landsat 8 and Sentinel 2 – ScriptNdebug</title>
+<title>Quarto Quizdown – ScriptNdebug</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,6 +43,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/quizdown-0.6.0/quizdown.js"></script>
+<script src="../../site_libs/quarto-contrib/quizdown-0.6.0/quizdownKatex.js"></script>
+<script src="../../site_libs/quarto-contrib/quizdown-0.6.0/quizdownHighlight.js"></script>
+<script src="../../site_libs/quarto-contrib/quizdown-0.6.0/quizdown-init.js"></script>
+<link href="../../site_libs/quarto-contrib/social-share-1.0.0/social-share.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/social-share-1.0.0/all.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -133,13 +139,10 @@ gtag('config', 'G-GZ4EJ7Y9J0', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Band combination for Landsat 8 and Sentinel 2</h1>
+      <h1 class="title">Quarto Quizdown</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Satellite</div>
-                <div class="quarto-category">Landsat</div>
-                <div class="quarto-category">Landsat8</div>
-                <div class="quarto-category">Sentinel</div>
-                <div class="quarto-category">Sentinel2</div>
+                <div class="quarto-category">Quarto</div>
+                <div class="quarto-category">Extensions</div>
               </div>
                   </div>
   </div>
@@ -150,17 +153,23 @@ gtag('config', 'G-GZ4EJ7Y9J0', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Muhammad N Ahmad </p>
+               <p>Muhammad N. Ahmad </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 4, 2019</p>
+        <p class="date">January 14, 2026</p>
       </div>
     </div>
     
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">January 14, 2026</p>
+      </div>
+    </div>
       
     </div>
     
@@ -176,46 +185,55 @@ gtag('config', 'G-GZ4EJ7Y9J0', { 'anonymize_ip': true});
 
 
 
-<p>This post is a summery of the original discussion on <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a>, I just place it in one page for easy access.</p>
-<section id="landsat-8-band-combinations" class="level3">
-<h3 class="anchored" data-anchor-id="landsat-8-band-combinations">Landsat 8 band combinations</h3>
-<p>Natural Color 4 3 2</p>
-<p>False Color (urban) 7 6 4</p>
-<p>Color Infrared (vegetation) 5 4 3</p>
-<p>Agriculture 6 5 2</p>
-<p>Atmospheric Penetration 7 6 5</p>
-<p>Healthy Vegetation 5 6 2</p>
-<p>Land/Water 5 6 4</p>
-<p>Natural With Atmospheric Removal 7 5 3</p>
-<p>Shortwave Infrared 7 5 4</p>
-<p>Vegetation Analysis 6 5 4</p>
-<p>The above information is summarized from <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a></p>
-<p>Landsat scenes are categorised into 3 tiers <a href="https://www.usgs.gov/media/videos/landsat-collections-what-are-tiers">source</a> i.e.&nbsp;raw real time data, tier 1 (where RMSE is less than 12 meters) and tier 2 (where RMSE is more than 2 meters). Also read more <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1_RT">here</a></p>
-</section>
-<section id="sentinel-2" class="level3">
-<h3 class="anchored" data-anchor-id="sentinel-2">Sentinel 2</h3>
-<p>Natural Colors: 4 3 2</p>
-<p>False color Infrared: 8 4 3</p>
-<p>False color Urban: 12 11 4</p>
-<p>Agriculture: 11 8 2</p>
-<p>Atmospheric penetration: 12 11 8a</p>
-<p>Healthy vegetation: 8 11 2</p>
-<p>Land/Water: 8 11 4</p>
-<p>Natural Colors with Atmospheric Removal: 12 8 3</p>
-<p>Shortwave Infrared: 12 8 4</p>
-<p>Vegetation Analysis: 11 8 4</p>
-<p>The above information is summarized from <a href="http://forum.step.esa.int/t/list-of-band-combinations-for-sentinel-2/1156/7">ESA’s discussion forum</a></p>
-<p>Following image ESA website also explains the above information in a nice way.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="band_combination1.png" class="img-fluid figure-img"></p>
-<figcaption>Band Combination</figcaption>
-</figure>
+<p>Test</p>
+<div class="quizdown">
+# Python Lists (multiple choice)
+
+What is the value of `x[2]`?
+
+&gt; Python lists are mutable!
+
+~~~python
+x = [2, 3, 4]
+x[2] = 4
+print(x[2])
+~~~
+
+- [ ] 1
+- [ ] 2
+- [ ] 3
+- [x] 4
+
+# What is the capital of Germany (single choice)? 
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Siegessaeule_Aussicht_10-13_img4_Tiergarten.jpg/405px-Siegessaeule_Aussicht_10-13_img4_Tiergarten.jpg)
+
+&gt; It's the largest city in Germany!         
+
+1. [ ] Frankfurt
+1. [x] Berlin
+1. [ ] Hamburg
+1. [ ] Munich
+
+
+# Put the [days](https://en.wikipedia.org/wiki/Day) in order (sequence)!
+
+Quizdown also renders formulas:
+
+$$
+x = \frac{a+b^2}{\sqrt{b+c}}
+$$
+
+&gt; Monday is the *first* day of the week.
+
+1. Monday
+2. Tuesday
+3. Wednesday
+4. Friday
+5. Saturday
 </div>
-<p>ESA’s Sentinel documentation for <a href="https://sentinel.esa.int/documents/247904/685211/Sentinel-2+Products+Specification+Document+%28PSD%29/0f7bedeb-9fbb-4b60-91aa-809162de456c">Sentinel 2 products</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -619,6 +637,7 @@ gtag('config', 'G-GZ4EJ7Y9J0', { 'anonymize_ip': true});
   });
   </script>
 </div> <!-- /content -->
+<div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://mnahmad.github.io/scriptndebug/posts/quarto_quizdown/&amp;text=Quarto QuizDown" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://mnahmad.github.io/scriptndebug/posts/quarto_quizdown/&amp;title=Quarto QuizDown" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=Quarto QuizDown&amp;body=Check out this link:https://mnahmad.github.io/scriptndebug/posts/quarto_quizdown/" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://mnahmad.github.io/scriptndebug/posts/quarto_quizdown/" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/quarto_quizdown/&amp;title=Quarto QuizDown" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a><a href="https://www.stumbleupon.com/submit?url=https://mnahmad.github.io/scriptndebug/posts/quarto_quizdown/&amp;title=Quarto QuizDown" target="_blank" class="stumbleupon"><i class="fa-brands fa-stumbleupon fa-fw fa-lg"></i></a><a href="https://www.tumblr.com/share/link?url=https://mnahmad.github.io/scriptndebug/posts/quarto_quizdown/&amp;name=Quarto QuizDown" target="_blank" class="tumblr"><i class="fa-brands fa-tumblr fa-fw fa-lg"></i></a><a href="javascript:void(0);" onclick="var mastodon_instance=prompt('Mastodon Instance / Server Name?'); if(typeof mastodon_instance==='string' &amp;&amp; mastodon_instance.length){this.href='https://'+mastodon_instance+'/share?text=Quarto QuizDown https://mnahmad.github.io/scriptndebug/posts/quarto_quizdown/'}else{return false;}" target="_blank" class="mastodon"><i class="fa-brands fa-mastodon fa-fw fa-lg"></i></a><a href="https://bsky.app/intent/compose?text=https://mnahmad.github.io/scriptndebug/posts/quarto_quizdown/ Quarto QuizDown" target="_blank" class="bsky"><i class="fa-brands fa-bluesky"></i></a></div></div>
 
 
 
